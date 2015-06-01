@@ -1,4 +1,4 @@
-# Modern front end tooling
+# Modern Front End Tooling 101
 
 ## Grunt
 
