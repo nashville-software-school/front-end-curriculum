@@ -315,3 +315,11 @@ Students must use JavaScript to create a list of songs in the `list.html` file. 
 Suggest that the students use a `div` element to insert each item into the DOM.
 
 ---
+
+# Want to learn more?
+
+1. You've learned how to use a boolean condition check with *if..else* statements, but what if a condition has more than just a true/false state? Learn how to use a [switch statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
+1. Learn how to catch exceptions (errors) in your code and handle them gracefully with a [*try..catch..finally*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block.
+1. When trying to find out what's causing an error in your code, a useful command is the [debugger](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statement. Try putting it in your code and watch what happens when you run it in Chrome.
+1. Now that you know how to declare variables, you can learn about how JavaScript [hoists](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) variable declarations.
+1. Learn how to assign the [same value to two variables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#Assigning_two_variables_with_single_string_value) with a single line of code.
