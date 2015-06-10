@@ -3,7 +3,7 @@
 **H**yper**t**ext **M**arkup **L**anguage: The Building Blocks of the Web
 
 ## Prerequisite Homework
-Read Introduction and chapters 1-3 of Duckett's "**HTML & CSS**" book.
+Read Introduction and chapters 1-3 of Duckett's "**HTML & CSS**" book.  
 *Treehouse > Beginning HTML and CSS* course: Complete the course.
 
 ## Overview 
