@@ -33,6 +33,8 @@ Visit the [Sublime Text](http://www.sublimetext.com) website and click the downl
 
 Install the Sublime Text [package control](https://packagecontrol.io/installation) which, in turn, allows you to easily install and manage tons of really cool add-ons for customizing your Sublime editor.
 
+Read [this excellent introduction](https://scotch.io/bar-talk/best-of-sublime-text-3-features-plugins-and-settings) to getting the very most out of Sublime Text. These tips will make coding more enjoyable and increase your speed.
+
 ### Vagrant
 
 Visit the [Vagrant download](https://www.vagrantup.com/downloads.html) page and download the installer for your operating system. Once complete, run the installer using all of the default options it provides.
