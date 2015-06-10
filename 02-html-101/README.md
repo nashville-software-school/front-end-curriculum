@@ -35,14 +35,14 @@ What is it? Is it a "real" language like C or Java?
   + select
   + option
   + textarea
-  2. TYPES:
-    + text
-    + password
-    + date
-    + submit
-    + radio
-    + checkbox
-    + button
+2. TYPES:
+  + text
+  + password
+  + date
+  + submit
+  + radio
+  + checkbox
+  + button
 1. IMAGES
   + img
 1. LISTS
@@ -52,8 +52,10 @@ What is it? Is it a "real" language like C or Java?
   + table
   + td
   + tr
-  + th
-## Attributes: (from MDN) "Additional values that configure the elements or adjust their behavior"
+  + th  
+
+## Attributes: 
+(from MDN) "Additional values that configure the elements or adjust their behavior"  
 + href
 + id
 + class
@@ -64,18 +66,18 @@ What is it? Is it a "real" language like C or Java?
 + hidden
 
 ## Block elements vs inline elements  
-  Just touch on this by showing how some elements fill the width of their parent and some don't. Planting the seed     for later when we begin styling.
+Just touch on this by showing how some elements fill the width of their parent and some don't. Planting the seed     for later when we begin styling.
 
-  A block element is an element that has, but may not be limited to, the following characteristics:
-  + If no width is set, will expand naturally to fill its parent container
-  + Can have margins and/or padding
-  + If no height is set, will expand naturally to fit its child elements (assuming they are not floated or positioned)
-  + By default, will be placed below previous elements in the markup (assuming no floats or positioning on surrounding elements)
-  + Ignores the vertical-align property
-`<p>, <div>, <form>, <header>, <nav>, <ul>, <li>, and <h1>`
+A block element is an element that has, but may not be limited to, the following characteristics:
++ If no width is set, will expand naturally to fill its parent container
++ Can have margins and/or padding
++ If no height is set, will expand naturally to fit its child elements (assuming they are not floated or positioned)
++ By default, will be placed below previous elements in the markup (assuming no floats or positioning on surrounding elements)
++ Ignores the vertical-align property  
+
+Examples: `<p>, <div>, <form>, <header>, <nav>, <ul>, <li>, and <h1>`
 
 An inline element has, but may not be limited to, the following characteristics:
-
 + Flows along with text content, thus
 + Will not clear previous content to drop to the next line like block elements
 +Is subject to white-space settings in CSS
@@ -84,10 +86,10 @@ An inline element has, but may not be limited to, the following characteristics:
 + If floated left or right, will automatically become a block-level element, subject to all block characteristics
 + Is subject to the vertical-align property
 
-The easiest way to picture an inline element is to think of it as a box that acts like text. What happens, for example, to text that’s not separated by other elements? It flows one letter after the other. If you put an inline element next to text, it will flow next to that text just like another piece of text.
-`<a>, <span>, <b>, <em>`
+The easiest way to picture an inline element is to think of it as a box that acts like text. What happens, for example, to text that’s not separated by other elements? It flows one letter after the other. If you put an inline element next to text, it will flow next to that text just like another piece of text.  
+Examples: `<a>, <span>, <b>, <em>`
 
-1. Commenting your code
+## Commenting your code
 
 ## Dive Deeper into HTML
 ### Required Reading
