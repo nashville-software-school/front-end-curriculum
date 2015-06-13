@@ -6,10 +6,15 @@ None
 ## Sublime Text
 
 1. Install [Package manager](https://packagecontrol.io/installation#st3)
-1. Install [EditorConfig](https://github.com/sindresorhus/editorconfig-sublime#readme) plugin
+  + [HTMLTidy](https://packagecontrol.io/packages/HtmlTidy)
+  + [Pretty JSON](https://packagecontrol.io/packages/Pretty%20JSON)
+  + [DocBlockr](https://packagecontrol.io/packages/DocBlockr)
+  + [BracketHighlighter](https://packagecontrol.io/packages/BracketHighlighter)
+  + [SublimeCodeIntel](https://packagecontrol.io/packages/SublimeCodeIntel)
+  + [EditorConfig](https://github.com/sindresorhus/editorconfig-sublime#readme)
 
 ---
-> **Instructor:** Break now for class exercise. Give the students a document of text with multiple paragraphs and start practicing the keyboard shortcuts.
+> **Instructor:** Break now for class exercise. Give the students a document of text with multiple paragraphs and start practicing the keyboard shortcuts. Share the link to the unofficial docs for [http://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/keyboard_shortcuts_win.html](keyboard shortcuts).
 
 > 1. Cmd+O
 1. Cmd+K, B
@@ -38,11 +43,27 @@ The developer tools available in Chrome allow you modify your code, see errors, 
 
 ### Writing JavaScript in the console
 
+Show students some basic examples of how they can write JavaScript in the console and have it immediately executed by the browser.
+
+ + `alert()`
+ + `document.querySelector()`
+ + `innerHTML()`
+
 ### Inspecting and modifying HTML
+
+Show students how to inspect specific elements on a page, add attributes, and even delete them.
 
 ### Inspecting and modifying CSS
 
-### Network traffic overview
+Show students how they can tweak the design of their webpages right in the browser, which they can then copy pasta back into their code.
+
+### Network traffic
+
+ + Show document list
+ + Show request/response headers per request
+ + Filtering requests by type
+ + Large/small row types
+ + Timeline overview
 
 ---
 > **Instructor:** Break now for class exercise. Have the students load an HTML document that has several elements, and ask them to change the format, colors, and layout just by modifying the CSS in Chrome. Then have them modify the DOM in the console with some innerHTML commands, and deleting other DOM elements.
@@ -56,7 +77,6 @@ The developer tools available in Chrome allow you modify your code, see errors, 
 1. Read chapters 1-9 of "**A smarter way to learn JavaScript**".
 2. Do all of the interactive coding exercises for each chapter.
 3. *Treehouse* > *JavaScript Basics Course*: Watch first two videos and do the review questions
-
 
 ---
 
