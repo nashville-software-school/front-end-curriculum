@@ -116,7 +116,13 @@ console.log("Hello, world!");
 ```
 
 ---
-> **Instructor:** Break now for class exercises. Have students do at least 3 different challenges that makes them create variables, perform math functions, and check boolean expressions.
+> **Instructor Suggestion:** 
+> Break now for class exercises. Have students do at least 3 different challenges that makes them create variables, perform math functions, and check boolean expressions.
+> 
+> * How many hours are in a year
+> * How many minutes are in a decade
+> * How many seconds old they are
+> * If they are older than some arbitrary number, alert "I'm old", else "I'm young"
 
 ---
 
@@ -178,13 +184,18 @@ for (var count = 1; count < 10;) {
 ```
 The last element is what will be executed each time through your loop. In this example, we're simply going to increase the value of our `count` variable by 1.
 ```
-for (var count = 1; count < 10; count += 1) {
+for (var count = 1; count < 10; count = count + 1) {
    console.log("Current value of count = ", count);
 }
 ```
 
 ---
-> **Instructor:** Break now for class exercises. Have students do 4 different challenges that makes them start at different initial values, use different evaluation punctuation (>, <, <=, >=), and increment/decrement the counter by different amounts.
+> **Instructor Suggestion:** 
+> Break now for class exercises. Have students do 4 different challenges that makes them start at different initial values, use different evaluation punctuation (>, <, <=, >=), and increment/decrement the counter by different amounts.
+>
+> * Write a for loop that increments a variable by 10 each time.
+> * Augment the loop to insert each new value into an array
+> * Write a loop that starts at 100 and decrements a variable by 1. If the number is even, add the number to the beginning of an array, else add it to the end of the array.
 
 ---
 
@@ -209,7 +220,8 @@ alert(phrase.length);
 ```
 ### Finding characters in a string
 You use the `indexOf()` method that is automatically added to any variable that holds a string value.
-```
+
+```js
 var phrase = "The lazy brown fox jumped over the dog.";
 
 // In JavaScript, the first position of a string 
@@ -223,7 +235,7 @@ alert(phrase.indexOf("x"));
 ### Determine which character is at a position in a string
 Yo use the `charAt()` method that is automatically added to any variable that holds a string value.
 
-```
+```js
 var phrase = "How now brown cow?";
 var position = phrase.charAt(8);
 alert(position); // Will alert "b"
@@ -232,9 +244,17 @@ alert(position); // Will alert "b"
 ### Replacing characters in a string
 You use the `replace()` method that is automatically added to any variable that holds a string value.
 
-```
+```js
 var phrase = "The lazy dog";
 var newPhrase = phrase.replace("lazy", "bounding");
+alert(newPhrase);
+```
+
+Change every occurrence by using a regular expression. Try this out.
+
+```js
+var phrase = "The lazy dog likes the weird fox";
+var newPhrase = phrase.replace(/o/g, "i");
 alert(newPhrase);
 ```
 
@@ -257,7 +277,8 @@ element.innerHTML = phrase;
 ```
 
 ---
-> **Instructor:** Break now for class exercises. Have students do exercises for each of the string methods you covered, and then use Codepen to build up some HTML inside a string (for example, using some p, a, div tags) and insert that code in the document. Build multiple JS strings, multiple HTML elements, and then do multiple inserts into different elements.  Also have them insert new HTML inside HTML they already inserted.
+> **Instructor Suggestion:** 
+> Break now for class exercises. Have students do exercises for each of the string methods you covered, and then use Codepen to build up some HTML inside a string (for example, using some p, a, div tags) and insert that code in the document. Build multiple JS strings, multiple HTML elements, and then do multiple inserts into different elements.  Also have them insert new HTML inside HTML they already inserted.
 
 ---
 
@@ -297,6 +318,13 @@ In this part, students will be creating a full, but basic, web document that com
 1. Copy the code from the script element into the new JS file.
 1. Update the script element to be an external link.
 1. Refresh browser and ensure code still works.
+
+> **Instructor Suggestion:** 
+> Take this opportunity to have students write more basic programs that calculate 
+> 
+> * How many hours are in a year
+> * How many minutes are in a decade
+> * How many seconds old they are
 
 
 ## Homework 
