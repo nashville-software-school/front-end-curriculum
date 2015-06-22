@@ -1,6 +1,6 @@
 # CSS
 
-**C**ascading **S**tyle *S**heets
+**C**ascading **S**tyle **S**heets
 
 1. What is it?
 1. Selectors
