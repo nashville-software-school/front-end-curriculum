@@ -30,3 +30,11 @@ Through dynamic resizing or CSS
 Writing clean CSS with the SASS pre-processor
 
 1. Using the popular Bootstrap framework
+
+## CSS3
+
+### Transitions
+
+### Transforms
+
+### Animations
