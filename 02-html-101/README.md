@@ -30,12 +30,11 @@ What is it? Is it a "real" language like C or Java?
   + br
 1. LINKS:
   + anchor
-1. FORMS:
+1. Form element types:
   + form
   + select
   + option
   + textarea
-2. TYPES:
   + text
   + password
   + date
@@ -54,8 +53,9 @@ What is it? Is it a "real" language like C or Java?
   + tr
   + th  
 
-## Attributes: 
-(from MDN) "Additional values that configure the elements or adjust their behavior"  
+## Attributes
+> **MDN:** "Additional values that configure the elements or adjust their behavior"
+
 + href
 + id
 + class
@@ -66,9 +66,10 @@ What is it? Is it a "real" language like C or Java?
 + hidden
 
 ## Block elements vs inline elements  
-Just touch on this by showing how some elements fill the width of their parent and some don't. Planting the seed     for later when we begin styling.
+Just touch on this by showing how some elements fill the width of their parent and some don't. Planting the seed for later when we begin styling.
 
 A block element is an element that has, but may not be limited to, the following characteristics:
+
 + If no width is set, will expand naturally to fill its parent container
 + Can have margins and/or padding
 + If no height is set, will expand naturally to fit its child elements (assuming they are not floated or positioned)
@@ -92,9 +93,13 @@ Examples: `<a>, <span>, <b>, <em>`
 ## Commenting your code
 
 ## Dive Deeper into HTML
+
 ### Required Reading
+
 [Writing Your Best Code](http://learn.shayhowe.com/html-css/writing-your-best-code/)
+
 ### Learn more 
+
 #### Vids
 [HTML Images and Hyperlinks](https://www.youtube.com/watch?v=CGSdK7FI9MY)  
 [ID's vs Classes](https://www.youtube.com/watch?v=9UNmumTYuq8)  
