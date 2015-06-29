@@ -6,4 +6,4 @@ You will learn more advanced CSS features
 1. Selecting specific elements in a list
 1. Floating
 1. Positioning (initial, fixed, static, absolute, etc)
-1. Pseudo selectors
+1. Advanced pseudo-classes

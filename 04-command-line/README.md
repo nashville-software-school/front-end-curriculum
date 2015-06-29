@@ -2,6 +2,10 @@
 
 Ensure that any students who are using Windows have the Powershell package installed, since you'll be covering \*nix commands for the following actions.
 
+## Prerequisite Homework
+
+1. *Treehouse* > *Console Foundations* > *Getting Started with the Console*: Finish all 12 sections.
+
 ## Basic commands
 
 1. Learn how to navigate your computer's directory structure `cd`
@@ -55,6 +59,6 @@ Use the `man` command to learn more about the other commands below. For example,
 
 # Nightshade Challenge
 
-> **Developer point worth**: 100
+> **Developer point worth**: 1000
 
 There is another account on the Vagrant machine named `student`. The password is `nss`. Go ahead and `ssh` to the machine using those credentials. Your challenge is to find out how to can `ssh` into the box on that account without needing to enter in a password.
