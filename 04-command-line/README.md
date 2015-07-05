@@ -49,7 +49,7 @@ Explain Vagrant and why it's being used to standardize the development environme
 
 Use the `man` command to learn more about the other commands below. For example, `man touch` tells you everything you need to know about the `touch` command. Just press `q` when you're done reading the content.
 
-1. **List all processes on your machine (and kill them)**. Learn about the `ps` command to find processes on your machine. You can then use the `kill` command to immediately termination any process. **_Use caution_** and be sure you don't kill a service unless you know exactly what it is.
+1. **List all processes on your machine**. Learn about the `ps` command to find processes on your machine. For advanced usage, combine it with grep to find a specific process.
 1. **View processes, live, with stats**. Try the `top` command to monitor running processes in real time.
 1. **curl your way on the Web**. You can "surf the web" on the command line using `curl`. Read the docs and see what happens when you use `curl` instead of a web browser.
 1. **Find the process using a port**. There's a way to see which port every process that's running is listening on (if applicable). It's `lsof -i`. To find the process listening on a specific port, you add a second argument that is the port number - `lsof -i :8080`.
@@ -57,8 +57,14 @@ Use the `man` command to learn more about the other commands below. For example,
 
 ---
 
-# Nightshade Challenge
+# Nighthawk Challenge \#1
 
-> **Developer point worth**: 1000
+> **Developer point worth**: 250
+
+Your Vagrant machine is using a custom shell called [oh my zsh](https://github.com/robbyrussell/oh-my-zsh). There's a plugin called autojump that allows you to easily switch between directories on your machine. Get it correctly installed, and show its usage.
+
+# Nighthawk Challenge \#2
+
+> **Developer point worth**: 2000
 
 There is another account on the Vagrant machine named `student`. The password is `nss`. Go ahead and `ssh` to the machine using those credentials. Your challenge is to find out how to can `ssh` into the box on that account without needing to enter in a password.

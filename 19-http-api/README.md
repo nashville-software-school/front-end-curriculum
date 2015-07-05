@@ -4,6 +4,10 @@
 
 ## Verbs
 
+# The Web
+
+## IP based (DNS came later)
+
 # API
 
 ## What is it (presentation)
@@ -11,7 +15,7 @@
 ## Use jQuery to interact with an API over HTTP
 
 > **Instructor Suggestion:** 
-> Use the API that is exposed on the Vagrant machine at `http://192.168.33.10:8080/api/fruits` to show how to get data from an API using an AJAX call with jQuery.
+> Use the API that is exposed on the Vagrant machine at `http://192.168.33.10:8080/food` to show how to get data from an API using an AJAX call with jQuery.
 
 
 ## Firebase
