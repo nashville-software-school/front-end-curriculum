@@ -12,16 +12,7 @@ Students must have a CodePen account.
 1. Read Introduction and chapters 1-3 of Duckett's "**HTML & CSS**" book.  
 2.  Complete the Treehouse Beginning HTML and CSS course.
 
-## Overview 
-What is it? Is it a "real" language like C or Java?
-
 ## Elements
-
----
-> **Instructor Suggestion:** 
-> First have the students copy the contents of the [basic HTML file](https://raw.githubusercontent.com/nashville-software-school/evening-cohort/master/resources/__basic.html) in the resources directory and paste it into a new Codepen project. Then live-code with them while describing each tag.
-
----
 
 ### Structure
   + html
@@ -29,6 +20,8 @@ What is it? Is it a "real" language like C or Java?
   + body
   + div
   + span
+
+#### HTML5 semantic structure
   + article
   + section
   + nav
@@ -52,21 +45,13 @@ What is it? Is it a "real" language like C or Java?
 ### Links
   + anchor
 
-### Forms & element types
-  + form
-  + select
-  + option
-  + textarea
-  + text
-  + password
-  + date
-  + submit
-  + radio
-  + checkbox
-  + button
+### Media
 
-### Images
+Use, or fork, this [Codepen project](http://codepen.io/chortlehoort/pen/qdoKqr) to show examples of video and audio tags.
+
   + img
+  + audio
+  + video
 
 ### Lists
   + li
@@ -77,7 +62,11 @@ What is it? Is it a "real" language like C or Java?
   + table
   + td
   + tr
-  + th  
+  + th
+
+## Commenting your code
+
+`<!-- This is how you comment HTML code -->`
 
 ### Element Attributes
 > **MDN:** "Additional values that configure the elements or adjust their behavior"
@@ -95,15 +84,27 @@ They can, and usually are, combined.
 
 `<div id="bio" class="student--biography" style="color: red">`
 
-## Commenting your code
-
-`<!-- This is how you comment HTML code -->`
-
----
 > **Instructor Suggestion:** 
-> Break now for a class exercise. Have students create a very simple profile page for themselves with their name, place of birth, email address, place of work (if applicable, otherwise NSS), and an unordered list of interests. Make sure student comment their code to describe the purpose of each element.
+> Break now for a class exercise. Have students create a very simple blog document that contains a header, navigation (using a table for now), footer, and multiple articles that each contain their own header, footer, and multiple sections. Each article should include a related image. Make sure students comment their code to describe the purpose of each element.
 
----
+### Forms & element types
+
+Use, or fork, an example [HTML form Codepen project](http://codepen.io/chortlehoort/pen/ogpVZq) to show all the major field types that can be used.
+
+  + form
+  + select
+  + option
+  + textarea
+  + text
+  + password
+  + date
+  + submit
+  + radio
+  + checkbox
+  + button
+
+> **Instructor Suggestion:** 
+> Break now for a class exercise. Have students create an example bank loan form based on the instructions in this [HTML101 Codepen project](http://codepen.io/chortlehoort/pen/XbEqLW).
 
 ## Homework
 
