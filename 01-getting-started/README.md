@@ -29,7 +29,7 @@ Once Chrome is installed, open it and visit the [Chrome Store page](https://chro
 
 ### Sublime Text
 
-Visit the [Sublime Text](http://www.sublimetext.com) website and click the download button. Then install once the download is complete.
+Visit the [Sublime Text](http://www.sublimetext.com/3) website and click the link that corresponds to your operating system. Then install once the download is complete.
 
 Install the Sublime Text [package control](https://packagecontrol.io/installation) which, in turn, allows you to easily install and manage tons of really cool add-ons for customizing your Sublime editor.
 
