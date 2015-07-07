@@ -26,6 +26,8 @@ Ensure that any students who are using Windows have the Powershell package insta
 1. Use `mkdir -p` to automatically make every directory in a new path
 1. Use wildcards when moving or copying files, e.g. `cp *.js ./`
 1. Use the `-r` option with `mv` or `cp` to recursively perform the action on all sub-directories
+1. Use double bang `!!` to repeat last command, or prefix it with `sudo`, for example.
+1. Aliases in .bashrc `mkcd() { [ -n "$1" ] && mkdir -p "$@" && cd $_; }`
 
 
 > **Instructor Suggestion:**
@@ -57,14 +59,10 @@ Use the `man` command to learn more about the other commands below. For example,
 
 ---
 
-# Nighthawk Challenge \#1
-
-> **Developer point worth**: 250
+# Challenge \#1
 
 Your Vagrant machine is using a custom shell called [oh my zsh](https://github.com/robbyrussell/oh-my-zsh). There's a plugin called autojump that allows you to easily switch between directories on your machine. Get it correctly installed, and show its usage.
 
-# Nighthawk Challenge \#2
-
-> **Developer point worth**: 2000
+# Challenge \#2
 
 There is another account on the Vagrant machine named `student`. The password is `nss`. Go ahead and `ssh` to the machine using those credentials. Your challenge is to find out how to can `ssh` into the box on that account without needing to enter in a password.

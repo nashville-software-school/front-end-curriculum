@@ -27,6 +27,8 @@ Students must have a CodePen account.
   + nav
   + footer
   + header
+  + time `<time datetime="">`
+  + mark
 
 ### Meta
   + DOCTYPE
@@ -102,6 +104,11 @@ Use, or fork, an example [HTML form Codepen project](http://codepen.io/chortleho
   + radio
   + checkbox
   + button
+  + range
+  + number
+  + tel
+  + url
+  + email
 
 > **Instructor Suggestion:** 
 > Break now for a class exercise. Have students create an example bank loan form based on the instructions in this [HTML101 Codepen project](http://codepen.io/chortlehoort/pen/XbEqLW).
@@ -167,3 +174,5 @@ Examples: `<a>, <span>, <b>, <em>`
 [HTML Advanced Tutorial](http://htmldog.com/guides/html/advanced/)  
 [All You Need to Know About the HTML5 Data Attribute ](http://webdesign.tutsplus.com/tutorials/all-you-need-to-know-about-the-html5-data-attribute--webdesign-9642)  
 [Authoring conformance criteria for bidirectional-algorithm formatting characters](http://www.echoecho.com/htmlframes.htm)
+[HTML5 input types](http://www.htmldog.com/guides/html/advanced/html5forms1/)
+[More HTML5 tags](http://www.html-5.com/tutorials/new-html-tags.html)
