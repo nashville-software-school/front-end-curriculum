@@ -19,6 +19,11 @@ Ensure that any students who are using Windows have the Powershell package insta
 1. Moving files and directories `mv`
 1. Deleting files and folders `rm && rm -rf`
 
+> **Instructor Suggestion:** 
+> Have students create a `workspace` directory in their home directory. Then create a child directory named `nss`. Create a file named `THEIR_NAME.md`. Copy that file to `THEIR_NAME-COPY.md`. Create another directory under `nss` named `destroy` (i.e. `/workspace/nss/destroy`), then create another file with a name of their choosing in that one. Go back up one directory and delete the `destroy` directory.
+
+
+
 ## Advanced commands & options
 
 1. Perform actions that affect the entire machine with `sudo`

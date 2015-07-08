@@ -99,10 +99,62 @@ article section:first-of-type {
 }
 ```
 
+### first-child
+
+This will only select the first sibling child of a shared parent
+
+```html
+<article>
+  <section> A </section>
+  <section> B </section>
+  <aside> Aside </aside>
+  <section> C </section>
+  <section> D </section>
+  <section> E </section>
+</article>
+```
+
+The following code will highlight the first section, and the aside.
+
+```css
+section {
+  background-color: orange;
+}
+
+article section:first-child {
+  background-color: lime;
+}
+```
+
 
 ## Positioning (initial, fixed, static, absolute, etc)
 
 ## Advanced pseudo-classes
 
-1. `:checked` for selected any checkboxes in a form that have been checked by the user.
-1. 
+`:checked` for selected any checkboxes in a form that have been checked by the user.
+
+### HTML5 form type validation classes
+
+```
+<form>
+  <div>
+    <label>Enter a URL:</label>
+    <input type="url" />
+  </div>
+
+  <div>
+    <label>Enter an email address:</label>
+    <input type="email" required/>
+  </div>
+</form>
+```
+
+```css
+input:valid {
+  background-color: #ddffdd;
+}
+
+input:invalid {
+  background-color: #ffdddd;
+}
+```
