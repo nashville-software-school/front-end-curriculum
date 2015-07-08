@@ -66,7 +66,7 @@ Use the `man` command to learn more about the other commands below. For example,
 
 # Challenge \#1
 
-Your Vagrant machine is using a custom shell called [oh my zsh](https://github.com/robbyrussell/oh-my-zsh). There's a plugin called autojump that allows you to easily switch between directories on your machine. Get it correctly installed, and show its usage.
+There's a plugin called [autojump](https://github.com/joelthelion/autojump) that allows you to easily switch between directories on your machine. Get it correctly installed, and show its usage.
 
 # Challenge \#2
 
