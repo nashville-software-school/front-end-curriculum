@@ -150,6 +150,12 @@ Examples: `<a>, <span>, <b>, <em>`
 > **Instructor Suggestion:** 
 > Break now for a class exercise. Live-code some example where a span or anchor tag is a child of a block element, and then show a block element child.
 
+## The Document Object Model (DOM)
+
+The Document Object Model is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page. This is an overview of DOM-related materials here at W3C and around the web.
+
+<img src="http://www.w3.org/TR/DOM-Level-2-Core/images/table.gif">
+
 
 ## Dive Deeper into HTML
 
