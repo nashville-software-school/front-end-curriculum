@@ -22,7 +22,20 @@ Ensure that any students who are using Windows have the Powershell package insta
 > **Instructor Suggestion:** 
 > Have students create a `workspace` directory in their home directory. Then create a child directory named `nss`. Create a file named `THEIR_NAME.md`. Copy that file to `THEIR_NAME-COPY.md`. Create another directory under `nss` named `destroy` (i.e. `/workspace/nss/destroy`), then create another file with a name of their choosing in that one. Go back up one directory and delete the `destroy` directory.
 
+## Helpful commands to install
 
+### tree
+
+### OSX
+
+1. [Install homebrew](http://brew.sh/)
+2. Type `brew install tree` and wait for installation to complete
+3. Type `tree`
+
+### Linux
+
+1. Type `sudo apt-get install tree`
+2. Type `tree`
 
 ## Advanced commands & options
 
