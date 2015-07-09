@@ -12,6 +12,10 @@ To store credentials locally, use this command so that you're not prompted every
 
 `git config credential.helper store`
 
+If you don't want to store them per project, but rather globally in your HOME directory, use this instead.
+
+`git config --global credential.helper store`
+
 ## Create a Github repository
 
 Show students how to create one in the Github web UI. The repository should be named `music-history`. Make sure the *Create a README* options is not ticked. Then have them copy pasta the standard commands that Github provides once the repo is created.
