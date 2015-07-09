@@ -70,6 +70,34 @@ Show students how to convert a standard `<ul>` element into a usable navigation 
 }
 ```
 
+## Validation for HTML5 inputs
+
+With some of the new HTML5 input types, specifically the `url` and `email` types, the specification required that browsers provide the ability to write CSS pseudo classes that allows developers to style the inputs based on  the default validation rules.
+
+```html
+<form>
+  <div>
+    <label>Enter a URL:</label>
+    <input type="url" />
+  </div>
+
+  <div>
+    <label>Enter an email address:</label>
+    <input type="email" required/>
+  </div>
+</form>
+```
+
+```css
+input:valid {
+  background-color: #ddffdd;
+}
+
+input:invalid {
+  background-color: #ffdddd;
+}
+```
+
 ## Homework
 
 1. *Treehouse* > *Styling Web Pages and Navigation*: Watch all videos and complete all exercises.
