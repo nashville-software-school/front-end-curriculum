@@ -109,4 +109,18 @@ input:invalid {
 
 1. **Generate and use a cool tooltip**. Visit the [CSS Tooltip Generator](http://www.cssportal.com/css-tooltip-generator/) and create the CSS you need. Then, see if you can get a tooltip to display when you hover a link in your profile page.
 2. **Create awesome buttons**. Visit the [CSS3 Button Generator](http://css3button.net/) and make buttons for your navigation instead of links.
-3. 
+3. **Try some layout challenges**. Visit the [Wikiversity CSS Challenges](https://en.wikiversity.org/wiki/Web_Design/CSS_challenges) page and try to complete as many as you can.
+
+# Challenge \#1: Interactive navigation bar
+
+Create a navigation bar out of an unordered list element, and add the following interactivity.
+
+1. When the user hovers over one of the links, the color of the text should change.
+1. When the user hovers over one of the links, the background color of the element that contains the link should change.
+1. When the user clicks on one of the links, the element that contains the link should grow in size by 5px on the left and right.
+
+# Challenge \#2: Sticky navigation bar
+
+You will learn more about how to do this in CSS102, but if you want a challenge now, create a web page that has a navigation bar and plenty of articles so that the content goes well below the fold (fancy term for the amount of real estate that exists when the user first loads the page).
+
+When the user scrolls now to read the rest of the content, the navigation bar should remain at the top of the page, always visible, no matter how far down the user scrolls.
