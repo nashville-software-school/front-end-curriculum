@@ -13,7 +13,7 @@ In the earliest days of the World Wide Web, there were just documents. The Web w
 Then, companies started to see a glimmer of promise for making money on the Web, so they started sharing their documents. Plain, boring text didn't cut it, so the W3C (World Wide Web Consortium) released CSS1 in 1996 so that professional web page developers - there weren't that many yet - could create more stylized documents with complex layouts and color schemes.
 
 > **Instructor Suggestion:** 
-> Have students open up their HTML101 profile [Codepen ](http://codepen.io/) and start adding CSS to that project.
+> Have students open up their HTML101 blog [Codepen](http://codepen.io/) and start adding CSS to that project.
 
 ## Selecting an element
 

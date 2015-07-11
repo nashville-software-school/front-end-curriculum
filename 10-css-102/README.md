@@ -3,6 +3,64 @@
 You will learn more advanced CSS features
 
 ## The box model
+
+## Advanced layouts with Flexible Box Layout
+
+A relatively new CSS feature is the [Flexible Box Layout module](http://css-tricks.com/snippets/css/a-guide-to-flexbox/). Explain how `display: flex`, `flex-flow`, and `flex-grow` works. Using this should help those who struggled with the first Music History layout.
+
+> **Instructor Suggestion:** 
+> Have students fork the [Flexbox project](http://codepen.io/chortlehoort/pen/PqexqV) on Codepen and experiment with different values for `flex-flow`, and `flex-grow`.  The code for that Pen is below for quick reference.
+
+```html
+<div class="flex-container">
+  <header class="flex-item">Header</header>
+  <section class="flex-item sidebar__left">Sidebar</section>
+  <section class="flex-item main">Main</section>
+  <section class="flex-item sidebar__right">This is some longer sidebar content that shows how every cell in this row will grow to be the same size as this one.</section>
+  <footer class="flex-item">Footer</footer>
+</div>
+```
+
+```css
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: 200px;  
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flex-container > header, 
+.flex-container > footer { 
+  flex: 1 100%; 
+}
+
+.sidebar__left { 
+  flex-grow: 2;
+}
+
+.sidebar__right { 
+  flex-grow: 1;
+}
+
+.main {
+  flex-grow: 6;
+}
+
+.flex-item {  
+  background: tomato;
+  padding: 10px;
+  width: 100px;
+  border: 3px solid rgba(0,0,0,.2);
+  
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+```
+
 ## Selecting specific elements in a list
 
 ### nth-child
