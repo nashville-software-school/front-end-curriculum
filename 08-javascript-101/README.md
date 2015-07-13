@@ -115,7 +115,6 @@ Learn how to output the value of variables to the browser's console.
 console.log("Hello, world!");
 ```
 
----
 > **Instructor Suggestion:** 
 > Break now for class exercises. Have students do at least 3 different challenges that makes them create variables, perform math functions, and check boolean expressions.
 > 
@@ -123,8 +122,6 @@ console.log("Hello, world!");
 > * How many minutes are in a decade
 > * How many seconds old they are
 > * If they are older than some arbitrary number, alert "I'm old", else "I'm young"
-
----
 
 ## Arrays
 
@@ -189,15 +186,15 @@ for (var count = 1; count < 10; count = count + 1) {
 }
 ```
 
----
+You can perform any mathematical operation on the `count` variable that you want. Increment by 1, decrement by 5, multiply by 3, divide by 10... whatever you need for the problem you're trying to solve.
+
 > **Instructor Suggestion:** 
 > Break now for class exercises. Have students do 4 different challenges that makes them start at different initial values, use different evaluation punctuation (>, <, <=, >=), and increment/decrement the counter by different amounts.
 >
-> * Write a for loop that increments a variable by 10 each time.
+> * Write a for loop that increments the counter variable by 10 each time, and displays the value.
+> * Write a for loop that divides the counter variable by 2 each time, and displays the value.
 > * Augment the loop to insert each new value into an array
 > * Write a loop that starts at 100 and decrements a variable by 1. If the number is even, add the number to the beginning of an array, else add it to the end of the array.
-
----
 
 ## String manipulation
 
@@ -276,7 +273,6 @@ document.getElementById("container");
 element.innerHTML = phrase;
 ```
 
----
 > **Instructor Suggestion:** 
 > Break now for class exercises. Have students do exercises for each of the string methods you covered, and then use Codepen to build up some HTML inside a string (for example, using some p, a, div tags) and insert that code in the document. Build multiple JS strings, multiple HTML elements, and then do multiple inserts into different elements.  Also have them insert new HTML inside HTML they already inserted.
 
@@ -297,12 +293,28 @@ element.innerHTML = phrase;
 
 Time to move on from CodePen. From this point on, work will be done in SublimeText and Chrome, and files will be served from the Vagrant box.
 
+## Switch statement
+
+```js
+var value = 10;
+switch (value) {
+  case 1:
+    console.log("Small number");
+  case 5:
+    console.log("Medium number");
+  case 1:
+    console.log("Large number");
+  default:
+    console.log("Dunno");
+}
+```
+
 ## Vagrant
 
 Have each student go to their CLI and run `vagrant up` and `vagrant ssh`. Once logged in, have them execute the following commands.
 
 ```
-cd /vagrant
+cd /vagrant/workspace
 http-server ./
 ```
 
@@ -310,7 +322,7 @@ http-server ./
 
 In this part, students will be creating a full, but basic, web document that combines the HTML and the JavaScript - both inline and via an external link - and open it up in Chrome.
 
-1. Have students create `/workspace/js-101` directory.
+1. Have students create `/vagrant/workspace/js-101` directory.
 1. Each student should grab the `resources/__basic.html`, copy it into the **js-101** directory, and rename it as `index.html`.
 1. Have students create a script element before the closing body tag, and put some basic JS in there that logs to the console, or creates an alert box, whatever you like.
 1. Open `http://192.168.33.10:8080/js-101/index.html` and make sure the code works.
@@ -320,11 +332,11 @@ In this part, students will be creating a full, but basic, web document that com
 1. Refresh browser and ensure code still works.
 
 > **Instructor Suggestion:** 
-> Take this opportunity to have students write more basic programs that calculate 
+> Take this opportunity to have students write a program that loops over an array of student grades (values from 50-100) and outputs how many of each grades there are.  50-60=F, 61-70=D, 71-80=C, 81-90=B, 91-100=A.
 > 
-> * How many hours are in a year
-> * How many minutes are in a decade
-> * How many seconds old they are
+> * How many of each grade?
+> * What is the lowest grade?
+> * What is the highest grade?
 
 
 ## Homework 
@@ -351,3 +363,8 @@ Suggest that the students use a `div` element to insert each item into the DOM.
 1. When trying to find out what's causing an error in your code, a useful command is the [debugger](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statement. Try putting it in your code and watch what happens when you run it in Chrome.
 1. Now that you know how to declare variables, you can learn about how JavaScript [hoists](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) variable declarations.
 1. Learn how to assign the [same value to two variables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#Assigning_two_variables_with_single_string_value) with a single line of code.
+
+---
+
+# Challenge \#1
+
