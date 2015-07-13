@@ -6,6 +6,10 @@ Ensure that any students who are using Windows have the Powershell package insta
 
 1. *Treehouse* > *Console Foundations* > *Getting Started with the Console*: Finish all 12 sections.
 
+## Rule \#1 of command line
+
+**Always know where you are**
+
 ## Basic commands
 
 1. Learn how to navigate your computer's directory structure `cd`
@@ -92,8 +96,6 @@ Install and configure [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) she
 # Challenge \#2
 
 There's a plugin called [autojump](https://github.com/joelthelion/autojump) that allows you to easily switch between directories on your machine. Get it correctly installed, and if you've completed Challenge 1, enable the plugin in zsh.
-
-
 
 # Challenge \#3
 
