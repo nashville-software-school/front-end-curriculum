@@ -317,14 +317,14 @@ Have each student go to their CLI and run `vagrant up` and `vagrant ssh`.
 
 In this part, students will be creating a full, but basic, web document that combines the HTML and the JavaScript - both inline and via an external link - and open it up in Chrome.
 
-1. Have students create `/vagrant/workspace/js-101` directory.
+1. Have students create `/vagrant/js-101` directory.
 1. Each student should grab the `resources/__basic.html`, copy it into the **js-101** directory, and rename it as `index.html`.
 1. Have students create a script element before the closing body tag, and put some basic JS in there that logs to the console, or creates an alert box, whatever you like.
 
 ## Starting basic web server
 
 ```
-cd /vagrant/workspace/js-101
+cd /vagrant
 http-server ./
 ```
 
