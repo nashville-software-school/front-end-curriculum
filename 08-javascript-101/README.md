@@ -342,6 +342,8 @@ http-server ./
 > * How many of each grade?
 > * What is the lowest grade?
 > * What is the highest grade?
+>
+> Once they are done with that, move on the [colored reindeer](http://codepen.io/chortlehoort/pen/WbZPze?editors=101) problem, and then [boy bands & vegetables](http://codepen.io/chortlehoort/pen/myBvrL?editors=101).
 
 
 ## Homework 
