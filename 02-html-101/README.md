@@ -146,6 +146,8 @@ An inline element has, but may not be limited to, the following characteristics:
 The easiest way to picture an inline element is to think of it as a box that acts like text. What happens, for example, to text that’s not separated by other elements? It flows one letter after the other. If you put an inline element next to text, it will flow next to that text just like another piece of text.  
 Examples: `<a>, <span>, <b>, <em>`
 
+<img src="http://www.w3.org/wiki/images/3/38/Fc-ss-01.png">
+
 
 > **Instructor Suggestion:** 
 > Break now for a class exercise. Live-code some example where a span or anchor tag is a child of a block element, and then show a block element child.
