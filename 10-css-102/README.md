@@ -26,7 +26,7 @@ A value of `inline` will make an element behave like an inline-level element.
 display: inline;
 ```
 
-#### inline -block
+#### inline-block
 
 A value of `inline-block` will make an element behave like an inline-level element, but will allow you to style it with block level properties.
 
