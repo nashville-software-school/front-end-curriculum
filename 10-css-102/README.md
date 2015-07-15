@@ -10,7 +10,7 @@ You will learn more advanced CSS features
 
 There are quite a few values for the display property, but the most common are `block`, `inline`, `inline-block`, and `none`.
 
-#### Block 
+#### block 
 
 A value of `block` will make an element behave like an block-level element.
 
@@ -18,7 +18,7 @@ A value of `block` will make an element behave like an block-level element.
 display: block;
 ```
 
-#### Inline 
+#### inline 
 
 A value of `inline` will make an element behave like an inline-level element.
 
@@ -26,7 +26,7 @@ A value of `inline` will make an element behave like an inline-level element.
 display: inline;
 ```
 
-#### Inline 
+#### inline -block
 
 A value of `inline-block` will make an element behave like an inline-level element, but will allow you to style it with block level properties.
 
