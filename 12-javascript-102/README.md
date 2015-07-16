@@ -10,7 +10,7 @@ This combines all elements in an array into a single string, delimited by the ch
 var fruit = ['cherries', 'apples', 'bananas'];
 var fruitString = fruit.join(","); // "cherries,apples,bananas"
 fruitString = fruit.join(" "); // "cherries apples bananas"
-fruitString = fruit.join("><"); // "cherries><apples><bananas"
+fruitString = fruit.join("><");
 ```
 
 ### String.split()
@@ -85,6 +85,12 @@ console.log("My car has " + myCar.doors + " doors.");
 ```
 
 ## Functions
+
+Go over the basics of functions and live code some examples.
+
+### Handling DOM events
+
+Provide an `onlick=someFunction()` attribute to an anchor element and show how it can be handled with JavaScript.
 
 ## Prototypal inheritance
 
