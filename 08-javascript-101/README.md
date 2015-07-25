@@ -219,7 +219,7 @@ alert(phrase.length);
 You use the `indexOf()` method that is automatically added to any variable that holds a string value.
 
 ```js
-var phrase = "The lazy brown fox jumped over the dog.";
+var phrase = "The quick brown fox jumps over the lazy dog.";
 
 // In JavaScript, the first position of a string 
 // (called the index) is actually 0, not 1. The 
@@ -269,7 +269,7 @@ Learn to use `document.getElementById()` and  `element.innerHTML` to add text to
 
 ```javascript
 var phrase = "Hey, look at me!";
-document.getElementById("container");
+var element = document.getElementById("container");
 element.innerHTML = phrase;
 ```
 
