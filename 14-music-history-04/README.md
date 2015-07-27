@@ -1,6 +1,6 @@
 # Music History Part 4
 
-## Part 1
+## Part One
 
 1. Read from local JSON file with jQuery
 1. Loop over results and inject into Music History list page
