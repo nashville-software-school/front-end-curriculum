@@ -12,3 +12,7 @@
 1. Add a button at the bottom of your music list and label it "More >".
 1. Load the songs from the first list and inject the DOM into the document as you've already done.
 1. When the [user clicks](https://api.jquery.com/on/) that button, load the songs from the second JSON file and append them to the bottom of the existing music, but before the More button.
+
+# Resources
+
+1. Use [JSON Lint](http://www.jsonlint.com) to validate your JSON documents.
