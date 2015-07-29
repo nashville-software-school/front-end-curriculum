@@ -348,12 +348,12 @@ http-server ./
 
 ## Homework 
 
-Students must use JavaScript to create a list of songs in the `list.html` file. Have them download the `resources/js-101.js` file, which contains an array of strings with song information.
+Students must use JavaScript to create a list of songs in their Music History page. Have them download the `resources/js-101.js` file, which contains an array of strings with song information.
 
 1. Each student must add one song to the beginning and the end of the array.
 1. Loop over the array and remove any words that obviously don't belong.
 1. Students must find and replace the `>` character in each item with a `-` character.
-1. Must add each string to the DOM in `list.html`.
+1. Must add each string to the DOM container that holds the song list.
 
  ------------------------------------------------
 |  {Song name} by {Artist} on the album {Album}  | 
