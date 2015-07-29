@@ -337,13 +337,16 @@ http-server ./
 1. Refresh browser and ensure code still works.
 
 > **Instructor Suggestion:** 
-> Take this opportunity to have students write a program that loops over an array of student grades (values from 50-100) and outputs how many of each grades there are.  50-60=F, 61-70=D, 71-80=C, 81-90=B, 91-100=A.
+> Start the students on the [colored reindeer](http://codepen.io/chortlehoort/pen/WbZPze?editors=101) problem, and then [boy bands & vegetables](http://codepen.io/chortlehoort/pen/myBvrL?editors=101).
+> 
+> After those have been completed, and reviewed, move on to have students write a program that loops over an array of student grades (values from 50-100) and outputs how many of each grades there are.  50-60=F, 61-70=D, 71-80=C, 81-90=B, 91-100=A.
+> 
+> Start with array of random scores: 
+> `var scores = [82, 71, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87];`
 > 
 > * How many of each grade?
 > * What is the lowest grade?
 > * What is the highest grade?
->
-> Once they are done with that, move on the [colored reindeer](http://codepen.io/chortlehoort/pen/WbZPze?editors=101) problem, and then [boy bands & vegetables](http://codepen.io/chortlehoort/pen/myBvrL?editors=101).
 
 
 ## Homework 
