@@ -1,5 +1,11 @@
 # JavaScript 103
 
+
+> **Instructor Suggestion:** 
+>
+> Begin coordinating with previous class about a joint project that allows the back-end class to work with the new front-end developers.
+
+
 # Core principles
 
 ## Function expression vs. function declaration
