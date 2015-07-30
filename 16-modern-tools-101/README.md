@@ -7,7 +7,7 @@ Talk about what Grunt does for modern front end developers.
  * Checking code for errors
  * Uglify code
  * Concatenate files
- * 
+ * Other cool stuff
 
 In your Vagrant machine, run the command `which grunt`. You should see the output `/usr/local/bin/grunt`.  If you don't, execute the command `sudo npm install grunt-cli -g`.
 
