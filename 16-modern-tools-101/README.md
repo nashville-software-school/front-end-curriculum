@@ -18,7 +18,7 @@ npm init
 touch Gruntfile.js
 ```
 
-After completing those tasks, replace the contents of `package.json` file - which got created with the `npm init` command - with the following configuration code.
+After completing those tasks, replace the contents of `package.json` file - which got created with the `npm init` command - with the following configuration code. Move all of your JavaScript into the `javascripts` folder.
 
 ```js
 {
@@ -77,12 +77,6 @@ module.exports = function(grunt) {
 };
 ```
 
-## Modular JavaScript with RequireJS
-
-1. Download require script
-1. Configure require
-1. Convert your existing JavaScript modules to require modules
-
 ## Bower
 
 Bower is a package manager, like `npm`, but for front end development tooling that we use to build web applications. One of the main benefits of Bower is that installation of requires components for your application can now be automated during the build process (Travis, Jenkins, etc.). Using Bower, you never check third-party libraries into **your** codebase, but rather install them during the build process.
@@ -95,3 +89,10 @@ Bower is a package manager, like `npm`, but for front end development tooling th
 These command will put the libraries, pulled from Github usually, into a `bower_components` directory. You then can include them in your html with the appropriate path. For example...
 
 `<script src="./bower_components/jquery/dist/jquery.min.js`
+
+## Modular JavaScript with RequireJS
+
+1. Download require script
+1. Configure require
+1. Convert your existing JavaScript modules to require modules
+
