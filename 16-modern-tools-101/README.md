@@ -35,7 +35,7 @@ After completing those tasks, replace the contents of `package.json` file - whic
 }
 ```
 
-Now run `npm install` to install all those packages that are specified in the `package.json` file.
+Now run `npm install` to install all those packages that are specified in the `package.json` file. If you are running Windows, you may need to run `npm install --no-bin-link` instead so that no symlinks are created in the process (Windows no like symlinks).
 
 Next, open `Gruntfile.js` and put in the following code.
 
