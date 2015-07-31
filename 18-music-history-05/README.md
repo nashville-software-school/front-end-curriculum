@@ -19,3 +19,7 @@ Your task is to take the code that you wrote for Music History 4, where you popu
 1. The `populate-songs` file should contain the AJAX call to your first JSON file with songs in it. This module should return the array of songs.
 1. The `get-more-songs` file should contain the AJAX call to your second JSON file with songs in it. This module should return the array of songs.
 1. The main module should then use the return objects from all three dependencies to populate your song list.
+
+As you are working, ensure that your Grunt task is running at all times so that your code is automatically checked as you're writing it.
+
+> **Note:** After you run your grunt task, if you add more JavaScript files, you need to restart grunt so that it recognizes the new file you added.
