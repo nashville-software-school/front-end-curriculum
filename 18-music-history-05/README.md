@@ -5,9 +5,9 @@
 1. Create a `javascripts` directory.
 1. Copy your JavaScript file(s) from Music History 4 into the `javascripts` directory.
 1. In the `music-history-5` directory, `touch package.json` and populate it with the code from Modern Tooling module.
-1. Run `npm install`.
+1. In your Vagrant guest machine, run `npm install` in the `music-history-5` directory..
 1. `touch Gruntfile.js` and populate it with the code from Modern Tooling module.
-1. `bower init` and accept defaults.
+1. In your Vagrant guest machine, run `bower init` in the `music-history-5` directory, and accept defaults.
 1. Install jQuery via Bower.
 1. Install RequireJS via Bower.
 
