@@ -14,7 +14,7 @@
 
 Your task is to take the code that you wrote for Music History 4, where you populated your song list via two AJAX calls, and use RequireJS to accomplish the following.
 
-1. The main module should have a minimum of three dependencies: `["dom-access", "populate-songs", "get-more-songs"]`.
+1. The main module (i.e. `javascripts/main.js`) should have a minimum of three dependencies: `["dom-access", "populate-songs", "get-more-songs"]`.
 1. The `dom-access` module should return a reference to the DOM element in your HTML that will contain the song list.
 1. The `populate-songs` file should contain the AJAX call to your first JSON file with songs in it. This module should return the array of songs.
 1. The `get-more-songs` file should contain the AJAX call to your second JSON file with songs in it. This module should return the array of songs.
