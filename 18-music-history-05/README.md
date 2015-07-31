@@ -8,8 +8,8 @@
 1. In your Vagrant guest machine, run `npm install` in the `music-history-5` directory..
 1. `touch Gruntfile.js` and populate it with the code from Modern Tooling module.
 1. In your Vagrant guest machine, run `bower init` in the `music-history-5` directory, and accept defaults.
-1. Install jQuery via Bower.
-1. Install RequireJS via Bower.
+1. In your Vagrant guest machine, install jQuery via Bower.
+1. In your Vagrant guest machine, install RequireJS via Bower.
 
 
 Your task is to take the code that you wrote for Music History 4, where you populated your song list via two AJAX calls, and use RequireJS to accomplish the following.
