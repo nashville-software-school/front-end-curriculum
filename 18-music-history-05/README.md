@@ -18,7 +18,7 @@ Your task is to take the code that you wrote for Music History 4, where you popu
 1. The `dom-access` modules should return a reference to the DOM element in your HTML that will contain the song list.
 1. The `populate-songs` file should contain the AJAX call to your first JSON file with songs in it. This module should return the array of songs.
 1. The `get-more-songs` file should contain the AJAX call to your second JSON file with songs in it. This module should return the array of songs.
-1. The main module should then use the return objects from all three dependencies to populate your song list.
+1. The main module (i.e. `javascripts/main.js`) should then use the return objects from all three dependencies to populate your song list.
 
 As you are working, ensure that your Grunt task is running at all times so that your code is automatically checked as you're writing it.
 
