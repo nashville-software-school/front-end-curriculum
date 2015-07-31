@@ -1,4 +1,21 @@
 # Music History Part 5
 
-Rebuild your Music History interface using Bootstrap responsive grid, and Require modules
+1. Create a new directory `workspace/music-history-5` and `cd` into it.
+1. Copy your HTML document from Music History 4 into this directory.
+1. Create a `javascripts` directory.
+1. Copy your JavaScript file(s) from Music History 4 into the `javascripts` directory.
+1. In the `music-history-5` directory, `touch package.json` and populate it with the code from Modern Tooling module.
+1. Run `npm install`.
+1. `touch Gruntfile.js` and populate it with the code from Modern Tooling module.
+1. `bower init` and accept defaults.
+1. Install jQuery via Bower.
+1. Install RequireJS via Bower.
 
+
+Your task is to take the code that you wrote for Music History 4, where you populated your song list via two AJAX calls, and use RequireJS to accomplish the following.
+
+1. The main module should have a minimum of three dependencies: `["dom-access", "populate-songs", "get-more-songs"]`.
+1. The `dom-access` modules should return a reference to the DOM element in your HTML that will contain the song list.
+1. The `populate-songs` file should contain the AJAX call to your first JSON file with songs in it. This module should return the array of songs.
+1. The `get-more-songs` file should contain the AJAX call to your second JSON file with songs in it. This module should return the array of songs.
+1. The main module should then use the return objects from all three dependencies to populate your song list.
