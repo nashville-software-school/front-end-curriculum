@@ -79,6 +79,55 @@ Start a new playground directory named `responsive` and use Bower to install Boo
 
 Get SASS installed, show some examples, and then show how to use Grunt to compile SASS on file change.
 
+1. Install Ruby (should exist for Mac and *nix machines)
+1. Install SASS with `gem install sass`
+1. In your Music History directory, create two new sub-directories: `sass` and `styles` (if you already have a directory for your CSS, just keep that).
+1. Install the Grunt task that will compile SASS into CSS `npm install grunt-contrib-sass --save-dev`.
+
+Update your Gruntfile to have the following contents
+
+```js
+module.exports = function(grunt) {
+
+  grunt.initConfig({
+    jshint: {
+      files: ['./javascripts/**/*.js']
+    },
+    sass: {
+      dist: {
+        files: {
+          'sass/main.css': 'sass/main.scss'
+        }
+      }
+    },
+    watch: {
+      javascripts: {
+        files: ['./javascripts/**/*.js'],
+        tasks: ['jshint']
+      }
+    }
+  });
+
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  grunt.registerTask('default', ['jshint', 'sass']);
+};
+```
+
+1. Create the `sass/main.scss` file.
+1. In that file, place the following code.
+
+```sass
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+```
+
+1. Run `grunt` and it will compile the `sass/main.scss` file as regular CSS in the `styles/main.css` file.
+
 ## CSS3
 
 ### Transitions
