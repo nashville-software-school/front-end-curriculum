@@ -1,5 +1,7 @@
 # Music History Part 5
 
+## Using RequireJS
+
 1. Create a new directory `workspace/music-history-5` and `cd` into it.
 1. Copy your HTML document from Music History 4 into this directory.
 1. Create a `javascripts` directory.
@@ -20,6 +22,12 @@ Your task is to take the code that you wrote for Music History 4, where you popu
 1. The `get-more-songs` file should contain the AJAX call to your second JSON file with songs in it. This module should return the array of songs.
 1. The main module (i.e. `javascripts/main.js`) should then use the return objects from all three dependencies to populate your song list.
 
-As you are working, ensure that your Grunt task is running at all times so that your code is automatically checked as you're writing it.
+## Using SASS
+
+All your current CSS should be converted into SASS, and you must use SASS from this point forward.
+
+## Using Grunt
+
+As you are working, ensure that your Grunt task is running at all times so that your JavaScript code is automatically checked as you're writing it, and your SASS is compiled into CSS.
 
 > **Note:** After you run your grunt task, if you add more JavaScript files, you need to restart grunt so that it recognizes the new file you added.
