@@ -96,7 +96,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          'styles/main.css': 'sass/main.scss'
+          'sass/main.css': 'sass/main.scss'
         }
       }
     },
@@ -128,10 +128,9 @@ body {
 
 1. Run `grunt` and it will compile the `sass/main.scss` file as regular CSS in the `styles/main.css` file.
 
-## CSS3
+# Challenge \#1
 
-### Transitions
+Visit the [CSS3 Transitions, Transforms, Animation, Filters](http://css3.bradshawenterprises.com/) site and learn all about the cool stuff that the CSS3 specification gives web application developers. Using the techniques you discover there, develop your own way to transition between the different songs in your Music History song list.
 
-### Transforms
-
-### Animations
+# Challenge \#2
+Set a background image for your page, and make sure that it takes up the full background of the page, no matter what size the viewport is.
