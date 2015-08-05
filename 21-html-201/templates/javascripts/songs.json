@@ -1,0 +1,20 @@
+{
+  "songs": [
+    {
+      "name":"Gimme All Your Lovin",
+      "album": {
+        "name": "Eliminator",
+        "year": 1985
+      },
+      "artist": "ZZ Top"
+    },
+    {
+      "name":"Welcome To The Jungle",
+      "album": {
+        "name": "Appetite For Destruction",
+        "year": 1987
+      },
+      "artist": "Guns & Roses"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #666;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin bordered($size:1px) {
+  border: $size solid black;
+}
+
+@mixin padded($size:5px) {
+  padding: $size;
+}
+
+.bordered { 
+  @include bordered();
+}
+
+.padded--small {
+  @include padded(5px);
+}
+
+.padded--medium {
+  @include padded(10px);
+}
+
+.padded--large {
+  @include padded(15px);
+}
+
+.separation--top {
+  margin: 20px 0 0 0;
+}

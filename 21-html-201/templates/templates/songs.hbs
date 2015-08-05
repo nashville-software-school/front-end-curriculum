@@ -1,0 +1,10 @@
+<div class="">
+  {{#each songs}}
+  <div>
+    <h3>{{name}} ({{album.year}})</h3>
+    Performed by {{artist}} on the album {{album.name}}
+  </div>
+  {{/each}}
+
+  <button id="loadMoreSongs" class="separation--top">Load More &gt;</button>
+</div>

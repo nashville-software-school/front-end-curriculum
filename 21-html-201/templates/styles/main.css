@@ -1,0 +1,16 @@
+.bordered {
+  border: 1px solid black; }
+
+.padded--small {
+  padding: 5px; }
+
+.padded--medium {
+  padding: 10px; }
+
+.padded--large {
+  padding: 15px; }
+
+.separation--top {
+  margin: 20px 0 0 0; }
+
+/*# sourceMappingURL=main.css.map */
