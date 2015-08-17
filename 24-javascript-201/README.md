@@ -92,20 +92,44 @@ By separating each of the XHR calls into their own functions that return a promi
 // Place all of your functions that return Promises into an array
 var firstXHR = function() {
   var deferred = Q.defer();
-  $.ajax(...);
-  return deferred;
+
+  $.ajax({
+    url: "https://nss-demo-instructor.firebaseio.com/songs.json"
+  }).done(function(data) {
+    deferred.resolve(data);
+  }).fail(function(xhr, status, error) {
+    deferred.reject(error);
+  });
+
+  return deferred.promise;
 };
 
 var secondXHR = function(result_of_firstXHR) {
   var deferred = Q.defer();
-  $.ajax(...);
-  return deferred;
+
+  $.ajax({
+    url: "https://nss-demo-instructor.firebaseio.com/songs.json"
+  }).done(function(data) {
+    deferred.resolve(data);
+  }).fail(function(xhr, status, error) {
+    deferred.reject(error);
+  });
+
+  return deferred.promise;
 };
 
 var thirdXHR = function(result_of_secondXHR) {
   var deferred = Q.defer();
-  $.ajax(...);
-  return deferred;
+
+  $.ajax({
+    url: "https://nss-demo-instructor.firebaseio.com/songs.json"
+  }).done(function(data) {
+    deferred.resolve(data);
+  }).fail(function(xhr, status, error) {
+    deferred.reject(error);
+  });
+
+  return deferred.promise;
 };
 
 // Use the allSettled method to look
@@ -114,7 +138,7 @@ firstXHR()
     return secondXHR();
   })
   .then(function(data2) {
-    return thirdXHR(data1);
+    return thirdXHR(data2);
   })
   .done();
 ```
