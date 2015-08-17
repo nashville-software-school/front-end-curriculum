@@ -191,7 +191,9 @@ firstXHR()
   .done();
 ```
 
-Promises also maintain their state. If you store a Promise object in a variable, you can then check the state of that Promise at any other time in your code.
+Promises also maintain their state. If you store a Promise object in a variable, you can then check the state of that Promise at any other time in your code. Think of a banking application where you use an XHR to get the current balance of an account, and all transactions in the last 30 days.
+
+By using a promise to broadcast, and maintain, the state of that operation, you can then check it later 
 
 ```js
 // This stores the Promise object
