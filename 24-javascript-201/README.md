@@ -89,7 +89,7 @@ $.ajax(...).done(function(first_data) {
 By separating each of the XHR calls into their own functions that return a promise, that code becomes much more readable.
 
 ```js
-// Place all of your functions that return Promises into an array
+// Define a function for each XHR call
 var firstXHR = function() {
   var deferred = Q.defer();
 
