@@ -108,7 +108,7 @@ var secondXHR = function(result_of_firstXHR) {
   var deferred = Q.defer();
 
   $.ajax({
-    url: "https://nss-demo-instructor.firebaseio.com/songs.json"
+    url: "https://nss-demo-instructor.firebaseio.com/more-songs.json"
   }).done(function(data) {
     deferred.resolve(data);
   }).fail(function(xhr, status, error) {
@@ -132,10 +132,10 @@ var thirdXHR = function(result_of_secondXHR) {
   return deferred.promise;
 };
 
-// Use the allSettled method to look
+// Define the order of execution of the XHR calls
 firstXHR()
   .then(function(data1) {
-    return secondXHR();
+    return secondXHR(data1);
   })
   .then(function(data2) {
     return thirdXHR(data2);
