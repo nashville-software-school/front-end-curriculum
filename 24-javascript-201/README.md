@@ -103,7 +103,30 @@ firstXHR()
     return secondXHR(data2);
   })
   .done();
+```
 
+Promises also maintain their state. If you store a Promise object in a variable, you can then check the state of that Promise at any other time in your code.
+
+```js
+// This stores the Promise object
+ var promiseStorage = promise();
+
+// You can then handle success/failure of the promise
+ promiseStorage.then(function(results) {
+   console.log("results",results);
+ }).fail(function(error) {
+   console.log("error", error);
+ });
+
+ $("#clearFilter").click(function() {
+   // This does not execute the XHR function again, but simply
+   // checks the state of the Promise and acts accordingly
+   promiseStorage.then(function(results) {
+     console.log("results",results);
+   }).fail(function(error) {
+      console.log("error", error);
+   });
+ });
 ```
 
 ## Scope & Closures
