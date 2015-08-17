@@ -115,9 +115,6 @@ firstXHR()
   })
   .then(function(data2) {
     return thirdXHR(data1);
-  }
-  .then(function(data3) {
-    return secondXHR(data2);
   })
   .done();
 ```
