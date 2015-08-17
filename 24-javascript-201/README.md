@@ -2,9 +2,26 @@
 
 ## lodash
 
+lodash provides all the functional programming methods that you with JavaScript had natively. Show students some examples of [lodash](http://www.lodash.com/docs) method (e.g. chain, uniq, pluck, sortBy, filter, etc...). They should very quickly see where they could use these methods to replace many `for` loops they have written in the past.
+
 ## Promises
 
 We will be using the [Q](https://github.com/kriskowal/q) library to work with Promises.
+
+```bash
+bower install q --save
+```
+
+Add the library to the RequireJS configuration.
+
+```js
+requirejs.config({
+  baseUrl: './javascripts',
+  paths: {
+    'q': '../bower_components/q/q'
+  }
+});
+```
 
 A Promise is basically a fancy callback function that maintains its own internal state - pending, rejected and resolved. So instead of using a callback function like we have until this point...
 
@@ -130,6 +147,90 @@ Promises also maintain their state. If you store a Promise object in a variable,
 ```
 
 ## Scope & Closures
+
+Go over call-site and call-stacks. Four examples are given below to show different contexts and/or behaviors for what `this` holds.
+
+```js
+/*
+  Example one: call site and call stack
+ */
+var fubar = "42";
+
+function baz() {
+    console.log( "baz" );
+    bar();
+}
+
+function bar() {
+    console.log( "bar" );
+    foo();
+}
+
+function foo() {
+    var fubar = "666";
+
+    console.log( "foo" );
+    console.log( this );
+    console.log( this.fubar );
+}
+
+baz();
+
+
+/*
+  Example two: context objects
+ */
+function foo() {
+    console.log( this.a );
+}
+
+var obj = {
+    a: 2,
+    foo: foo
+};
+
+obj.foo();
+
+
+/*
+  Example three: context objects
+ */
+function foo() {
+    console.log( this.a );
+}
+
+var obj2 = {
+    a: 42,
+    foo: foo
+};
+
+var obj1 = {
+    a: 2,
+    obj2: obj2
+};
+
+obj1.obj2.foo();
+
+
+/*
+  Example four: losing original binding
+ */
+function foo() {
+    console.log( this.a );
+}
+
+var obj = {
+    a: 2,
+    foo: foo
+};
+
+var bar = obj.foo;
+var a = "global warming";
+
+obj.foo();
+// bar();
+
+```
 
 ## ES2015 Syntax
 
