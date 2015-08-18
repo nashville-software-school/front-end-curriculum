@@ -1,7 +1,7 @@
 1. Create a Github repo named JS201.
 1. Clone it into your workspace directory and `cd` into the directory it creates.
 1. Create a `javascripts`, `css` and a `sass` directory.
-1. Use Bower to install the following packages - jQuery, RequireJS, Handlebars. You may install more if you need to, but that is the minimum.
+1. Use Bower to install the following packages - jQuery, RequireJS, Handlebars (make sure you use the `require-handlebars-plugin` Bower library, not plain Handlebars). You may install more if you need to, but that is the minimum.
 1. Copy your `package.json` file from an existing project into this directory and install the packages.
 1. Set up a `Gruntfile.js` that builds any `.scss` files in your sass directory into your `css` directory. It must also have a task for running JSLint on the code in your `javascripts` directory.
 1. Create a new Firebase application. Go to your dashboard and fill out the form. App name should be "family", and provide a unique URL. (e.g. nss-steve-family)
