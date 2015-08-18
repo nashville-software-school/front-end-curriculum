@@ -255,6 +255,13 @@ var newPhrase = phrase.replace(/o/g, "i");
 alert(newPhrase);
 ```
 
+### Converting strings to numbers
+
+```js
+var five = "5"; // "5"
+var numberFive = parseInt(five); // 5
+```
+
 ## Adding strings to your web page
 
 Learn to use `document.getElementById()` and  `element.innerHTML` to add text to a web page with JavaScript. This is an alternative to `document.write()` which is taught in the Treehouse video for their first JavaScript program.

@@ -40,6 +40,14 @@ var fruit = ['cherries', 'apples', 'bananas'];
 fruit.sort(); // ['apples', 'bananas', 'cherries']
 ```
 
+The tricky thing about sort is that it doesn't work very well with numbers. To sort numbers, you have to pass a custom function to the sort method. The default sort logic simply looks at the first character of each item and compares the ASCII value of that character.
+
+```js
+var numbers = [8, 1, 42, 13, 22, 7, 4, 53];
+numbers.sort(); // [1, 13, 22, 4, 42, 53, 7, 8]
+numbers.sort(function(first, second) { return first - second; }) // [1, 4, 7, 8, 13, 22, 42, 53]
+```
+
 ### slice
 
 The slice() method returns a shallow copy of a portion of an array into a new array object.
