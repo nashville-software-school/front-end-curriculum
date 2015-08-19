@@ -211,7 +211,7 @@ function throwAway() {
 }
 
 // You have to explicitly execute the function
-// throwAway();
+throwAway();
 console.log("global_base",global_base);
 
 // This function expression is immediately executed
