@@ -4,7 +4,7 @@ Use the [OpenWeatherMap](http://openweathermap.org/API) API to build an applicat
 
 **given** a user wants to view weather information<br/>
 **when** the user visits your application<br/>
-**then** they should be presented with an authentication mechanism that allows login via Google, Twitter, Facebook, or Github
+**then** they should be presented with an authentication mechanism that allows login via Google, Twitter, Facebook, or Github. Pick one, at a minimum, but if you want to add all, that would be impressive.
 
 **given** a user wants to view weather information<br/>
 **when** the user visits your initial view<br/>
