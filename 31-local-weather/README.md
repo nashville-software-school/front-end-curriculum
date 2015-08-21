@@ -3,6 +3,10 @@
 Use the [OpenWeatherMap](http://openweathermap.org/API) API to build an application that meets the following criteria.
 
 **given** a user wants to view weather information<br/>
+**when** the user visits your application<br/>
+**then** they should be presented with an authentication mechanism that allows login via Google, Twitter, Facebook, or Github
+
+**given** a user wants to view weather information<br/>
 **when** the user visits your initial view<br/>
 **then** there should be an input field to accept a zip code value
 
@@ -24,8 +28,23 @@ Use the [OpenWeatherMap](http://openweathermap.org/API) API to build an applicat
 1. Conditions
 1. Air pressure
 1. Wind speed
-1. A link to show the 4-day forecast
+1. An affordance to view the forecast for the current day, the next three days, or the next 7 days
 
 **given** the user is viewing the current forecast<br/>
-**when** the user clicks on the link to view the 4-day forecast<br/>
-**then** the current data (see above), and the data for the next 4 days should be displayed
+**when** the user clicks on the link to view the 3 day forecast<br/>
+**then** the current data (see above), and the data for the next 3 days should be displayed
+
+**given** the user is viewing the current forecast<br/>
+**when** the user clicks on the link to view the 7 day forecast<br/>
+**then** the current data (see above), and the data for the next 7 days should be displayed
+
+# Bonus Challenges
+
+**given** a user wants to view weather information<br/>
+**when** the user visits your initial view<br/>
+**then** there should be social sharing buttons for Facebook and Twitter
+
+**given** a user wants share a day's forecast<br/>
+**when** the user performs a gesture on one of the social sharing elements<br/>
+**then** the user should be authenticated against that service's OAuth API and prompted with a status update affordance with the day's forecast pre-populated
+
