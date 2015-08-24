@@ -367,3 +367,29 @@ This is Swedish, so please choose other languages. You can add as many words/tra
 > **Optional Bonus 2**
 >
 > In addition to inserting the translated text into the HTML document, have the browser read the translated text to the user.
+> 
+
+# Team Exercise 2
+## Sandwich Maker
+
+Create a sandwich order form that allows the user to select all the ingredients for a custom deli sandwich. Create a `Sandwich` module, then create the following as individual modules, using IFFE syntax, to augment `Sandwich`:  
+
++ bread  
++ meat  
++ cheese
++ condiments
++ veggies
+
+1. As before, one team member creates a Github project and adds the other(s) as collaborators.
+1. Your project should have one HTML file that has:
++ a section of options for each sandwich part 
++ the ability to select multiple, or zero, choices for each section (such as turkey _and_ bacon, or "no meat") 
++ a button with a label of "Make me a sandwich"  
++ an empty DOM element into which the final ingredients list will be inserted  
+1. The ingredient choices should be held in private variables that cannot be accessed by the other modules except through an accessor (getter) method.
+1. Each IIFE should expose, in its public interface, a method named `add{ingredient}` (e.g. `addMeat` or `addVeggies`) that accepts a single argument. That argument's value should be the ingredient(s) selected by the user.
+1. The team should create an additional JavaScript file that handles interacting with the form elements and determining which method should be called.
+
+> **Optional Bonus 1**
+>
+> Add prices for each ingredient. In an additional module, calculate and display the total cost along with the final order. 
