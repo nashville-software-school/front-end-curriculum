@@ -391,6 +391,7 @@ Your project should have one HTML file that has:
 The ingredient choices should be stored as JS objects that contain the ingredients as keys and their cost as the value. `{"turkey": "2.00", "bacon": "1.50"}` 
 
 Make sure the ingredient objects cannot be accessed by the other modules except through an accessor (getter) method.  
+
 Each IIFE should expose, in its public interface, a method named `add{ingredient}` (e.g. `addMeat` or `addVeggies`) that accepts a single argument. That argument's value should be the ingredient(s) selected by the user.  
 
 The team should create an additional JavaScript file that handles interacting with the form elements and determining which method should be called.  
