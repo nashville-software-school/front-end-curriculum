@@ -372,13 +372,14 @@ This is Swedish, so please choose other languages. You can add as many words/tra
 # Team Exercise 2
 ## Sandwich Maker
 
-Create a sandwich order form that allows the user to select all the ingredients for a custom deli sandwich. Create a `Sandwich` module, then create the following as individual modules, using IFFE syntax, to augment `Sandwich`:  
+Create a sandwich order form that allows the user to select all the ingredients for a custom deli sandwich. Create a `Sandwich` module, then create the following as individual modules, using IIFE syntax, to augment `Sandwich`:  
 
 + bread
 + meat
 + cheese
 + condiments
-+ veggies
++ veggies  
+
 
 1. As before, one team member creates a Github project and adds the other(s) as collaborators.
 1. Your project should have one HTML file that has:
