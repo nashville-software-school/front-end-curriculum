@@ -378,7 +378,7 @@ Create a sandwich order form that allows the user to select all the ingredients 
 + meat
 + cheese
 + condiments
-+ veggies  
++ veggies
 
 1. As before, one team member creates a Github project and adds the other(s) as collaborators.
 1. Your project should have one HTML file that has:
