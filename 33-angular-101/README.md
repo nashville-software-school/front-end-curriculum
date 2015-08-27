@@ -96,9 +96,10 @@ app.controller("TodoCtrl", function($scope) {
   $scope.macaroni = "";
 
   $scope.todos = [
-    "Cut the grass",
-    "Mow the lawn",
-    "Trim the weeds"
+    { name: "Mow the lawn", complete: "incomplete" },
+    { name: "Cut the grass", complete: "complete" },
+    { name: "Kill the ants", complete: "incomplete" },
+    { name: "Trim the weeds", complete: "complete" }
   ];
 });
 ```
@@ -107,8 +108,8 @@ To output these in our HTML, we use the `ng-repeat` helper. The syntax is differ
 
 ```
 <div>
-  <ul class="todo-list" ng-repeat="todo in todos">
-    <li>{{todo}}</li>
+  <ul ng-repeat="todo in todos">
+    <li>{{ todo.name }}</li>
   </ul>
 </div>
 ```
@@ -119,8 +120,8 @@ So let's put in an affordance to delete each Todo. A button after each one, and 
 
 ```
 <div>
-  <ul class="todo-list" ng-repeat="todo in todos">
-    <li>{{todo}} <button ng-click="killTodo(todo)">Finish</button></li>
+  <ul ng-repeat="todo in todos">
+    <li>{{ todo.name }} <button ng-click="killTodo(todo)">Finish</button></li>
   </ul>
 </div>
 ```
@@ -129,7 +130,9 @@ Add the `killTodo` function to the controller.
 
 ```
 $scope.killTodo = function(todo) {
-  var todoIndex = $scope.todos.indexOf(todo);
+  // Do you see the PFM here of full object comparison?
+  var todoIndex = $scope.todos.indexOf(todo); 
+  
   if (todoIndex >= 0) {
     $scope.todos.splice(todoIndex, 1);
   }
@@ -137,3 +140,53 @@ $scope.killTodo = function(todo) {
 ```
 
 Try it out.
+
+## Promises
+
+Angular has its own implementation of the Q library that we've been using.
+
+## Filtering
+
+Let's filter our list of Todos. Add an input field where we can enter in some text.
+
+```
+<input type="text" ng-model="searchText" />
+```
+
+Now we add the `filter` condition to our `ng-repeat` helper. Since we used `ng-model` above to create a two-way binding on the `searchText` variable, Angular will automatically match your search string against **any** key in the Todo 
+
+```
+<div>
+  <ul ng-repeat="todo in todos | filter: searchText">
+    <li>{{todo.name}}</li>
+  </ul>
+</div>
+```
+
+Refresh your page and start typing in something in the search field and watch the list of todos get immediately filtered.
+
+## Grouping
+
+Check out this bad boy. Angular can automatically group option elements in the select element based on a key name on the object.
+
+```
+<div>
+  Grouped tasks:
+  <select
+      ng-model="theTodo"
+      ng-options="value.name group by value.complete for value in todos">
+  </select>
+</div>
+```
+
+# Refactoring Music History \#1
+
+> **Instructor Suggestion:** 
+>
+> Break now for a class exercise. Have students start refactoring their Music History application with Angular. Go back to where they were populating the list of songs from two JSON files.
+> 
+>    1. Read from two JSON files that have different songs.
+>    1. Put all songs into one array and display the list of songs in the main content area.
+>    1. Have a select element that shows a list of all albums.
+>    1. Have a select element that shows a list of all artists.
+
