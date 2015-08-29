@@ -23,7 +23,7 @@ app.controller("SongCtrl",
 
 ### Showing individual songs
 
-```
+```js
 app.controller("SongDetailCtrl",
   ["$scope", "$routeParams", "$firebaseArray",
   function($scope, $routeParams, $firebaseArray) {
@@ -47,7 +47,7 @@ app.controller("SongDetailCtrl",
 ### Adding a new song
 
 > **partials/song-form.html**
-```
+```html
 <section>
   <div>
     Song name: <input type="text" ng-model="newSong.name" />
@@ -66,7 +66,7 @@ app.controller("SongDetailCtrl",
 ```
 
 > **app/controllers/SongFormCtrl.js**
-```
+```js
 app.controller("SongFormCtrl", ["$scope", "$firebaseArray",
   function($scope, $firebaseArray) {
 
