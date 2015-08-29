@@ -47,6 +47,7 @@ app.controller("SongDetailCtrl",
 ### Adding a new song
 
 > **partials/song-form.html**
+
 ```html
 <section>
   <div>
@@ -66,6 +67,7 @@ app.controller("SongDetailCtrl",
 ```
 
 > **app/controllers/SongFormCtrl.js**
+
 ```js
 app.controller("SongFormCtrl", ["$scope", "$firebaseArray",
   function($scope, $firebaseArray) {
