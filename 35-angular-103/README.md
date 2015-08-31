@@ -8,13 +8,24 @@ Use [Firebase Arrays](https://www.firebase.com/docs/web/libraries/angular/guide/
 
 ### Loading songs
 
+To start using AngularFire, you need to include it as a dependency to your application.
+
+```js
+var app = angular.module("SongApp", ['firebase', 'ngRoute']);
+```
+
+Now you can include `$firebaseArray` as an object to use in your controllers.
+
 ```js
 app.controller("SongCtrl", 
   ["$scope", 
    "$firebaseArray", 
   function($scope, $firebaseArray) {
 
+  // Just like in the RequireJS version of Music History, make a reference
     var ref = new Firebase("https://nss-demo-instructor.firebaseio.com/songs");
+
+  // Instead of snapshot.val(), use this syntax to get songs
     $scope.songs = $firebaseArray(ref);
 
   }
@@ -33,8 +44,12 @@ app.controller("SongDetailCtrl",
     var ref = new Firebase("https://nss-demo-instructor.firebaseio.com/songs");
     $scope.songs = $firebaseArray(ref);
 
+  // Make sure you use the $loaded promise handler, which waits
+  // for all songs to be loaded from the reference before you try
+  // to grab the record the user wanted.
     $scope.songs.$loaded()
       .then(function() {
+      // The $getRecord method on a $firebaseArray is very useful
         $scope.selectedSong = $scope.songs.$getRecord($scope.songId);
       })
       .catch(function(error) {

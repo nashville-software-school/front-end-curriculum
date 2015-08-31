@@ -42,7 +42,34 @@ Open your JSON file(s) and add an unique `id` key to each your song objects. Jus
     ...
 ```
 
-And now open the `song-list.html` file and create a *partial* for listing songs.
+Next comment out all of your existing HTML in your `index.html` file. We're going to start using partials to display information. Here's what it should look like.
+
+```html
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NSS Starter Kit - Angular</title>
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+
+<body ng-app="SongApp">
+
+  <div ng-view></div>
+
+  <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="lib/bower_components/angular/angular.min.js"></script>
+  <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
+
+  <script src="app/app.js"></script>
+  <script src="app/controllers/SongCtrl.js"></script>
+</body>
+</html>
+```
+
+Next, open the `song-list.html` file and create a *partial* for listing songs.
+
 ```html
 <div>
   <input type="text" ng-model="query" />
@@ -55,7 +82,87 @@ And now open the `song-list.html` file and create a *partial* for listing songs.
 
 Notice anything strange about the anchor tag there? That's a strange looking URL for the `href` property. Well, since you're now starting the process of building a SPA, then you don't want any link to actually refresh the browser, and so by prepending the new location with #, you ensure that. You'll see this in action as we set up the routing.
 
+### Initial route
 
+Now that you have a partial, let's start using Angular routing to show it in the element with the `ng-view` attribute. First, we add an add in a new configuration object for our application, and set `$routeProvider` as a dependency.
+
+```js
+app.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider.
+      when('/songs/list', {
+        templateUrl: 'partials/song-list.html',
+        controller: 'SongCtrl'
+      });
+  }]);
+```
+
+What this does is make Angular now watch the values URL in the browser, and when it changes, it tries to match the pattern `/songs/list`. If it matches, it loads the HTML in our partial, and then binds that DOM to the `SongCtrl` controller. Try it out by putting this URL in your browser `http://localhost:8080/#/songs/list`, or if you're on your Vagrant machine `http://192.168.33.10:8080/#/songs/list`.
+
+It should display your list of songs.
+
+### Adding a new song
+
+Add a new route for `/songs/new` and load the song form partial.
+
+```js
+app.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider.
+      when('/songs/list', {
+        templateUrl: 'partials/song-list.html',
+        controller: 'SongCtrl'
+      }).
+      when('/songs/new', {
+        templateUrl: 'partials/song-form.html',
+        controller: 'SongCtrl'
+      });
+  }]);
+```
+
+> **File: ** partials/song-form.html
+
+```html
+<section>
+  <div>
+    Song name: <input type="text" ng-model="newSong.name" />
+  </div>
+  <div>
+    Album Name: <input type="text" ng-model="newSong.albumName" />
+  </div>
+  <div>
+    Album Year: <input type="text" ng-model="newSong.albumYear" />
+  </div>
+  <div>
+    Artist: <input type="text" ng-model="newSong.artist" />
+  </div>
+  <button ng-click="addSong()">Add Song</button>
+</section>
+```
+
+> **File:** app/controllers/SongCtrl.js
+
+```js
+app.controller("SongCtrl", ["$scope",
+  function($scope) {
+
+    /*
+      Add the following code
+    */
+    $scope.newSong = { artist: "", album: "", name: ""};
+
+    $scope.addSong = function() {
+      $scope.songs.$add({
+        artist: $scope.newSong.artist,
+        name: $scope.newSong.name,
+        album: $scope.newSong.album
+      });
+    };
+  }
+]);
+```
+
+Now, you may be wondering at this point if it's possible to break up this controller. One for managing the list of songs, and another for managing the song form. Yes, of course it is, and it's recommended, but then we run into the problem of how each of those controllers can read, and modify the same array of songs. Since the `$scope` object is not accessible outside the controller, if we read our songs from the JSON file in the song list controller, then somehow we have to share that with the song form controller so that it can add a new song to it.
 
 ## Factories
 
@@ -70,9 +177,9 @@ You want one, common, mechanism that both controllers can use to get the list of
 ```js
 app.factory("simple-songs", function() {
   var song_list = [
-  { id: 1, name: "Me", album: "Album", artist: "Artist" },
-  { id: 2, name: "You", album: "Album", artist: "Artist"  },
-  { id: 3, name: "And I", album: "Album", artist: "Artist"  }
+    { id: 1, name: "99 Problems", album: "Black", artist: "JayZ" },
+    { id: 2, name: "Helter Skelter", album: "White", artist: "Beatles"  },
+    { id: 3, name: "99 Problems", album: "Grey", artist: "DJ Danger Mouse"  }
   ];
 
   return {
@@ -83,12 +190,16 @@ app.factory("simple-songs", function() {
       return song_list.filter(function(song){
         return song.id === id;
       })[0];
+    },
+    addSong: function(song) {
+      song_list.push(song);
+      return song_list;
     }
   }
 });
 ```
 
-Now, in each of my controllers, I get all songs - which is what I want in `SongListCtrl` - or just get one song - which is what I want in `SongDetailCtrl`. The factory is a singleton, meaning there's only, ever, one instance of this factory created, so you'll never have to worry about which version of the song list you're working with, because there's only one version. Period.
+Now, in each of your controllers, you can get all songs, which is what you want in `SongListCtrl` , just get one song, which is what you want in `SongDetailCtrl`, or add a new song, which is what you want in `SongFormCtrl` . The factory is a singleton, meaning there's only, ever, one instance of this factory created, so you'll never have to worry about which version of the song list you're working with, because there's only one version. Period.
 
 ##### SongListCtrl.js
 
@@ -121,6 +232,27 @@ app.controller("SongDetailCtrl",
 );
 ```
 
+##### SongFormCtrl.js
+
+```js
+app.controller("SongFormCtrl", 
+  [
+    "$scope", 
+    "simple-songs", 
+    function($scope, simple_songs) {
+      $scope.newSong = { artist: "", album: "", name: ""};
+
+      $scope.addSong = function() {
+        simple_songs.addSong({
+          artist: $scope.newSong.artist,
+          name: $scope.newSong.name,
+          album: $scope.newSong.album
+        });
+      };
+    }
+  ]
+);
+```
 
 ## Using $http instead of $.ajax()
 
