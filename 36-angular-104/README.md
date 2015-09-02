@@ -136,6 +136,7 @@ Now you can include the custom directive in other partials.
 [Angular in 30 Minutes](http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/)
 
 #### Advanced Topics
+[Angular directives tutorial](http://www.befundoo.com/university/tutorials/angularjs-directives-tutorial/)
 [Create a tree hierarchy with ng-include](http://gurustop.net/blog/2014/07/15/angularjs-using-templates-ng-include-create-infinite-tree/)
 [How to Work With All the Scopes in Angular](http://jonathancreamer.com/working-with-all-the-different-kinds-of-scopes-in-angular/)
 
