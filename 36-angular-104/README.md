@@ -1,5 +1,9 @@
 # Angular 104
 
+## controllerAs
+
+[Intro to controller as](http://toddmotto.com/digging-into-angulars-controller-as-syntax/)
+
 ## ng-include
 
 The `ng-include` directive allows you to include HTML partials into other ones. Most of your did the same thing in your Require/Handlebars applications.
