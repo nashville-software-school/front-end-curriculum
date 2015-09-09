@@ -4,26 +4,26 @@
 
 Create a new folder and do your base project setup with Bower, npm, and Grunt. However, this time, instead of making a `javascripts` folder, make an `app` folder which will hold all of your JavaScript files. Make sure you update your Gruntfile accordingly.
 
-```
+```bash
 cd lib
 bower install angular --save
 ```
 
 Then include Angular in your HTML file.
 
-```
+```html
 <script src="lib/bower_components/angular/angular.min.js"></script>
 ```
 
 Next, create the file `app/Todo.js` and set up your Angular application with the following code.
 
-```
+```js
 var app = angular.module("TodoApp", []);
 ```
 
 The next thing you want to do is create a controller, which is an Angular function where you write related logic for a feature. To start off with, we'll create a controller for displaying, creating, and deleting Todo items.
 
-```
+```js
 app.controller("TodoCtrl", function($scope) {
 
 });
@@ -35,7 +35,7 @@ We've talked about how, in JavaScript, scope drives what variables are accessibl
 
 So let's start with a basic example of one-way data binding in Angular.
 
-```
+```js
 app.controller("TodoCtrl", function($scope) {
   $scope.title = "Welcome to your task list";
 });
@@ -46,7 +46,7 @@ In your HTML, there's a couple things that need to be in place to start working 
 1. We need to bind the Angular application to our DOM. The simplest way to do this is on the `<body>` element.
 2. We need to bind a controller to a corresponding DOM element. We'll just bind it to a `<section>` element.
 
-```
+```html
 <body ng-app="TodoApp">
   <section ng-controller="TodoCtrl">
 
@@ -56,7 +56,7 @@ In your HTML, there's a couple things that need to be in place to start working 
 
 Now we can start injecting variable interpolations, just like Handlebars.
 
-```
+```html
 <body ng-app="TodoApp">
   <section ng-controller="TodoCtrl">
     <h1>{{ title }}</h1>
@@ -68,7 +68,7 @@ Now we can start injecting variable interpolations, just like Handlebars.
 
 Now let's look at what a magical unicorn looks like. Two-way data binding. Put an input field in your HTML, and use the `ng-model` attribute on it with a value of `macaroni` (just a random variable name for this exercise). Right beneath it, we'll put a standard interpolation of macaroni.
 
-```
+```html
 <div>
   <input type="text" ng-model="macaroni" />
   <div> {{ macaroni }} </div>
@@ -77,7 +77,7 @@ Now let's look at what a magical unicorn looks like. Two-way data binding. Put a
 
 Then add a macaroni variable to your controller's scope.
 
-```
+```js
 app.controller("TodoCtrl", function($scope) {
   $scope.title = "Welcome to your task list";
   $scope.macaroni = "";
@@ -90,7 +90,7 @@ Now refresh your browser, start typing in the input field and bathe in the aweso
 
 Remember the `{{#each}} {{/each}}` helper in Handlebars? Well, Angular does something very similar. To show this off, let's create an array of Todo items in our controller scope.
 
-```
+```js
 app.controller("TodoCtrl", function($scope) {
   $scope.title = "Welcome to your task list";
   $scope.macaroni = "";
@@ -106,7 +106,7 @@ app.controller("TodoCtrl", function($scope) {
 
 To output these in our HTML, we use the `ng-repeat` helper. The syntax is different than Handlebars, though.
 
-```
+```html
 <div>
   <ul ng-repeat="todo in todos">
     <li>{{ todo.name }}</li>
@@ -118,7 +118,7 @@ To output these in our HTML, we use the `ng-repeat` helper. The syntax is differ
 
 So let's put in an affordance to delete each Todo. A button after each one, and the button will use the `ng-click` helper to bind to a function in our controller.
 
-```
+```html
 <div>
   <ul ng-repeat="todo in todos">
     <li>{{ todo.name }} <button ng-click="killTodo(todo)">Finish</button></li>
@@ -128,7 +128,7 @@ So let's put in an affordance to delete each Todo. A button after each one, and 
 
 Add the `killTodo` function to the controller.
 
-```
+```js
 $scope.killTodo = function(todo) {
   // Do you see the PFM here of full object comparison?
   var todoIndex = $scope.todos.indexOf(todo); 
@@ -149,13 +149,13 @@ Angular has its own implementation of the Q library that we've been using.
 
 Let's filter our list of Todos. Add an input field where we can enter in some text.
 
-```
+```html
 <input type="text" ng-model="searchText" />
 ```
 
 Now we add the `filter` condition to our `ng-repeat` helper. Since we used `ng-model` above to create a two-way binding on the `searchText` variable, Angular will automatically match your search string against **any** key in the Todo 
 
-```
+```html
 <div>
   <ul ng-repeat="todo in todos | filter: searchText">
     <li>{{todo.name}}</li>
@@ -169,7 +169,7 @@ Refresh your page and start typing in something in the search field and watch th
 
 Check out this bad boy. Angular can automatically group option elements in the select element based on a key name on the object.
 
-```
+```html
 <div>
   Grouped tasks:
   <select

@@ -32,6 +32,41 @@ The `ng-include` directive allows you to include HTML partials into other ones. 
 
 ## Custom directives
 
+A directive, at its most simple implementation, is simply a fancy `ng-include`.  Check out the custom directive below.
+
+```js
+app.directive("simpleDirective", function() {
+  return {
+    restrict: "E",
+    templateUrl: "partials/song-brief.html"
+  }
+});
+```
+
+Now you can use a custom DOM element to load the contents of `song-brief.html` in any other partial.
+
+```html
+<div>
+  <simple-directive></simple-directive> <!-- Contents of song-brief.html will go here -->
+</div>
+```
+
+Let's look at a more powerful example of what directives can do for your code. Beyond being a way to include DOM anywhere in your code, which is itself a great feature, your directive can provide complex functionality based on attributes that are defined on the custom element.
+
+So let's start with the `song-brief` partial. This is the base DOM of our directive. It displays the artist and album name for each song, but also will show stars, based on the `rating` key on each song object. Here's a sample JSON representation of a song.
+
+```js
+{
+  "name": "Song",
+  "artist": "Artist",
+  "album": {
+    "year": 2010,
+    "name": "Album"
+  },
+  "rating": 3
+}
+```
+
 ##### **File:** partials/song-brief.html
 
 ```html
@@ -44,6 +79,8 @@ The `ng-include` directive allows you to include HTML partials into other ones. 
   </div>
 </section>
 ```
+
+Notice that there is an `ng-repeat` for a `stars` property on the object, but that key does not exist in the raw JSON. The directive adds the `stars` key in its own scope for use in rendering the directive. Let's look at how it does that.
 
 ##### **File:** app/directives/song-directive.js
 ```js
