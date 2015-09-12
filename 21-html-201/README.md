@@ -126,3 +126,12 @@ $("#entryOutput").append(entryOutput);
 1. Handlebar helpers (each, if..else, unless)
 1. Handlebar [partials](http://blog.teamtreehouse.com/handlebars-js-part-2-partials-and-helpers)
 1. Custom Handlebar helpers
+
+## Create a Handlebar template for your songs
+
+1. Walk students through how to create a template directory and their first Handlebar file.
+1. Install the `require-handlebar-plugin` Bower components and show students how to call their Handlebar file in the the Require application with the `hbs!` prepend to the file path.
+
+## Create a song form
+
+Create a form that lets users create a new song. It won't work for now, but you'll create another file named `form.html` that contains all the fields.
