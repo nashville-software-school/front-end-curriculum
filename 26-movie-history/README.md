@@ -1,6 +1,6 @@
 # Movie History
 
-Break up into teams of three, and build a new application to keep track of movies that you have seen, and want to see, with your own ratings based on OMDb API
+You will be split up into teams of three, and your team will build a new application to keep track of movies that you have seen, and want to see, with your own ratings based on OMDb API
 
 ## Requirements
 1. You must use Firebase to store movies
@@ -16,3 +16,7 @@ Break up into teams of three, and build a new application to keep track of movie
 1. You must be using Grunt to automate SASS compilation
 1. You must be using Grunt to automate Handlebar template compilation
 1. You must be using Grunt to automate your unit test suite - which means you must have unit tests for your code
+
+> **Instructor suggestion**:
+>
+> Draw the suggested UI for student teams to design towards. Something simple, perhaps naive. Also, remember the twist.
