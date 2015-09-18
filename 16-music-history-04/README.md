@@ -19,7 +19,7 @@
 
 You will be split up into teams of 3. Each team will be responsible for implementing a solution to one of the following simple business problems.
 
-### Expanding product line
+### Problem \#1: Expanding product line
 
 You are working as a junior developer team for Acme, Inc. This company sells dog food. Each brand of dog food is represented by an object in an array you get back from the (fictional database) in JSON format.
 
@@ -101,7 +101,7 @@ Brand         |   Breeds      |   Types / Prices
 Purrina       | Siamese, Bengal, Showshoe, Munchkin | Kitten, 20oz, 19.99 : Kitten, 32oz, 26.99 : Kitten, 64oz, 34.99 : Elite, 20oz, 24.99 : Elite, 40oz, 47.99
 Meow Meal     | Manx, Egyptian Mau, Himalayan, Rag Doll | Kitten, 24oz, 19.99 : Kitten, 48oz, 34.99 : Adult, 28oz, 22.99 : Adult, 56oz, 40.99
 
-## Seasonal sale adjustments
+## Problem \#2: Seasonal sale adjustments
 
 You work as a developer for a big box store. Here is a JSON representation of a small sample of the products you sell.
 
