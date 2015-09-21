@@ -46,6 +46,10 @@ echo '{
   "dependencies": {
   }
 }' > lib/bower.json
+touch .gitignore
+echo 'bower_components
+node_modules
+.sass-cache' > .gitignore
 cd lib
 bower install jquery requirejs --save && npm install
 
