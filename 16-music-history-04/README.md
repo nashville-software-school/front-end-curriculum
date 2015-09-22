@@ -2,6 +2,10 @@
 
 ## Individual Project
 
+### Create a new branch
+
+`git checkout -b v4.0`
+
 ### Part One
 
 1. Read from local JSON file with jQuery.
