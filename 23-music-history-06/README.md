@@ -1,6 +1,5 @@
 # Music History 6
 
-1. Get your songs into Firebase.
 1. Use jQuery to retrieve the songs from your API.
 1. Use the JSON objects to populate Handlebar templates.
 1. Use the populated templates to update the browser.

@@ -8,9 +8,6 @@ Clone the [Back to the Future](https://github.com/nashville-software-school/back
 > 
 > Live code with the students on how to author RequireJS modules that each define their own Angular module. At the very minimum, show how to create a single view that defines the route and the controller for that view.
 
-
-
-
 # Resources
 
 [Angular RequireJS Seed](https://github.com/tnajdek/angular-requirejs-seed/) - This was the inspiration for the basic plan of this application.
