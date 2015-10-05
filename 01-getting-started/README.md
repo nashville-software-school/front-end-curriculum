@@ -97,3 +97,7 @@ It's why it's called a *virtual* machine.
   `vagrant init vagrant-trusty64 http://www.stevebrownlee.com/content/images/nss-base.box`
 1. Once that completes, execute the command `vagrant up`. This will take some time and you'll notice a progress bar in your terminal while it's working.
 1. After that machine starts, you can then execute the command `vagrant halt` which will put the virtual machine into suspended animation until you're ready to start using it in class.
+
+# Homebrew for Mac users
+
+Visit the [homebrew home page](http://brew.sh/) and follow the single instruction there to get it installed.
