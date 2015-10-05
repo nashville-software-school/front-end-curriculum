@@ -6,10 +6,10 @@
 
 Github is the primary site that software developers throughout the world use to store their code, and share it with other developers. Visit the [sign up page](https://github.com/join) and create your own, free account.
 
-### Install Slack and join NSS channel
+### Install Slack 
 
-1. Visit [Slack](https://slack.com/) and enter in your email address and "Nashville Software School" into the fields of the sign up form, and submit.
-1. On the sign in page, enter in `nashvillesoftware` into the field labeled *teamdomain*, and click Continue.
+1. We will make sure you get an invitation to the Nashville Software School Slack organization.
+1. When you get your invitation email, make sure you download and install the Slack client on your machine.
 
 ### Create Treehouse account
 
