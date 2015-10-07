@@ -1,3 +1,9 @@
+# Hardware
+
+Up until now, you didn't have the power to destroy your machine, but now you do. Go buy a backup drive RIGHT NOW and start backing up your entire hard drive.
+
+Seriously, right now.
+
 # Things you need to install
 
 ## Everyone
