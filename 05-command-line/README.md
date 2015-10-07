@@ -99,4 +99,4 @@ There's a plugin called [autojump](https://github.com/joelthelion/autojump) that
 
 # Challenge \#3
 
-There is another account on the Vagrant machine named `student`. The password is `nss`. Go ahead and `ssh` to the machine using those credentials. Your challenge is to find out how to can `ssh` into the box on that account without needing to enter in a password.
+There is another account on the Vagrant machine named `student`. The password is `nss`. Go ahead and `ssh` to the machine using those credentials. Your challenge is to find out how you can `ssh` into the box on that account without needing to enter in a password.
