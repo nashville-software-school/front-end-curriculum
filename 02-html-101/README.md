@@ -173,14 +173,20 @@ The Document Object Model is a platform- and language-neutral interface that wil
 
 ##### Basics
 [Mozilla Developer Network's Intro to HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction)
+
 [HTML Web Foundations: Elements](http://www.sitepoint.com/web-foundations/elements/)
+
 [How to Structure an HTML Form](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form)
 
 ##### Advanced
 [HTML Advanced Tutorial](http://htmldog.com/guides/html/advanced/)
+
 [All You Need to Know About the HTML5 Data Attribute ](http://webdesign.tutsplus.com/tutorials/all-you-need-to-know-about-the-html5-data-attribute--webdesign-9642)
+
 [Authoring conformance criteria for bidirectional-algorithm formatting characters](http://www.echoecho.com/htmlframes.htm)
+
 [HTML5 input types](http://www.htmldog.com/guides/html/advanced/html5forms1/)
+
 [More HTML5 tags](http://www.html-5.com/tutorials/new-html-tags.html)
 
 ---
