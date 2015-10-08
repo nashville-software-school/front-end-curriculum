@@ -98,7 +98,7 @@ input:invalid {
 }
 ```
 
-## Homework
+## Evening Course Homework
 
 1. *Treehouse* > *Styling Web Pages and Navigation*: Watch all videos and complete all exercises.
 1. *Treehouse* > *Console Foundations* > *Getting Started with the Console*: Finish all 12 sections.
@@ -107,9 +107,10 @@ input:invalid {
 
 # Want to learn more?
 
+1. A cool [CSS game](https://flukeout.github.io/)
 1. **Generate and use a cool tooltip**. Visit the [CSS Tooltip Generator](http://www.cssportal.com/css-tooltip-generator/) and create the CSS you need. Then, see if you can get a tooltip to display when you hover a link in your profile page.
-2. **Create awesome buttons**. Visit the [CSS3 Button Generator](http://css3button.net/) and make buttons for your navigation instead of links.
-3. **Try some layout challenges**. Visit the [Wikiversity CSS Challenges](https://en.wikiversity.org/wiki/Web_Design/CSS_challenges) page and try to complete as many as you can.
+1. **Create awesome buttons**. Visit the [CSS3 Button Generator](http://css3button.net/) and make buttons for your navigation instead of links.
+1. **Try some layout challenges**. Visit the [Wikiversity CSS Challenges](https://en.wikiversity.org/wiki/Web_Design/CSS_challenges) page and try to complete as many as you can.
 
 # Challenge \#1: Interactive navigation bar
 
