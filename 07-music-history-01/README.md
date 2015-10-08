@@ -43,8 +43,3 @@ echo '<!doctype html>
 </html>' > index.html
 
 ```
-
-1. Copy the code from your Codepen project in between the opening and closing `<body>` tags.
-1. `git add .`
-1. `git commit -m "Adding Codepen code"`
-1. `git push origin master`
