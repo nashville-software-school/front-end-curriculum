@@ -322,3 +322,9 @@ input:invalid {
 # Resources
 
 [CSS Pro Tips](https://github.com/AllThingsSmitty/css-protips)
+
+# Challenge \#1
+
+Your challenge is to replicate the shapes, and the animations that you see in the animated GIF below
+
+<img src="http://www.stevebrownlee.com/images/css102-challenge.gif">
