@@ -198,7 +198,7 @@ article section:first-of-type {
 }
 ```
 
-### first-child
+### first-child, last-child
 
 This will only select the first sibling child of a shared parent
 
@@ -222,6 +222,21 @@ section {
 
 article section:first-child {
   background-color: lime;
+}
+```
+
+### not()
+
+Show a standard `<ul>` as a comma separated list.
+
+```
+ul > li {
+  list-style-type: none;
+  display: inline;
+}
+
+ul > li:not(:last-child)::after {
+  content: ",";
 }
 ```
 
@@ -303,3 +318,7 @@ input:invalid {
   background-color: #ffdddd;
 }
 ```
+
+# Resources
+
+[CSS Pro Tips](https://github.com/AllThingsSmitty/css-protips)
