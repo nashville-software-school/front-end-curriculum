@@ -23,23 +23,3 @@ Visit the [Music History mockup](https://moqups.com/chortlehoort/1E8LJX7r/) and 
 1. Go back to your browser and copy the commands listed under the title "…or create a new repository on the command line"
 1. Paste those commands into your terminal window and hit enter/return
 
-Your local directory is now connected to your Github project. Now follow these steps.
-
-1. Make sure you are still in your `musichistory` directory.
-1. Paste the following command into your terminal. It creates an HTML file with some basic markup.
-
-```
-echo '<!doctype html>
-
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>NSS Starter Kit</title>
-</head>
-
-<body>
-
-</body>
-</html>' > index.html
-
-```
