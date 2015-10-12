@@ -151,9 +151,16 @@ console.log(sum);
 
 # Modular JavaScript Development
 
+Now it's time to start making you a modern, web application developer. The most important skill is not knowing JavaScript, but understanding how to make a modular application, regardless of the language used. You may end up working for a team that likes CoffeeScript, or TypeScript, or any other meta-language that compiles into vanilla JavaScript.
+
+Creating modular code is all about creating strong [abstractions](https://en.wikipedia.org/wiki/Abstraction_(computer_science)). We want boundaries which appropriately expose functionality and [hide implementation](https://stackoverflow.com/a/8694874/435409).
+
+> **Instructor suggestion:** This would be a good time to give a presentation on abstaction and information hiding. Better yet, live code an example of how a developer identifies a possible abstraction, then defines the abstraction and hides as many implementation details as possible. Maintain *Einstein's Simplicity Principle* - Make it as simple as possible, but not simpler.
+
+
 ## Literal modules
 
-A literal JavaScript module is just a POJO. It has no internal, private state that cannot be changed by someone else that has access to your code in the browser.
+A literal JavaScript module is just a plain old JavaScript object [POJO]. It has no internal, private state that cannot be changed by someone else that has access to your code in the browser.
 
 ```js
 // Literal object module

@@ -48,6 +48,12 @@ Margins and padding work like normal for block and inline-block elements.
 
 A relatively new CSS feature is the [Flexible Box Layout module](http://css-tricks.com/snippets/css/a-guide-to-flexbox/). Explain how `display: flex`, `flex-flow`, and `flex-grow` works. Using this should help those who struggled with the first Music History layout.
 
+### Recommended reading
+
+Read this wonderful [visual guide to Flexbox](https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties).
+
+
+
 > **Instructor Suggestion:** 
 > 
 > Have students fork the [Flexbox project](http://codepen.io/chortlehoort/pen/PqexqV) on Codepen and experiment with different values for `flex-flow`, and `flex-grow`.  The code for that Pen is below for quick reference.
