@@ -281,6 +281,7 @@ element.innerHTML = phrase;
 ```
 
 > **Instructor Suggestion:** 
+>
 > Time for the [sonnet exercise](SONNET.md)
 
 
