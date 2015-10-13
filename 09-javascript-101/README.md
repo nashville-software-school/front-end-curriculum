@@ -281,11 +281,12 @@ element.innerHTML = phrase;
 ```
 
 > **Instructor Suggestion:** 
-> Break now for class exercises. Have students do exercises for each of the string methods you covered, and then use Codepen to build up some HTML inside a string (for example, using some p, a, div tags) and insert that code in the document. Build multiple JS strings, multiple HTML elements, and then do multiple inserts into different elements.  Also have them insert new HTML inside HTML they already inserted.
+> Time for the [sonnet exercise](SONNET.md)
+
 
 ---
 
-## Homework
+## Evening Cohort Homework
 
 1. Read chapters 10-25 of "**A smarter way to learn JavaScript**".
 2. Do all of the interactive coding exercises for each chapter.
