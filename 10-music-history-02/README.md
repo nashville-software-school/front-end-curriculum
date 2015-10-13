@@ -4,7 +4,7 @@
 
 Use JavaScript arrays, loops, and innerHTML to show the music you love.
 
-Students must use JavaScript to create a list of songs in the `index.html` file for their Music History project. Have them download the [`resources/js-101.js`](https://raw.githubusercontent.com/nashville-software-school/evening-cohort/master/resources/js-101.js) file, which contains an array of strings with song information.
+Students must use JavaScript to create a list of songs in the `index.html` file for their Music History project. Have them download the [`songs.js`](https://raw.githubusercontent.com/nashville-software-school/front-end-curriculum/9f5d7303f4c53102e8918f0ca06bebc84c91d266/resources/js-101.js) file, which contains an array of strings with song information.
 
 1. Each student must add one song to the beginning and the end of the array.
 1. Loop over the array and remove any words or characters that obviously don't belong.
