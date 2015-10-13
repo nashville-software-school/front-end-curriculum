@@ -1,5 +1,10 @@
 # Music History Part 2
 
+## Setup
+
+1. Create a branch in your `musichistory` repository named `version2`.
+1. Switch to that branch.
+
 ## Requirements
 
 Use JavaScript arrays, loops, and innerHTML to show the music you love.
@@ -21,7 +26,7 @@ After you've got all of the requirements completed, follow these steps.
 
 1. In your `musichistory` directory, enter the command `git checkout master`. This switches you back to the master branch.
 1. `git merge -X theirs v2.0`
-1. You'll be presented with a vim screen with a default commit message. Just `:x` to save and exit.
+1. If you see a vim screen with a default message in it just `:x` to save and exit.
 
 Your branch is now merged into the master branch and you can push the master branch up to Github with `git push origin master`.
 
