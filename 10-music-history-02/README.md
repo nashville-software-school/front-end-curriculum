@@ -1,18 +1,5 @@
 # Music History Part 2
 
-## Branching your project
-
-> **Instructor Suggestion:** 
-> Talk to student about Git branching. Why they are created, and how developers use them to intelligently manage their code enhancements.
-
-1. Open a terminal and SSH into your Vagrant machine.
-1. `cd musichistory`
-1. Create your first branch with `git checkout -b v2.0`.
-1. Now type `git branch` and you will see two branches listed: `master` and `v2.0`. There should be an asterisk next to v2 to let you know which branch you are currently working on.
-1. When you are all done with your work, you will be merging your code back into the `master` branch.
-
-As you are working on your branch, you will want to occasionally want to push that branch to Github. You can do that with the command `git push origin v2.0`.
-
 ## Requirements
 
 Use JavaScript arrays, loops, and innerHTML to show the music you love.

@@ -298,10 +298,6 @@ element.innerHTML = phrase;
 
 ---
 
-# Javascript 101 - Part 2
-
-Time to move on from CodePen. From this point on, work will be done in SublimeText and Chrome, and files will be served from the Vagrant box.
-
 ## Switch statement
 
 ```js
@@ -329,22 +325,6 @@ switch (value) {
 > * How many of each grade?
 > * What is the lowest grade?
 > * What is the highest grade?
-
-
-## Homework 
-
-Students must use JavaScript to create a list of songs in their Music History page. Have them download the `resources/js-101.js` file, which contains an array of strings with song information.
-
-1. Each student must add one song to the beginning and the end of the array.
-1. Loop over the array and remove any words that obviously don't belong. Hint, use a [JavaScript regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
-1. Students must find and replace the `>` character in each item with a `-` character.
-1. Must add each string to the DOM container that holds the song list.
-
- ------------------------------------------------
-|  {Song name} by {Artist} on the album {Album}  | 
- ------------------------------------------------
-
-Suggest that the students use a `div` element to insert each item into the DOM.
 
 ---
 
