@@ -316,35 +316,8 @@ switch (value) {
 }
 ```
 
-## Vagrant
-
-Have each student go to their CLI and run `vagrant up` and `vagrant ssh`. 
-
-## First full web page
-
-In this part, students will be creating a full, but basic, web document that combines the HTML and the JavaScript - both inline and via an external link - and open it up in Chrome.
-
-1. Have students create `/vagrant/js-101` directory.
-1. Each student should grab the `resources/__basic.html`, copy it into the **js-101** directory, and rename it as `index.html`.
-1. Have students create a script element before the closing body tag, and put some basic JS in there that logs to the console, or creates an alert box, whatever you like.
-
-## Starting basic web server
-
-```
-cd /vagrant
-http-server ./
-```
-
-## Open page and linking JS
-
-1. Open `http://192.168.33.10:8080/js-101/` and make sure the code works.
-1. Then have them create `main.js` file in same directory.
-1. Copy the code from the script element into the new JS file.
-1. Update the script element to be an external link.
-1. Refresh browser and ensure code still works.
-
 > **Instructor Suggestion:** 
-> Start the students on the [colored reindeer](http://codepen.io/chortlehoort/pen/WbZPze?editors=101) problem, and then [boy bands & vegetables](http://codepen.io/chortlehoort/pen/myBvrL?editors=101).
+> Start the students on the [colored reindeer](REINDEER.md) problem, and then [boy bands & vegetables](BOYBANDSVEGETABLES.md).
 > 
 > After those have been completed, and reviewed, move on to have students write a program that loops over an array of student grades (values from 50-100) and outputs how many of each grades there are.  50-60=F, 61-70=D, 71-80=C, 81-90=B, 91-100=A.
 > 
