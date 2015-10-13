@@ -25,7 +25,7 @@ Students must use JavaScript to create a list of songs in the `index.html` file 
 After you've got all of the requirements completed, follow these steps.
 
 1. In your `musichistory` directory, enter the command `git checkout master`. This switches you back to the master branch.
-1. `git merge -X theirs v2.0`
+1. `git merge -X theirs version2`
 1. If you see a vim screen with a default message in it just `:x` to save and exit.
 
 Your branch is now merged into the master branch and you can push the master branch up to Github with `git push origin master`.
