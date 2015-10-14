@@ -14,8 +14,6 @@ You will be split up into teams of three, and your team will build a new applica
    1. A boolean value that, if true, means that you have watched the movie
 1. You must be using Grunt to automate Javascript testing
 1. You must be using Grunt to automate SASS compilation
-1. You must be using Grunt to automate Handlebar template compilation
-1. You must be using Grunt to automate your unit test suite - which means you must have unit tests for your code
 
 > **Instructor suggestion**:
 >
