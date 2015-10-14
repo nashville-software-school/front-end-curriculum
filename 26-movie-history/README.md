@@ -3,6 +3,8 @@
 You will be split up into teams of three, and your team will build a new application to keep track of movies that you have seen, and want to see, with your own ratings based on OMDb API
 
 ## Requirements
+1. Must have the ability to register a user in Firebase
+1. Must have the ability to log in
 1. You must use Firebase to store movies
 1. You must be able to add movies
 1. You must be able to remove movies
