@@ -1,6 +1,6 @@
 # Movie History
 
-You will be split up into teams of three, and your team will build a new application to keep track of movies that you have seen, and want to see, with your own ratings based on OMDb API
+You will be split up into teams of three, and your team will build a new application to keep track of movies that you have seen, and want to see, with your own ratings based on [OMDb API](http://omdbapi.com/).
 
 ## Requirements
 1. Must have the ability to register a user in Firebase
