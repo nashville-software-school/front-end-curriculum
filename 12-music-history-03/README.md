@@ -2,7 +2,7 @@
 
 ## Create a new branch
 
-`git checkout -b v3.0`
+`git checkout -b version3`
 
 ## Requirements
 
@@ -16,4 +16,4 @@ Using your new CSS skills, you'll build even better looking music history pages.
 
 ## Merging
 
-Remember to merge the `v3.0` branch back into `master` when you're done.
+Remember to merge the `version3` branch back into `master` when you're done.
