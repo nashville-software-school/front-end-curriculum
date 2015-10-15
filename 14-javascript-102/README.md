@@ -119,6 +119,11 @@ var sum = [0, 1, 2, 3, 4].reduce(function(previousValue, currentValue, index, ar
 console.log(sum);
 ```
 
+> **Instructor suggestion**:
+>
+> Have students do the [advanced array methods exercise](exercises/ARRAYMETHODS.md).
+
+
 ## Objects
 
 The most basic object is a collection of key:value pairs surrounded by curly braces.
