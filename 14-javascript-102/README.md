@@ -1,6 +1,6 @@
 # JavaScript 102
 
-## Advanced array usage
+## Basic array methods
 
 ### join
 
@@ -70,6 +70,54 @@ fruits.indexOf('Lemon'); // 2
 >
 > Have students do the [array methods exercise](exercises/BASICARRAYMETHODS.md).
 
+## Advanced array methods
+
+The `forEach` method on an array executed a callback function for each element in the array.
+
+```js
+function outputFruit(element, index, array) {
+  console.log('array[' + index + '] = ' + element);
+}
+
+var fruits = ["apple", "banana", "cherry"];
+fruits.forEach(outputFruit);
+```
+
+The `map()` method creates a new array with the results of calling a provided function on every element in this array.
+
+```js
+function reverseIt(element, index, array) {
+  return element.split("").reverse().join("");
+}
+
+var fruits = ["apple", "banana", "cherry"];
+var backwardFruits = fruits.map(reverseIt);
+console.log(backwardFruits); // ["elppa", "ananab", "yrrehc"]
+```
+
+The `filter()` method creates a new array with all elements that pass the test implemented by the provided function.
+
+```js
+function filterIt(element, index, array) {
+  if (element.length === 5) {
+    return element;
+  }
+}
+
+var fruits = ["apple", "banana", "cherry"];
+var filteredFruits = fruits.filter(filterIt);
+console.log(filteredFruits); // ["apple"]
+```
+
+The `reduce()` method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
+
+```js
+var sum = [0, 1, 2, 3, 4].reduce(function(previousValue, currentValue, index, array) {
+  console.log("curent index: " + index);
+  return previousValue + currentValue;
+});
+console.log(sum);
+```
 
 ## Objects
 

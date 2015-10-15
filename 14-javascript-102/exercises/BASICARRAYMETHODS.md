@@ -4,6 +4,7 @@
 1. Create a new directory and immediately change to it with the following command combination `mkdir basic-array-methods && cd $_`
 1. Create an `index.html` file and a `arrays.js` file
 1. Copy the code below into the JavaScript file
+1. Once you are done, `git push origin basic-array-methods`
 
 ```js
 /*
