@@ -1,6 +1,7 @@
-1. Create a new Github project named js102.
-1. Create a ~/workspace/js102 directory on your host machine.
-1. Initialize the ~/workspace/js102 directory as a git project and attach it to your js102 Github project.
+1. `cd /vagrant/quizzes`
+1. `git checkout master`
+1. Create a new branch in your `quizzes` repository named `js102`.
+1. Create a `/vagrant/quizzes/js102` directory on your host machine.
 1. Write a JavaScript function that accepts an array as an argument, and returns a new array that is sorted. Review the following URL for help sorting numbers. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 1. Write a JavaScript function that accepts an array, and returns a new array that contains elements in the array you passed in that are larger than 25.
 1. In your HTML, create one input field of type `text` and one `<button>` element.
