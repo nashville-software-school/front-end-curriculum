@@ -5,7 +5,7 @@
 1. Create an `index.html` file and a `arrays.js` file
 1. Copy the code below into the JavaScript file
 
-
+```js
 /*
   ...........YOUR MISSION...........
 
@@ -32,3 +32,4 @@ var testString = "";
 reversal(testString);
 alphabits(testString);
 palindrome(testString);
+```
