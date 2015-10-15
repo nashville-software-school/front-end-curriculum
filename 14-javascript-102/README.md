@@ -7,7 +7,7 @@
 This combines all elements in an array into a single string, delimited by the character that you specify.
 
 ```js
-var fruit = ['cherries', 'apples', 'bananas'];
+var fruit = ["cherries", "apples", "bananas"];
 var fruitString = fruit.join(","); // "cherries,apples,bananas"
 fruitString = fruit.join(" "); // "cherries apples bananas"
 fruitString = fruit.join("><");
@@ -27,8 +27,8 @@ var fruitArray = fruits.split("|");
 Pretty simple, it reverse the items in an array
 
 ```js
-var fruit = ['cherries', 'apples', 'bananas'];
-fruit.reverse(); // ['bananas', 'apples', 'cherries']
+var fruit = ["cherries", "apples", "bananas"];
+fruit.reverse(); // ["bananas", "apples", "cherries"]
 ```
 
 ### sort
@@ -36,8 +36,8 @@ fruit.reverse(); // ['bananas', 'apples', 'cherries']
 Pretty simple, it sorts the items in an array
 
 ```js
-var fruit = ['cherries', 'apples', 'bananas'];
-fruit.sort(); // ['apples', 'bananas', 'cherries']
+var fruit = ["cherries", "apples", "bananas"];
+fruit.sort(); // ["apples", "bananas", "cherries"]
 ```
 
 The tricky thing about sort is that it doesn't work very well with numbers. To sort numbers, you have to pass a custom function to the sort method. The default sort logic simply looks at the first character of each item and compares the ASCII value of that character.
@@ -53,8 +53,8 @@ numbers.sort(function(first, second) { return first - second; }) // [1, 4, 7, 8,
 The slice() method returns a shallow copy of a portion of an array into a new array object.
 
 ```js
-var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
-var citrus = fruits.slice(1, 3); // ['Orange', 'Lemon']
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1, 3); // ["Orange", "Lemon"]
 ```
 
 ### indexOf
@@ -62,7 +62,7 @@ var citrus = fruits.slice(1, 3); // ['Orange', 'Lemon']
 This method find the index of the specified value in an array. If it's not found, it returns -1.
 
 ```js
-var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 fruits.indexOf('Lemon'); // 2
 ```
 
