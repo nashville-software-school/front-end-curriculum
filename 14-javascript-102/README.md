@@ -68,7 +68,7 @@ fruits.indexOf('Lemon'); // 2
 
 > **Instructor suggestion**:
 >
-> Have students do the [array methods exercise](ARRAYMETHODS.md).
+> Have students do the [array methods exercise](exercises/BASICARRAYMETHODS.md).
 
 
 ## Objects
