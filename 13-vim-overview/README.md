@@ -33,3 +33,8 @@ Forage tote bag biodiesel, cray Pinterest meggings you probably haven't heard of
 Roof party slow-carb readymade, wayfarers mlkshk Echo Park pork belly sartorial ugh food truck flannel. Twee Odd Future bicycle rights, ugh Marfa asymmetrical chia. Letterpress High Life PBR Blue Bottle. VHS lomo irony tilde, Pinterest gluten-free seitan messenger bag pickled Echo Park mlkshk. 
 
 Post-ironic tote bag squid, fixie Odd Future hashtag freegan gluten-free banh mi locavore. Wayfarers pork belly locavore, sriracha taxidermy Marfa asymmetrical squid. Twee ugh Shoreditch, crucifix distillery Truffaut chillwave dreamcatcher chambray pop-up quinoa fap Pitchfork street art.
+
+# Resources
+
+1. [A Great Vim Cheat Sheet](http://vimsheet.com/)
+1. [Interactive vim tutorial](http://www.openvim.com/tutorial.html)
