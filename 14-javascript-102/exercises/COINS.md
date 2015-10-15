@@ -1,3 +1,7 @@
+1. Branch master again to a `coins` branch
+1. Create a `coins` directory
+
+```js
 /*
   ...........YOUR MISSION...........
 
@@ -27,3 +31,4 @@ function coinCounter () {
 
 var coins = coinCounter()
 console.log();
+```
