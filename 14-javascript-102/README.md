@@ -352,7 +352,16 @@ fieldEl.addEventListener("keyup", function (event) {
 });
 
 
+/*
+  Now we can start making a truly interactive experience
+  combining HTML, JavaScript and CSS. When a user clicks
+  on a button in the DOM, we can listen for that event in
+  JavaScript, and then add, or remove, CSS classes.
 
+  In this example, I simply use the `toggle()` method on
+  the `classList` property of a DOM element to automatically
+  add and remove a class.
+ */
 var guineaPig = document.getElementById("guinea-pig");
 
 document.getElementById("add-color")
