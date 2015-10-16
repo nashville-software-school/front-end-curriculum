@@ -1,13 +1,6 @@
-# Chatty exercise
+# Chatty team exercise
 
-Make sure you have committed all your current changes on your current branch and have pushed to Github.
-
-```bash
-cd /vagrant/exercises
-git checkout master
-git checkout -b chatty
-mkdir chatty && cd $_
-```
+This group project is more about [pair programming](http://www.wikihow.com/Pair-Program) than division of labor. You will all be working on a similar problem and taking turns helping solve it.
 
 ## Adding listeners to dynamically created elements
 
