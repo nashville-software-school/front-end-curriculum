@@ -23,7 +23,8 @@ mkdir temperature && cd $_
       converted to.
   3. Create a block level element that will hold the text of the
       converted temperature.
-  4. Create a button that, when clicked, displays the converted.
+  4. Create a button that, when clicked, displays the converted
+      temperature.
   5. Create another button that, when clicked, clears any text
       in the input field.
   6. Add an event handler to the input field that checks if the 
