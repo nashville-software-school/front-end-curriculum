@@ -291,15 +291,13 @@ console.log(result);
 ##### eventHandlers.js
 
 ```js
-var outputEl = document.getElementById("output-target");
 
 /*
-  This function gets invoked because we're
-  using an onclick attribute on a DOM element
+  Get a reference to the div in the HTML that will 
+  contain the messages as the user interacts with the
+  page.
  */
-var headerClickHandler = function(e) {
-  outputEl.innerHTML = "You clicked on the header";
-};
+var outputEl = document.getElementById("output-target");
 
 /*
   You can get a reference to DOM elements and
