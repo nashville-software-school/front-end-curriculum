@@ -355,23 +355,46 @@ fieldEl.addEventListener("keyup", function(e) {
 
 var guineaPig = document.getElementById("guinea-pig");
 document.getElementById("add-color").addEventListener("click", function() {
-  guineaPig.className += " blue";
+  guineaPig.classList.toggle("blue");
 });
 
 document.getElementById("make-large").addEventListener("click", function() {
-  guineaPig.className += " large";
-
+  guineaPig.classList.toggle("large");
 });
 
 document.getElementById("add-border").addEventListener("click", function() {
-  guineaPig.className += " bordered";
-
+  guineaPig.classList.toggle("bordered");
 });
 
 document.getElementById("add-rounding").addEventListener("click", function() {
-  guineaPig.className += " rounded";
-
+  guineaPig.classList.toggle("rounded");
 });
+```
+
+##### events.css
+
+```css
+.blue {
+  color: blue;
+}
+
+.large {
+  font-size: 2em;
+}
+
+.bordered {
+  border: 2px dotted purple;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+#guinea-pig {
+  margin: 50px 0 20px 0;
+  font-family: Helvetica;
+  padding: 5px;
+}
 ```
 
 ## Prototypal inheritance
