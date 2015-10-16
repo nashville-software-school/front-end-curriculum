@@ -1,5 +1,13 @@
-1. Branch master again to a `converter` branch
-1. Create a `converter` directory
+# Temperature converter
+
+Make sure you have committed all your current changes on your current branch and have pushed to Github.
+
+```bash
+cd /vagrant/exercises
+git checkout master
+git checkout -b temperature
+mkdir temperature && cd $_
+```
 
 ```js
 /*
