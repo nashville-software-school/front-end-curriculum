@@ -323,8 +323,7 @@ for (var i = 0; i < articleEl.length; i++) {
 /*
   Get a reference to the DOM element with an id of
   "page-header", and attach an event handler for the
-  mouseover, and mouseout, events. Log some message 
-  to the console for each.
+  mouseover, and mouseout, events.
  */
 var header = document.getElementById("page-header");
 
