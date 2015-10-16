@@ -1,3 +1,15 @@
+# Temperature converter
+
+Make sure you have committed all your current changes on your current branch and have pushed to Github.
+
+```bash
+cd /vagrant/exercises
+git checkout master
+git checkout -b firstorder
+mkdir firstorder && cd $_
+```
+
+```js
 /*
   Create a function that multiplies two numbers
   passed in as argument. Return the product.
@@ -34,4 +46,4 @@
   Log the result
  */
 console.log("result", result)
-
+```
