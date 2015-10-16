@@ -57,6 +57,24 @@ var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 var citrus = fruits.slice(1, 3); // ["Orange", "Lemon"]
 ```
 
+### splice
+
+The splice() method, unlike slice(), does not create a new array, but rather modifies the existing array. You can use it to remove items, or add new ones at any location.
+
+```js
+// Remove the item at position 2
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+fruits.splice(2, 1);
+
+// Replace Orange with Tangerine
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+fruits.splice(1, 1, "Tangerine");
+
+// Add new item at index 3
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+fruits.splice(3, 0, "Date");
+```
+
 ### indexOf
 
 This method find the index of the specified value in an array. If it's not found, it returns -1.
@@ -64,6 +82,24 @@ This method find the index of the specified value in an array. If it's not found
 ```js
 var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 fruits.indexOf('Lemon'); // 2
+```
+
+## Chaining methods
+
+If you want to perform multiple operations on an array, you can execute several statements. For example, if you want sort the fruits in descending alphabetical order, and then insert a new item, you could write this code.
+
+```js
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+fruits.sort();                  // Sort array items
+fruits.reverse();               // Reverse the items
+fruits.splice(4, 0, "Apricot"); // Add item
+```
+
+You can also chain all three operations together into one JavaScript statement.
+
+```js
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+fruits.sort().reverse().splice(4, 0, "Apricot");
 ```
 
 > **Instructor suggestion**:
@@ -221,7 +257,7 @@ console.log(result);
 
 > **Instructor suggestion**:
 >
-> After live coding and student questions, have students do the [coins exercise](COINS.md).
+> After live coding and student questions, have students do the [coins exercise](COINS.md). If you feel they are ready after that, throw the pine tree problem at them.
 
 
 
