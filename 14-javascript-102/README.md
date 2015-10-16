@@ -441,6 +441,10 @@ document.querySelector("body").addEventListener("click", function(event) {
   padding: 5px;
 }
 ```
+> **Instructor suggestion**:
+>
+> Time for the Chatty group project.
+
 
 ## Prototypal inheritance
 

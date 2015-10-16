@@ -55,48 +55,7 @@ Check out the [simple wireframe](https://app.moqups.com/chortlehoort/uGBbLbK46Y/
 1. When the user clicks on the dark theme checkbox, change the background color of your application to a dark gray, and the font color for messages should be white(ish)... you pick.
 1. If the user unchecks the box, the background color should change back to white with black text for messages.
 
-1. Create a `<div>` element in the HTML, below the input field that will hold all messages as they get created.
+### Messages
+1. When the user presses the return key in the message field, create a `<div>` element in the DOM, below the input field that will hold all messages as they get created.
 1. The message should have a button displayed after it with the text "Delete" inside of it.
-
-
-
-```js
-/*
-  ...........YOUR MISSION...........
-
-  Write an application that performs the bare basic
-  functionality as Slack. Here's the criteria.
-
-  - Create a input field for a user to enter in a message.
-  - Create a `<div>` element in the HTML, below the input
-      field that will hold all messages as they get created.
-  - Add an event listener for "keypress" and detect when
-      then return key has been pressed.
-  - When return key is detected, append the innerHTML of 
-      the element you created in step 2.
-  - The message should have a button displayed after it with
-      the text "Delete" inside of it.
-
-
-*/
-
-function toCelsius () {
-
-}
-
-function toFahrenheit () {
-
-}
-
-// Get a reference to the button element in the DOM
-var button = document.getElementById("converter");
-
-// This function should determine which conversion should
-// happen based on which radio button is selected.
-function determineConverter (clickEvent) {
-  console.log("event", clickEvent);
-}
-
-// Assign a function to be executed when the button is clicked
-button.addEventListener("click", determineConverter);
-```
+1. When the delete button next to a message is clicked, only that message should be removed from the DOM.
