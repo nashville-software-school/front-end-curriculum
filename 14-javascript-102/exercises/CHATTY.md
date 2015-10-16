@@ -2,6 +2,8 @@
 
 This group project is more about [pair programming](http://www.wikihow.com/Pair-Program) than division of labor. You will all be working on a similar problem and taking turns helping solve it.
 
+You will be creating your first, very simple, single page application (SPA). It will be a very basic implementation of Slack.
+
 ## Adding listeners to dynamically created elements
 
 When you add a DOM element to your page with JavaScript, the standard `addEventListener` method syntax will no longer work. What you need to do is listen for the event on the `<body>` element, and then inspect what the target of the event is (i.e. which element the user actually performed the action on).
