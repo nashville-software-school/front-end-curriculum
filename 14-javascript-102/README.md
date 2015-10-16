@@ -263,7 +263,116 @@ console.log(result);
 
 ### Handling DOM events
 
-Provide an `onlick=someFunction()` attribute to an anchor element and show how it can be handled with JavaScript.
+##### index.html
+
+```html
+<header id="page-header">
+  <h1>Page title</h1>
+</header>
+
+<article>
+  <section class="article-section">Introduction</section>
+  <section class="article-section">Body</section>
+  <section class="article-section">Conclusion</section>
+</article>
+
+<input type="text" id="keypress-input">
+
+<div id="output-target"></div>
+
+<div id="guinea-pig">Leave me alone</div>
+<button id="add-color">Add color</button>
+<button id="make-large">Hulkify</button>
+<button id="add-border">Capture it</button>
+<button id="add-rounding">Rounded</button>
+
+```
+
+##### eventHandlers.js
+
+```js
+var outputEl = document.getElementById("output-target");
+
+/*
+  This function gets invoked because we're
+  using an onclick attribute on a DOM element
+ */
+var headerClickHandler = function(e) {
+  outputEl.innerHTML = "You clicked on the header";
+};
+
+/*
+  You can get a reference to DOM elements and
+  directly attach an event handler. In this 
+  example, we get every element with a class of
+  "article-section" and listen for when the
+  user clicks on the element. When that event
+  fires, the attached "handleSectionClick"
+  function gets executed.
+ */
+var articleEl = document.getElementsByClassName("article-section");
+
+function handleSectionClick(e) {
+  var elementText = e.target.innerHTML;
+  outputEl.innerHTML = "You clicked on the " + elementText + " section";
+}
+
+for (var i = 0; i < articleEl.length; i++) {
+  articleEl.item(i).addEventListener("click", handleSectionClick);
+}
+
+/*
+  Get a reference to the DOM element with an id of
+  "page-header", and attach an event handler for the
+  mouseover, and mouseout, events. Log some message 
+  to the console for each.
+ */
+var header = document.getElementById("page-header");
+
+function handleHeaderMouseOver(e) {
+  outputEl.innerHTML ="You moved your mouse over me";
+}
+
+function handleHeaderMouseOut(e) {
+  outputEl.innerHTML = "Why u leave me?";
+}
+
+header.addEventListener("mouseover", handleHeaderMouseOver);
+header.addEventListener("mouseout", handleHeaderMouseOut);
+
+
+
+/*
+  We can also write an anonymous function (lamba expression)
+  in the addEventListener declaration instead of using a 
+  function reference
+ */
+var fieldEl = document.getElementById("keypress-input");
+fieldEl.addEventListener("keyup", function(e) {
+  outputEl.innerHTML = e.target.value;
+});
+
+
+var guineaPig = document.getElementById("guinea-pig");
+document.getElementById("add-color").addEventListener("click", function() {
+  guineaPig.className += " blue";
+});
+
+document.getElementById("make-large").addEventListener("click", function() {
+  guineaPig.className += " large";
+
+});
+
+document.getElementById("add-border").addEventListener("click", function() {
+  guineaPig.className += " bordered";
+
+});
+
+document.getElementById("add-rounding").addEventListener("click", function() {
+  guineaPig.className += " rounded";
+
+});
+```
 
 ## Prototypal inheritance
 
