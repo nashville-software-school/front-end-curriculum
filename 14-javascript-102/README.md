@@ -270,6 +270,12 @@ console.log(result);
   <h1>Page title</h1>
 </header>
 
+<ul>
+  <li>Unordered list item 1</li>
+  <li>Unordered list item 2</li>
+  <li>Unordered list item 3</li>
+</ul>
+
 <article>
   <section class="article-section">Introduction</section>
   <section class="article-section">Body</section>
@@ -291,12 +297,6 @@ console.log(result);
 ##### eventHandlers.js
 
 ```js
-
-/*
-  Get a reference to the div in the HTML that will 
-  contain the messages as the user interacts with the
-  page.
- */
 var outputEl = document.getElementById("output-target");
 
 /*
@@ -309,9 +309,10 @@ var outputEl = document.getElementById("output-target");
   function gets executed.
  */
 var articleEl = document.getElementsByClassName("article-section");
+console.log("articleEl",articleEl);
 
-function handleSectionClick(e) {
-  var elementText = e.target.innerHTML;
+function handleSectionClick(event) {
+  var elementText = event.target.innerHTML;
   outputEl.innerHTML = "You clicked on the " + elementText + " section";
 }
 
@@ -327,11 +328,11 @@ for (var i = 0; i < articleEl.length; i++) {
  */
 var header = document.getElementById("page-header");
 
-function handleHeaderMouseOver(e) {
+function handleHeaderMouseOver(event) {
   outputEl.innerHTML ="You moved your mouse over me";
 }
 
-function handleHeaderMouseOut(e) {
+function handleHeaderMouseOut(event) {
   outputEl.innerHTML = "Why u leave me?";
 }
 
@@ -346,26 +347,64 @@ header.addEventListener("mouseout", handleHeaderMouseOut);
   function reference
  */
 var fieldEl = document.getElementById("keypress-input");
-fieldEl.addEventListener("keyup", function(e) {
-  outputEl.innerHTML = e.target.value;
+
+fieldEl.addEventListener("keyup", function (event) {
+  outputEl.innerHTML = event.target.value;
 });
+
 
 
 var guineaPig = document.getElementById("guinea-pig");
-document.getElementById("add-color").addEventListener("click", function() {
+
+document.getElementById("add-color")
+  .addEventListener("click", function() {
   guineaPig.classList.toggle("blue");
 });
 
-document.getElementById("make-large").addEventListener("click", function() {
+document.getElementById("make-large")
+  .addEventListener("click", function() {
   guineaPig.classList.toggle("large");
 });
 
-document.getElementById("add-border").addEventListener("click", function() {
+document.getElementById("add-border")
+  .addEventListener("click", function() {
   guineaPig.classList.toggle("bordered");
 });
 
-document.getElementById("add-rounding").addEventListener("click", function() {
+document.getElementById("add-rounding")
+  .addEventListener("click", function() {
   guineaPig.classList.toggle("rounded");
+});
+
+
+
+/*
+  EVENT BUBBLING:
+
+  You can add an event handler on the body tag, and since all
+  browser events bubble up to the body, you can then put in
+  conditional logic to handle the click event on many different
+  elements in one function.
+ */
+document.querySelector("body").addEventListener("click", function(event) {
+  console.log(event);
+
+  // Handle the click event on any li
+  if (event.target.tagName.toLowerCase() === "li") {
+    console.log("You clicked on an <li> element");
+  }
+
+  // Handle the click event on any section
+  //    * Notice how when you click on a section, it executes
+  //      this code, but *also* the code on line 17.
+  if (event.target.className === "article-section") {
+    console.log("You clicked on an `article-section` element");
+  }
+
+  // Inspect the `id` property of the event target
+  if (event.target.id === "page-title") {
+    console.log("You clicked on the page-title element");
+  }
 });
 ```
 
@@ -400,5 +439,3 @@ document.getElementById("add-rounding").addEventListener("click", function() {
 Open the [playground Codepen](http://codepen.io/chortlehoort/pen/bdKJEE?editors=001) and show/explain prototypal inheritance.
 
 [Student exercise](http://codepen.io/chortlehoort/pen/JdZVGa?editors=001)
-
-## JSON
