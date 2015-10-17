@@ -31,7 +31,7 @@ document.querySelector("body").addEventListener("click", function(event) {
 
 ## Setting element attributes
 
-You can use JavaScript to set any attribute on a DOM element. You've seen how to add/remove classes with `classList.add()`, `classList.remove()`, and `classList.toggle()`, but you can also add `id`, `href`, `src`, or any other attribute.
+You can use JavaScript to [set any attribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute) on a DOM element. You've seen how to add/remove classes with `classList.add()`, `classList.remove()`, and `classList.toggle()`, but you can also add `id`, `href`, `src`, or any other attribute.
 
 Here's an example of how to add a `disabled` attribute to a button in the DOM.
 
