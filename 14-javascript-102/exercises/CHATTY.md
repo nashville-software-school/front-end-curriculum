@@ -29,6 +29,21 @@ document.querySelector("body").addEventListener("click", function(event) {
 });
 ```
 
+## Setting element attributes
+
+You can use JavaScript to set any attribute on a DOM element. You've seen how to add/remove classes with `classList.add()`, `classList.remove()`, and `classList.toggle()`, but you can also add `id`, `href`, `src`, or any other attribute.
+
+Here's an example of how to add a `disabled` attribute to a button in the DOM.
+
+```html
+<button class="clear-messages">Clear messages</button>
+```
+
+```js
+// This will disable the first button with a class of "button-message"
+document.getElementsByClassName("button-message")[0].setAttribute("disabled", true);
+```
+
 ## Requirements
 
 Check out the [simple wireframe](https://app.moqups.com/chortlehoort/uGBbLbK46Y/view/page/a9d5cd7bf) for this application on Moqups.com.
@@ -42,6 +57,7 @@ Check out the [simple wireframe](https://app.moqups.com/chortlehoort/uGBbLbK46Y/
 1. When return key is detected, you'll create a new message (*see details below*).
 1. Create a button to clear all messages.
 1. When the user clicks the clear messages button, all current chat messages should be removed from the application.
+1. If there are no messages, then the clear messages button should be disabled (*see example above*).
 1. The navigation bar should remain at the top of the screen, even if the contents of the page start to scroll.
 
 ### Options
