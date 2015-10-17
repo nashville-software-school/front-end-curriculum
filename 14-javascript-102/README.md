@@ -1,5 +1,9 @@
 # JavaScript 102
 
+## Variable names
+
+> **Reminder:** You can name variables whatever you like and it has **no impact** on what is actually stored in that variable. Naming a variable that will hold an array of widgets `x` makes it seem much more like a variable, but naming it `widgetArray` is more helpful. But it doesn't mean that it can only hold arrays. It is just a label.
+
 ## Basic array methods
 
 ### join
