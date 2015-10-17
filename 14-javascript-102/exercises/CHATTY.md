@@ -6,7 +6,7 @@ You will be creating your first, very simple, single page application (SPA). It 
 
 ## Adding listeners to dynamically created elements
 
-When you add a DOM element to your page with JavaScript, the standard `addEventListener` method syntax will no longer work. What you need to do is listen for the event on the `<body>` element, and then inspect what the target of the event is (i.e. which element the user actually performed the action on).
+When you add a DOM element to your page with JavaScript, you cannot add a listener to them directly in your code with `addEventListener`. This is because the element didn't exist when your JavaScript file got parsed and executed by the browser when it loaded. What you need to do is listen for the event on the `<body>` element, and then inspect what the target of the event is (i.e. which element the user actually performed the action on).
 
 ```js
 document.querySelector("body").addEventListener("click", function(event) {
