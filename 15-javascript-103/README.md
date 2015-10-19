@@ -251,8 +251,6 @@ homeLink.addEventListener("click", function() {
   homeView.classList.add("hidden");
   addView.classList.add("hidden");
 
-  document.getElementById("random-button").setAttribute("disabled", true);
-
   homeView.classList.add("visible");
   homeView.classList.remove("hidden");
   
