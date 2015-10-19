@@ -70,3 +70,32 @@ Check out the [simple wireframe](https://app.moqups.com/chortlehoort/uGBbLbK46Y/
 1. When the user presses the return key in the message field, create a `<div>` element in the DOM, below the input field that will hold all messages as they get created.
 1. The message should have a button displayed after it with the text "Delete" inside of it.
 1. When the delete button next to a message is clicked, only that message should be removed from the DOM.
+
+# Bonus criteria
+
+For you overachievers, once you've completed the basic criteria, take a stab at these.
+
+## Editing
+
+1. Let users edit an existing message. Add an edit button next to the delete button that, when clicked, will take the message and put it back in the message input at the top.
+1. Once user edits the message and presses the return key again, the message text in the list should be updated.
+
+## Multiple users
+
+1. Create an object in your JavaScript that holds an array of names (*see example below*).
+1. Next to the message input box, there should be a radio button group for each name in the list.
+1. When a user enters a message, it should be prepended with the chosen user's name, in bold text.
+
+```js
+// User object
+var users = {
+  names: ["Xavier", "Joanna", "Mackenzie", "Gunter", "Iveta", "Sven"];
+};
+```
+## Message limit
+
+1. Only show the last 20 messages.
+
+## Timestamp
+
+1. Put a timestamp on each message.
