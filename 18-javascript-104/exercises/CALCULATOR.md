@@ -13,6 +13,7 @@ mkdir calculator && cd $_
 1. Create 4 buttons to perform each of the basic mathematical functions (add, subtract, multiply, divide).
 1. In your JavaScript, put an event listener on each of the buttons.
 1. Copy the code below an implement a basic calculator.
+1. When the user performs one of the operations, output the result to another DOM element of your choice.
 
 ```js
 /*
@@ -49,19 +50,4 @@ mkdir calculator && cd $_
   Return the value of the operation.
  */
 
-
-
-/*
-  Create a variable to hold the return value of the
-  3-argument function. 
-
-  e.g. var result = myFunction(0, 0, func)
- */
-
-
-
-/*
-  Log the result
- */
-console.log("result", result)
 ```
