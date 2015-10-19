@@ -1,4 +1,4 @@
-# JavaScript 201
+# lodash and promises
 
 ## lodash
 
