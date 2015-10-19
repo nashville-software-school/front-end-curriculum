@@ -1,8 +1,7 @@
 # Music History Part 4
 
-## Create a new branch
-
-`git checkout -b version4`
+1. Create a new branch: `git checkout -b version4`
+2. Rip out all the styling that you added to implement Flexbox. We won't be using it any more. It might be easier to look at the previous commit on Github by going to the repository home, and clicking on the commits link near the top. Grab all your styling that you had before you implemented Flexbox and put it back in your CSS file.
 
 ## Requirements
 
