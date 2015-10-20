@@ -101,6 +101,9 @@ modifyThing(elephant, makeYoung);
  */
 console.log(elephant); // { bellyIs: "full", age: "young", color: "red" }
 ```
+> **Instructor suggestion**:
+>
+> Get students started on the [calculator exercise](exercises/CALCULATOR.md)
 
 
 # Prototypal inheritance
