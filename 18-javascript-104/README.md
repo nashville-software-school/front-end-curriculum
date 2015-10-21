@@ -146,6 +146,62 @@ You will be learning more about `this` in future modules, but just keep in mind 
 
 # Prototypal inheritance
 
+Prototypal inheritance is different from class based inheritance found in the traditional C-family of languages where a new object contains the properties of another class that it inherited from. In JavaScript, any object can specify what its prototype is, creating what's called a prototype chain.
+
+```js
+var Parent = function() {
+  this.name = "Parent";
+  this.foo = "bar";
+  this.baz = true;
+};
+
+var Child = function() {
+  this.name = "Child";
+  this.bam = false;
+};
+
+/*
+  Create a new instance of the Parent function and set
+  it as the prototype of child. This set up a prototype
+  chain as follows.
+
+  Child ---> Parent ---> Object
+ */
+Child.prototype = new Parent();
+```
+
+So what is this `new` keyword? Well by creating a `new` function, there's a few things that happen.
+
+1. JavaScript creates a new object.
+1. Then a new execution context is created, and is set to the object being created. In our case, `this` will be the new `Parent` object we are creating.
+1. Set the prototype on the object. By default it is the base `Object` in JavaScript, unless otherwise specified.
+1. The constructor function is executed. So when it parses `new Parent()`, the code inside the function declaration for `Parent` executes.
+1. It returns the new object, so we need to store that return value. In our case, the new `Parent` object is stored in `Child.prototype`, which establishes the prototype chain.
+
+So now that we've defined a child in the constructor function `Child`, and also established that `Parent` is the prototype of `Child`, we can now create a new `Child` object.
+
+```js
+var child = new Child();
+console.log("child", child);
+
+/*
+  The new child variable is now an object, that contains not
+  only the properties established in its own constructor function
+  but also the properties from the Parent.
+ */ 
+
+console.log(child.bam);  // false - defined in Child
+console.log(child.foo);  // "bar" - defined in Parent
+```
+
+If you try to access a property on an object, JavaScript first looks on the object itself, then on its prototype, then on the prototype's prototype, etc., until it finds the property. If it exists nowhere on the prototype chain, you'll get `undefined`.
+
+```js
+var height = child.height;  // undefined
+```
+
+Let's look at a more complex example.
+
 ```js
 /*
   A basic animal function
@@ -167,6 +223,8 @@ Animal();
   afterwards, JavaScript lets you add another property.
   Clearly explain how creating a new object based on 
   a function changes the value of `this`.
+
+  Animal ---> Object
  */
 var salamander = new Animal();
 salamander.property = "slimy";
@@ -201,6 +259,8 @@ Doge.prototype = new Animal();
   View the output of the console log below and make sure 
   you expand the __proto__ object on it to see that family 
   is inherited from the prototype.
+
+  Doge ---> Animal ---> Object
  */
 var doge = new Doge();
 console.log('doge',doge);
@@ -210,7 +270,7 @@ console.log('doge',doge);
   More inheritance. We set the prototype of the Angus 
   function to Doge.
 
-  Angus inherits from Doge which inherits from Animal
+  Angus ---> Doge ---> Animal ---> Object
  */
 function Angus () {
   this.name = "Angus";
