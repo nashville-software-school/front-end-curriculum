@@ -36,13 +36,13 @@ corresponding property and value
 
 
 
-// What is the prototype of a Model?
+// Define the prototype of a Model?
 
 
 // Define a Car
 
 
-// What is the prototype of a Car?
+// Define the prototype of a Car?
 
 
 // Create the first car
