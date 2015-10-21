@@ -101,9 +101,7 @@ modifyThing(elephant, makeYoung);
  */
 console.log(elephant); // { bellyIs: "full", age: "young", color: "red" }
 ```
-> **Instructor suggestion**:
->
-> Get students started on the [calculator exercise](exercises/CALCULATOR.md)
+> **Instructor suggestion**: Get students started on the [calculator exercise](exercises/CALCULATOR.md)
 
 # this
 
@@ -143,6 +141,8 @@ function sample( loopCounter ) {
 ```
 
 So when you output `sample.counter` to the console, it was still at 0, its initial value, because we never modified it. Instead, you were incrementing a global variable.
+
+You will be learning more about `this` in future modules, but just keep in mind that its value is not the function containing it, but the context in which the function was executed.
 
 # Prototypal inheritance
 
