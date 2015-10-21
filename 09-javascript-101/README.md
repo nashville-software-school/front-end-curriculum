@@ -1,5 +1,9 @@
 # Javascript 101 - Part 1
 
+> There a popular paradox stated about JavaScript. "Because JavaScript can be used without understanding, the understanding of the language is often never attained."
+
+You will not be one of those people. You will understand the power, complexities, and versatility of JavaScript when you leave this cohort.
+
 ## Prerequisite Homework
 
 1. Read chapters 1-9 of "**A smarter way to learn JavaScript**".
