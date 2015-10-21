@@ -29,3 +29,21 @@ You can also use amend to update the message of the commit.
 ```bash
 git commit --amend -m "Added feature to save music to Firebase"
 ```
+
+## Unstage file(s)
+
+If you've added a file to the staging area, but change your mind, you can reset.
+
+```bash
+git add script.js
+git status # This will show the file staged for commit
+git reset HEAD script.js # Removes the file from staging area
+```
+
+If you made a series of changes to your working copy, but, for any reason, need to completely revert all your changes back to the most recent commit. 
+
+```bash
+git reset --hard
+```
+
+This is destructive, so use with care and be sure that you want to completely revert **all** your local changes.
