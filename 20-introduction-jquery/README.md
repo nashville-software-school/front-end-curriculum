@@ -189,6 +189,24 @@ $(document).onready(function() {
 });
 ```
 
+## Updating the DOM
+
+```js
+$(document).onready(function() {
+  // To completely replace the contents of a DOM element,
+  // we used to write element.innerHTML = "something new";
+  $(".container").html("something new");
+});
+```
+
+```js
+$(document).onready(function() {
+  // To append the contents of a DOM element,
+  // we used to write element.innerHTML += "something new";
+  $(".container").append("something new");
+});
+```
+
 ## Listening for events
 
 You've learned how to use `addEventListener` in vanilla JavaScript, and jQuery makes the syntax even simpler.
