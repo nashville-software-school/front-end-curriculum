@@ -25,7 +25,7 @@ $(document).ready(function() {
 In your HTML file, put the following sample DOM between the body tags.
 
 ```html
-icle class="article--main" id="top-article">
+<article class="article--main" id="top-article">
   This is the very first article in my document.
 </article>
 
