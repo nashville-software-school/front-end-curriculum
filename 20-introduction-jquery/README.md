@@ -227,6 +227,8 @@ $(document).ready(function() {
 });
 ```
 
+> **Instructor suggestion:** Talk to students about the reality of what the majority of their careers will be: refactoring existing applications. Then it's time for a Chatty refactor.
+
 ## AJAX
 
 1. What is asynchronous execution vs. synchronous execution?
