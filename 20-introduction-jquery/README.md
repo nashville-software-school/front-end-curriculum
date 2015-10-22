@@ -14,13 +14,50 @@ At its core, jQuery allows a developer to quickly obtain references to DOM eleme
 1. Visit the [jQuery download page](https://jquery.com/download/#using-jquery-with-a-cdn) where you can copy the first line of code in that section. You do not need the one with the word `migrate` in it.
 1. Paste that into your HTML file above the script tag to your JavaScript file.
 1. Open your `script.js` file and add the following code
-  ```js
-  $(document).onready(function() {
-    // All the JavaScript that depends on jQuery will be written here
-  });
-  ```
+```js
+$(document).ready(function() {
+  // All the JavaScript that depends on jQuery will be written here
+});
+```
 
 ## DOM manipulation
+
+In your HTML file, put the following sample DOM between the body tags.
+
+```html
+icle class="article--main" id="top-article">
+  This is the very first article in my document.
+</article>
+
+<article class="article--main" id="middle-article">
+  This is the middle article in my document.
+</article>
+
+
+<button class="delete">Delete</button>
+
+<div class="container">
+  <h1 umbrella="open">Song list</h1>
+  <section class="song-container" index="0">
+    <div class="song">
+      <div umbrella="closed" class="title">The Walk</div>
+      <div class="artist">Mayer Hawthorne</div>
+      <div class="album">How Do You Do</div>
+    </div>
+  </section>
+</div>
+<button id="destroyer">Hide song</button>
+
+<ul id="letters">
+  <li class="letter a">a</li>
+  <li class="letter b">b</li>
+  <li class="letter c">c</li>
+  <li class="letter d">d</li>
+</ul>
+
+<input type="text" name="first_name" id="firstName" value="10">
+<div class="echo"></div>
+```
 
 ### Selecting and reading contents of DOM elements
 
@@ -56,9 +93,121 @@ $(document).onready(function() {
 });
 ```
 
+Or the tag name
 
-1. Adding elements
-1. Removing elements
+```js
+$(document).onready(function() {
+  // All the JavaScript that depends on jQuery will be written here
+
+  // Select the article DOM element by its class attribute
+  var button = $("button");
+  console.log("button", button);
+});
+```
+
+Or by attribute
+
+```js
+$(document).onready(function() {
+  // Select by attribute
+  var umbrellaElement = $("h1[umbrella='open']");
+  console.log("umbrella text: ", umbrellaElement.html());
+});
+```
+
+## Selecting child elements
+
+```js
+$(document).onready(function() {
+  // Select all children
+  console.log("all children: ", $(".container").children());
+});
+```
+
+To select a specific child, simply chain another selector.
+
+```js
+$(document).onready(function() {
+  // Select specific children
+  console.log("the h1: ", $(".container").children("h1"));
+  console.log("the section: ", $(".container").children("section"));
+});
+```
+
+If there's a specific item you want to select, and you know its location, but not any other specific identifier, you can select by index.
+
+```js
+$(document).onready(function() {
+  // Select specific child index (useful for ul/ol)
+  // Example of chaining selectors
+  console.log("third li: ", $("#letters").children(".letter").eq(2).html());
+});
+```
+
+However, the more selectors you chain together, the more expensive the operation. More processing power and memory is needed as you chain selectors. To alleviate this, jQuery provides the `find()` method.
+
+```js
+$(document).onready(function() {
+  // Finding an element
+  var album = $(".container").find(".album");
+  console.log("album", album.html());
+});
+```
+
+## Selecting sibling elements
+
+To get the next sibling of an element.
+
+```js
+$(document).onready(function() {
+  // Selecting next sibling
+  var aSibling = $(".a").next();
+  console.log("aSibling: ", aSibling.html());
+});
+```
+
+Get all sibling elements.
+
+```js
+$(document).onready(function() {
+  // Selecting all siblings
+  var siblings = $(".a").nextAll();
+  siblings.each(function(index, el) {
+    console.log("sibling text: ", $(el).html());
+  });
+});
+```
+
+## Get the value of a form field
+
+Instead of `html()`, you can use `val()` to get the current value of any input element.
+
+```js
+$(document).onready(function() {
+  // Working with form fields and the val() method
+  console.log("field value: ", $("#firstName").val());
+});
+```
+
+## Listening for events
+
+You've learned how to use `addEventListener` in vanilla JavaScript, and jQuery makes the syntax even simpler.
+
+```js
+$(document).onready(function() {
+  // Handling click events
+  $("#destroyer").click(function() {
+    $(".container").hide();
+    // $(".container").show();
+    // $(".container").toggle();
+  });
+
+  // Handling a keyup event
+  $("#firstName").keyup(function() {
+    $(".echo").html($(this).val());
+  });
+});
+```
 
 ## AJAX
 
