@@ -72,7 +72,7 @@ Now you can write your first, simple jQuery code. In your DOM create the followi
 Now in `script.js`, select the DOM element. Selectors in jQuery are **exactly** like CSS selectors - `#` for id, and `.` for class.
 
 ```js
-$(document).onready(function() {
+$(document).ready(function() {
   // All the JavaScript that depends on jQuery will be written here
 
   // Select the article DOM element by its id attribute
@@ -84,7 +84,7 @@ $(document).onready(function() {
 You can also select an element by its class.
 
 ```js
-$(document).onready(function() {
+$(document).ready(function() {
   // All the JavaScript that depends on jQuery will be written here
 
   // Select the article DOM element by its class attribute
@@ -96,7 +96,7 @@ $(document).onready(function() {
 Or the tag name
 
 ```js
-$(document).onready(function() {
+$(document).ready(function() {
   // All the JavaScript that depends on jQuery will be written here
 
   // Select the article DOM element by its class attribute
@@ -108,7 +108,7 @@ $(document).onready(function() {
 Or by attribute
 
 ```js
-$(document).onready(function() {
+$(document).ready(function() {
   // Select by attribute
   var umbrellaElement = $("h1[umbrella='open']");
   console.log("umbrella text: ", umbrellaElement.html());
@@ -118,7 +118,7 @@ $(document).onready(function() {
 ## Selecting child elements
 
 ```js
-$(document).onready(function() {
+$(document).ready(function() {
   // Select all children
   console.log("all children: ", $(".container").children());
 });
@@ -127,7 +127,7 @@ $(document).onready(function() {
 To select a specific child, simply chain another selector.
 
 ```js
-$(document).onready(function() {
+$(document).ready(function() {
   // Select specific children
   console.log("the h1: ", $(".container").children("h1"));
   console.log("the section: ", $(".container").children("section"));
@@ -137,7 +137,7 @@ $(document).onready(function() {
 If there's a specific item you want to select, and you know its location, but not any other specific identifier, you can select by index.
 
 ```js
-$(document).onready(function() {
+$(document).ready(function() {
   // Select specific child index (useful for ul/ol)
   // Example of chaining selectors
   console.log("third li: ", $("#letters").children(".letter").eq(2).html());
@@ -147,7 +147,7 @@ $(document).onready(function() {
 However, the more selectors you chain together, the more expensive the operation. More processing power and memory is needed as you chain selectors. To alleviate this, jQuery provides the `find()` method.
 
 ```js
-$(document).onready(function() {
+$(document).ready(function() {
   // Finding an element
   var album = $(".container").find(".album");
   console.log("album", album.html());
@@ -159,7 +159,7 @@ $(document).onready(function() {
 To get the next sibling of an element.
 
 ```js
-$(document).onready(function() {
+$(document).ready(function() {
   // Selecting next sibling
   var aSibling = $(".a").next();
   console.log("aSibling: ", aSibling.html());
@@ -169,7 +169,7 @@ $(document).onready(function() {
 Get all sibling elements.
 
 ```js
-$(document).onready(function() {
+$(document).ready(function() {
   // Selecting all siblings
   var siblings = $(".a").nextAll();
   siblings.each(function(index, el) {
@@ -183,7 +183,7 @@ $(document).onready(function() {
 Instead of `html()`, you can use `val()` to get the current value of any input element.
 
 ```js
-$(document).onready(function() {
+$(document).ready(function() {
   // Working with form fields and the val() method
   console.log("field value: ", $("#firstName").val());
 });
@@ -192,7 +192,7 @@ $(document).onready(function() {
 ## Updating the DOM
 
 ```js
-$(document).onready(function() {
+$(document).ready(function() {
   // To completely replace the contents of a DOM element,
   // we used to write element.innerHTML = "something new";
   $(".container").html("something new");
@@ -200,7 +200,7 @@ $(document).onready(function() {
 ```
 
 ```js
-$(document).onready(function() {
+$(document).ready(function() {
   // To append the contents of a DOM element,
   // we used to write element.innerHTML += "something new";
   $(".container").append("something new");
@@ -212,7 +212,7 @@ $(document).onready(function() {
 You've learned how to use `addEventListener` in vanilla JavaScript, and jQuery makes the syntax even simpler.
 
 ```js
-$(document).onready(function() {
+$(document).ready(function() {
   // Handling click events
   $("#destroyer").click(function() {
     $(".container").hide();
@@ -231,4 +231,22 @@ $(document).onready(function() {
 
 1. What is asynchronous execution vs. synchronous execution?
 1. What is XHR (history and usage)?
-1. Reading local JSON file with jQuery
+1. What is JSON, and why are we using it?
+
+### Your first XHR call
+
+Add the following HTML to your jQuery DOM. Feel free to comment out all the other DOM elements we used during the live coding.
+
+```html
+<div id="all-my-songs"></div>
+```
+
+Now create a new directory named `data`, and then create a new file named `songs.json`.
+
+```bash
+cd /vagrant/jquery
+mkdir data
+touch data/songs.json
+```
+
+Create a new JavaScript file named `ajax.js` and add a `<script>` tag for it. Add your `$(document).ready()` code first (just copy & paste from your other one).
