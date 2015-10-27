@@ -1,4 +1,4 @@
-# JavaScript 103
+# JavaScript 201
 
 
 > **Instructor Suggestion:** 
@@ -85,7 +85,7 @@ function goodFunc() {
 }
 ```
 
-## Callbacks
+## Callbacks review
 
 > A reference to executable code, or a piece of executable code, that is passed as an argument to other code.
 
@@ -106,7 +106,7 @@ Now it's time to start making you a modern, web application developer. The most 
 
 Creating modular code is all about creating strong [abstractions](https://en.wikipedia.org/wiki/Abstraction_(computer_science)). We want boundaries which appropriately expose functionality and [hide implementation](https://stackoverflow.com/a/8694874/435409).
 
-> **Instructor suggestion:** This would be a good time to give a presentation on abstaction and information hiding. Better yet, live code an example of how a developer identifies a possible abstraction, then defines the abstraction and hides as many implementation details as possible. Maintain *Einstein's Simplicity Principle* - Make it as simple as possible, but not simpler.
+> **Instructor suggestion:** This would be a good time to give a presentation on abstaction and information hiding. Better yet, [live code an example](sample/simplistic.js) of how a developer identifies a possible abstraction, then defines the abstraction and hides as many implementation details as possible. Maintain *Einstein's Simplicity Principle* - Make it as simple as possible, but not simpler.
 
 
 ## Literal modules
