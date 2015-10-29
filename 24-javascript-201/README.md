@@ -90,14 +90,16 @@ function goodFunc() {
 > A reference to executable code, or a piece of executable code, that is passed as an argument to other code.
 
 ```js
-function callMe(num, callback) {
-  var newNum = num * 11;
-  callback.call(this, newNum);
+function callMe(numA, callback) {
+  var newNum = numA * 11;
+  callback(newNum);
 }
 
-var final = callMe(5, function(num) {
-  console.log("final", num * 8);
-});
+function maybe(numB) {
+  console.log("final", numB * 8);
+}
+
+callMe(5, maybe);
 ```
 
 # Modular JavaScript Development

@@ -38,8 +38,6 @@ Use the [OpenWeatherMap](http://openweathermap.org/API) API to build an applicat
 **when** the user clicks on the link to view the 7 day forecast<br/>
 **then** the current data (see above), and the data for the next 7 days should be displayed
 
-# Bonus Challenges
-
 **given** a user wants to view weather information<br/>
 **when** the user visits your initial view<br/>
 **then** there should be social sharing buttons for Facebook and Twitter
