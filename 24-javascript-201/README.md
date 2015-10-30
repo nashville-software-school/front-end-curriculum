@@ -301,7 +301,7 @@ console.log(Sedan.setOccupancy(9));
 >    1. Getter/setter for the estimated age of the solar system in earth years.
 >    1. Getter/setter for array of known dwarf planets.
 
-# Team Exercise
+# Team Project
 
 Represent a small bilingual lexicon as a Javascript object (see example below) and use it to translate a holiday card message from English into another language. Each member of the team will build a JavaScript module that will convert text entered into an input field to the language that they choose.
 
@@ -329,7 +329,7 @@ This is Swedish, so please choose other languages. You can add as many words/tra
 > In addition to inserting the translated text into the HTML document, have the browser read the translated text to the user.
 > 
 
-# Team Exercise 2
+# Individual Project
 ## Sandwich Maker
 
 Create a sandwich order form that allows the user to select all the ingredients for a custom deli sandwich. Create a `Sandwich` module, then create the following as individual modules, using IIFE syntax, to augment `Sandwich`:  
@@ -340,9 +340,8 @@ Create a sandwich order form that allows the user to select all the ingredients 
 + condiments
 + veggies  
 
-As before, one team member creates a Github project and adds the other(s) as collaborators.  
+Your project should have one HTML file that has:
 
-Your project should have one HTML file that has:  
 + a section of options for each sandwich part 
 + the ability to select multiple, or zero, choices for each section (such as turkey _and_ bacon, or "no meat") 
 + a button with a label of "Make me a sandwich"  
@@ -354,6 +353,6 @@ Make sure the ingredient objects cannot be accessed by the other modules except 
 
 Each IIFE should expose, in its public interface, a method named `add{ingredient}` (e.g. `addMeat` or `addVeggies`) that accepts a single argument. That argument's value should be the ingredient(s) selected by the user.  
 
-The team should create an additional JavaScript file that handles interacting with the form elements and determining which method should be called.  
+You should also create an additional JavaScript file that handles interacting with the form elements and determining which method should be called.  
 
 Don't worry about exposing the prices to the user until you display the final cost. This is just an exercise, not a business model.
