@@ -18,7 +18,7 @@ Up until now, we've simply been putting all of our files into one directory. You
 First, in every project directory, you are going to create a few standard directories and files.
 
 ```bash
-mkdir -p /vagrant/modular && cd $_
+mkdir -p /vagrant/requirejs && cd $_
 mkdir javascripts # Will store all of our JavaScript code
 mkdir styles # Will store all of our CSS
 mkdir lib # Will store all 3rd-party libraries
