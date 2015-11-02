@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     jshint: {
-      files: ['./javascripts/**/*.js']
+      files: ['../javascripts/**/*.js']
     },
   });
 
@@ -81,11 +81,11 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     jshint: {
-      files: ['./javascripts/**/*.js']
+      files: ['../javascripts/**/*.js']
     },
     watch: {
       javascripts: {
-        files: ['./javascripts/**/*.js'],
+        files: ['../javascripts/**/*.js'],
         tasks: ['jshint']
       }
     }
