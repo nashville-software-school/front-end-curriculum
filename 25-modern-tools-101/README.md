@@ -111,7 +111,7 @@ Note the `--save` flag after the command. What this does is write the name and v
 
 These command will put the libraries, pulled from Github usually, into a `bower_components` directory. You then can include them in your html with the appropriate path. For example...
 
-`<script src="./bower_components/jquery/dist/jquery.min.js`
+`<script src="./lib/bower_components/jquery/dist/jquery.min.js`
 
 ## Modular JavaScript with RequireJS
 
