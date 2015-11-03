@@ -47,6 +47,10 @@ var math = require('../app/math');
 
 // Test to verify the math.sum() function
 describe('sum', function() {
+  it('defines a sum function', function() {
+    expect(math.sum).toBeDefined();
+  });
+
   it('adds 5 + 2 to equal 7', function() {
     expect(math.sum(2, 5)).toBe(7);
   });
