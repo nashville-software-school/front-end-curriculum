@@ -91,22 +91,22 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     jshint: {
-      files: ['./javascripts/**/*.js']
+      files: ['../javascripts/**/*.js']
     },
     sass: {
       dist: {
         files: {
-          'styles/main.css': 'sass/main.scss'
+          '../styles/main.css': '../sass/main.scss'
         }
       }
     },
     watch: {
       javascripts: {
-        files: ['./javascripts/**/*.js'],
+        files: ['../javascripts/**/*.js'],
         tasks: ['jshint']
       },
       sassy: {
-        files: ['./sass/**/*.scss'],
+        files: ['../sass/**/*.scss'],
         tasks: ['sass']
       }
     }
