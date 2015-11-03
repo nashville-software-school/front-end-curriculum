@@ -295,3 +295,13 @@ $(document).ready(function() {
 ```
 
 Now that you know the basics of using the `ajax()` method to make XHR calls, it's time to move on to the Music History 5 module where your job will be to use JSON and XHR to load your songs from separate files and then covert the raw JSON data to HTML for display in your page.
+
+# Team Challenge \#1
+
+Team challenges are different from individual challenges. The purpose of these is for you to pick one, or more, of your classmates and work on a project outside of class. I will reject a solution for a team challenge if you did it by yourself. Like individual challenges, I provide no guidance, and it will be difficult. It's for your and your teammates to truly challenge and grow your abilities.
+
+For the first challenge, the requirements are simple.
+
+1. Build a browser-based game using [Phaser](http://phaser.io/).
+
+That's it. Have fun.
