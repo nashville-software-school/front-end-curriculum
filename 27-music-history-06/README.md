@@ -2,7 +2,7 @@
 
 ## Set up
 
-Make sure you are in your Vagrant machine, and in the `/vagrant/musichistory` directory.
+If you are still using Vagrant, make sure you are in your Vagrant machine, and in the `/vagrant/musichistory` directory. If you are not using Vagrant, make sure you are in `~/workspace/musichistory`.
 
 ### Create a new branch
 
