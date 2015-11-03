@@ -356,12 +356,3 @@ Each IIFE should expose, in its public interface, a method named `add{ingredient
 You should also create an additional JavaScript file that handles interacting with the form elements and determining which method should be called.  
 
 Don't worry about exposing the prices to the user until you display the final cost. This is just an exercise, not a business model.
-
-# Individual challenge
-
-RequireJS has a tool that allows you to "compile" all of your modules into a single JavaScript file. It also uglifies the code, which provides two benefits:
-
-1. Reduces file size.
-1. Provides obfuscation which makes it harder for others to swipe your code.
-
-Your challenge is to use the [optimization tool](http://requirejs.org/docs/optimization.html) on your Sandwich Maker project.

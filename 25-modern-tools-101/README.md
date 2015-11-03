@@ -119,3 +119,11 @@ These command will put the libraries, pulled from Github usually, into a `bower_
 1. Configure require
 1. Convert your existing JavaScript modules to require modules
 
+# Individual challenge
+
+RequireJS has a tool that allows you to "compile" all of your modules into a single JavaScript file. It also uglifies the code, which provides two benefits:
+
+1. Reduces file size.
+1. Provides obfuscation which makes it harder for others to swipe your code.
+
+Your challenge is to use the [optimization tool](http://requirejs.org/docs/optimization.html) on your Sandwich Maker project.
