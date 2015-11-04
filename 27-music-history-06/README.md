@@ -22,7 +22,7 @@ Your task is to take the code that you wrote for Music History 4, where you popu
 
 The main module (i.e. `javascripts/entry.js`) should have a minimum of two dependencies: `["populate-songs", "get-more-songs"]`.
 
-The `populate-songs` module should contain the AJAX call to your first JSON file with songs in it. This module should return the array of songs using a callback. Remember callbacks?  Well, it's one of the few mechanisms you can use to pass data retrieved via an asynchronous operation from one Require module to another.
+The `populate-songs` module should contain the XHR to your first JSON file with songs in it. This module should return the array of songs using a callback. Remember callbacks?  Well, it's one of the few mechanisms you can use to pass data retrieved via an asynchronous operation from one Require module to another.
 
 ```js
 define(["jquery"], function($) {
@@ -36,18 +36,25 @@ define(["jquery"], function($) {
 });
 ```
 
-The `get-more-songs` file should contain the AJAX call to your second JSON file with songs in it. This module should return the array of songs. It will look practically identical to `populate-songs`, but loading a different JSON file.
+The `get-more-songs` file should contain the XHR to your second JSON file with songs in it. This module should return the array of songs. It will look practically identical to `populate-songs`, but loading a different JSON file.
 
-The main module (i.e. `javascripts/entry.js`) should then specify both of those files as dependencies, and then use the corresponding return objects from all three dependencies to populate your song list.
+The main module (i.e. `javascripts/entry.js`) should then specify both of those files as dependencies, and then use the corresponding return objects from both dependencies to populate your song list.
+
+You can remove the "Load more songs" button if you wish, but is not necessary.
 
 ```js
-require(["dom-access", "populate-songs", "get-more-songs"], 
+require(["populate-songs", "get-more-songs"], 
 function(dom, first, second) {
 
   // Get the first list of songs (passing a callback function reference)
   first.getMeSomeData(function(gimmeBackTheData) {
     console.log("gimmeBackTheData", gimmeBackTheData);
   });
+
+  // Get the second list of songs
+  
+
+  // Update the DOM to show the songs that are loaded from the XHR calls
 
 }); 
 ```
