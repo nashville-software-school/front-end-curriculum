@@ -20,7 +20,8 @@ What new things can you do with HTML 5?
 Run the following commands.
 
 ```
-mkdir ~/workspace/handlebars
+mkdir ~/workspace/handlebars #If you've switched to running from host machine
+mkdir /vagrant/handlebars #If you're still running Vagrant
 cd handlebars
 touch index.html
 mkdir javascripts
