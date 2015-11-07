@@ -20,7 +20,8 @@ What new things can you do with HTML 5?
 Run the following commands.
 
 ```
-mkdir ~/workspace/handlebars
+mkdir ~/workspace/handlebars #If you've switched to running from host machine
+mkdir /vagrant/handlebars #If you're still running Vagrant
 cd handlebars
 touch index.html
 mkdir javascripts
@@ -130,7 +131,7 @@ $("#entryOutput").append(entryOutput);
 ## Create a Handlebar template for your songs
 
 1. Walk students through how to create a template directory and their first Handlebar file.
-1. Install the `require-handlebar-plugin` Bower components and show students how to call their Handlebar file in the the Require application with the `hbs!` prepend to the file path.
+1. Install the `require-handlebars-plugin` Bower components and show students how to call their Handlebar file in the the Require application with the `hbs!` prepend to the file path.
 
 ## Create a song form
 
