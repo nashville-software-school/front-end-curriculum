@@ -2,7 +2,7 @@
 
 ## Angular route
 
-Install the Angular Route module. This library allows you to easily build a SPA (Single Page Application) where you switch out one view for another - without every refreshing the browser - and break up your HTML into what are called *partials*.
+Install the Angular Route module. This library allows you to easily build a SPA (Single Page Application) where you switch out one view for another - without ever refreshing the browser - and break up your HTML into what are called *partials*.
 
 ```bash
 bower install angular-route --save
