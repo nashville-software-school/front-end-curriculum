@@ -60,8 +60,6 @@ bower install handlebars
       <li>{{category}}:{{name}}</li>
     {{/each}}
     </ul>
-
-    {{> tagline }}
   </script>
 
   <script id="tagline-partial" type="text/x-handlebars-template">
@@ -106,9 +104,6 @@ var taglineData = {
   author_last_name: "Brownlee",
   authored_date: "January 29, 2015"
 };
-
-// Ignore this the first time through... move along
-Handlebars.registerPartial("tagline", Handlebars.compile($("#tagline-partial").html())(taglineData));
 
 // Grab the HTML from the appropriate <script> tag
 var entryHTML = $("#entry-template").html();
