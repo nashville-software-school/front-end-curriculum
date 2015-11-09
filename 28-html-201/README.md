@@ -128,6 +128,6 @@ $("#entryOutput").append(entryOutput);
 1. Walk students through how to create a template directory and their first Handlebar file.
 1. Install the `require-handlebars-plugin` Bower components and show students how to call their Handlebar file in the the Require application with the `hbs!` prepend to the file path.
 
-## Create a song form
+## Create handlebar templates for your filter form
 
-Create a form that lets users create a new song. It won't work for now, but you'll create another file named `form.html` that contains all the fields.
+Create two new templates to populate the artist and album dropdowns in the filter form.
