@@ -49,25 +49,21 @@ Import the following JSON file into your Firebase. You'll notice that the format
 {
   "songs": {
     "sharp": {
-      "id": 1,
       "name": "Sharp Dressed Man", 
       "artist": "ZZ Top",
       "album": "Eliminator"
     },
     "breakfast": {
-      "id": 2,
       "name": "Breakfast in America", 
       "artist": "Supertramp",
       "album": "Breakfast in America"
     },
     "goodbyemary": {
-      "id": 3,
       "name": "Goodbye Mary", 
       "artist": "Supertramp",
       "album": "Breakfast in America"
     },
     "carryon": {
-      "id": 4,
       "name": "Carry on My Wayward Son", 
       "artist": "Kansas",
       "album": {
