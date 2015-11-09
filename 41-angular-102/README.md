@@ -13,7 +13,7 @@ Include the JavaScript file.
 <script src="lib/bower_components/angular-route/angular-route.js"></script>
 ```
 
-Inject Angular Route into your app by adding it to the array of dependencies (which is most likely empty at this point)
+Inject Angular Route into your app by adding it to the module's array of dependencies.
 ```js
 var app = angular.module("SongApp", ['ngRoute']);
 ```
