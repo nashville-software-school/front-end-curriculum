@@ -62,8 +62,8 @@ Next comment out all of your existing HTML in your `index.html` file. We're goin
   <script src="lib/bower_components/angular/angular.min.js"></script>
   <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
 
-  <script src="app/app.js"></script>
-  <script src="app/controllers/SongCtrl.js"></script>
+  <script src="app/app.js"></script> <!---The entry point for all the other other modules in the app. -->
+  <script src="app/controllers/SongCtrl.js"></script> <!-- We will actually add this file in a moment -->
 </body>
 </html>
 ```
@@ -84,7 +84,8 @@ Notice anything strange about the anchor tag there? That's a strange looking URL
 
 ### Initial route
 
-Now that you have a partial, let's start using Angular routing to show it in the element with the `ng-view` attribute. First, we add an add in a new configuration object for our application, and set `$routeProvider` as a dependency.
+Now that you have a partial, let's start using Angular routing to show it in the element with the `ng-view` attribute. First, we add an add in a new configuration object for our application, and set `$routeProvider` as a dependency. The `module.config` method is a how we define, or set, configuration options before anything else happens in the app. Routes are certainly something we want established before the user gets to interact with the UI.
+
 
 ```js
 app.config(['$routeProvider',
