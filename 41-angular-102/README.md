@@ -13,6 +13,11 @@ Include the JavaScript file.
 <script src="lib/bower_components/angular-route/angular-route.js"></script>
 ```
 
+Inject Angular Route into your app by adding it to the array of dependencies (which is most likely empty at this point)
+```js
+var app = angular.module("SongApp", ['ngRoute']);
+```
+
 Next, you add the `ng-view` helper to an empty element on your page. Later, when you create your partials and have configured Angular Route when to show each one, the HTML in those partials will be injected into this DOM element.
 
 ```html
