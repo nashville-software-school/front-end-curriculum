@@ -155,13 +155,14 @@ app.controller("SongCtrl", ["$scope",
     /*
       Add the following code
     */
-    $scope.newSong = { artist: "", album: "", name: ""};
+    $scope.newSong = { name: "", artist: "" , albumName: "", albumYear: "", };
 
     $scope.addSong = function() {
       $scope.songs.$add({
-        artist: $scope.newSong.artist,
         name: $scope.newSong.name,
-        album: $scope.newSong.album
+        artist: $scope.newSong.artist,
+        album: $scope.newSong.albumName,
+        year: $scope.newSong.albumYear
       });
     };
   }
