@@ -6,3 +6,23 @@
 1. Add new songs to your Firebase API with POST AJAX calls.
 1. Populate the form fields with data from your API.
 1. When "Filter" button is pressed, update the song list with songs that only match the specified criteria.
+
+Make sure that you are using Handlebars for all DOM rendering. Do not fall back to using jQuery to hide and show songs in order to get the filtering to work. If you want to display a subset of songs that match an artist or an album, you need to send a new object to the Handlebar templates.
+
+Example:
+
+```js
+var filteredSongs = { songs: { } };
+
+for (var key in existingSongObjectFromFirebase.songs) {
+    var currentSong = existingSongObjectFromFirebase.songs[key];
+
+    // Check if the currentSong.artist key value matches what the user selected
+    // If it does, add the current song to the `filteredSongs.song` object
+}
+
+// Send filteredSongs to your Handlebar templates
+require("path/to/template", function(tpl) {
+    $("#someDOMElement").append(tpl(filteredSongs));
+});
+```
