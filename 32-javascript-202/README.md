@@ -9,7 +9,7 @@ lodash provides all the functional programming methods that you with JavaScript 
 We will be using the [Q](https://github.com/kriskowal/q) library to work with Promises.
 
 ```bash
-bower install q~1.0.1 --save
+bower install q#1.0.1 --save
 ```
 
 Add the library to the RequireJS configuration.
@@ -18,7 +18,7 @@ Add the library to the RequireJS configuration.
 requirejs.config({
   baseUrl: './javascripts',
   paths: {
-    'q': '../bower_components/q/q'
+    'q': '../lib/bower_components/q/q'
   }
 });
 ```
