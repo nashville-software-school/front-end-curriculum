@@ -26,3 +26,10 @@ require("path/to/template", function(tpl) {
     $("#someDOMElement").append(tpl(filteredSongs));
 });
 ```
+
+## Post promises requirements
+
+These requirements only apply after we cover promises in class.
+
+1. When you add, or delete, a song, the modules that perform the XHRs should return promises.
+1. After the promise is resolved, you should display a [Bootstrap modal](http://getbootstrap.com/javascript/#modals) window to provide feedback on if the operation was successful, or not.
