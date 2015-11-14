@@ -39,7 +39,9 @@ app.controller("SongDetailCtrl",
   ["$scope", "$routeParams", "$firebaseArray",
   function($scope, $routeParams, $firebaseArray) {
     $scope.selectedSong = {};
-    // $routeParams allows you to grab the value of the current route parameters. So, here we can pluck out the id      of the particular song, because we set it in the href of the link from song-list partial.
+    // $routeParams allows you to grab the value of the current route parameters.  
+    // So, here we can pluck out the id of the particular song,  
+    // because we set it in the href of the link from song-list partial.
     $scope.songId = $routeParams.songId;
 
     var ref = new Firebase("https://nss-demo-instructor.firebaseio.com/songs");
@@ -91,7 +93,7 @@ Just one example of how to display song info.
 <h2>{{ selectedSong.title }}</h2>
 <h3>by {{ selectedSong.artist}}</h3>
 <h4>from the {{ selectedSong.year}} album <em>{{ selectedSong.album }}</em></h4>
-``
+```
 
 
 ### Adding a new song
