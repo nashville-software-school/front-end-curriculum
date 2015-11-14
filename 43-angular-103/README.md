@@ -73,8 +73,10 @@ app.config(['$routeProvider',
         templateUrl: 'partials/song-form.html',
         controller: 'AddSongCtrl'
       })
-      // New route for viewing a single song
-      // Here we set the route with the `:songId` parameter, which gets matched in the controller to the href we          // defined in the songs-list partial: href="#/songs/{{ song.$id }}
+      // New route for viewing a single song  
+      // Here we set the route with the `:songId` parameter,  
+      // which gets matched in the controller to the href we  
+      // defined in the songs-list partial: href="#/songs/{{ song.$id }}
       .when('/songs/:songId', {
         templateUrl: 'partials/song-detail.html',
         controller: 'SongDetailCtrl'
