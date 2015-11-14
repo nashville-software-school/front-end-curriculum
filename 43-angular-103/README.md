@@ -39,6 +39,7 @@ app.controller("SongDetailCtrl",
   ["$scope", "$routeParams", "$firebaseArray",
   function($scope, $routeParams, $firebaseArray) {
     $scope.selectedSong = {};
+    // $routeParams allows you to grab the value of the current route parameters. So, here we can pluck out the id      of the particular song, because we set it in the href of the link from song-list partial.
     $scope.songId = $routeParams.songId;
 
     var ref = new Firebase("https://nss-demo-instructor.firebaseio.com/songs");
@@ -58,6 +59,38 @@ app.controller("SongDetailCtrl",
   }]
 );
 ```
+### Create the route for viewing an individua song. Add it to the exisiting `app.config`
+
+```js
+app.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider
+      .when('/songs/list', {
+        templateUrl: 'partials/song-list.html',
+        controller: 'SongListCtrl'
+      })
+      .when('/songs/new', {
+        templateUrl: 'partials/song-form.html',
+        controller: 'AddSongCtrl'
+      })
+      // New route for viewing a single song
+      // Here we set the route with the `:songId` parameter, which gets matched in the controller to the href we          // defined in the songs-list partial: href="#/songs/{{ song.$id }}
+      .when('/songs/:songId', {
+        templateUrl: 'partials/song-detail.html',
+        controller: 'SongDetailCtrl'
+      })
+      .otherwise({ redirectTo: '/songs/list' });
+  }]);
+```
+> **partials/song-detail.html**
+
+Just one example of how to display song info. 
+```html
+<h2>{{ selectedSong.title }}</h2>
+<h3>by {{ selectedSong.artist}}</h3>
+<h4>from the {{ selectedSong.year}} album <em>{{ selectedSong.album }}</em></h4>
+``
+
 
 ### Adding a new song
 
