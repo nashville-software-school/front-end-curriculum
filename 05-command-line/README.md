@@ -73,6 +73,7 @@ Explain Vagrant and why it's being used to standardize the development environme
 
 Use the `man` command to learn more about the other commands below. For example, `man touch` tells you everything you need to know about the `touch` command. Just press `q` when you're done reading the content.
 
+1. Go through the CodeAcademy [command line course](https://www.codecademy.com/learn/learn-the-command-line).
 1. **List all processes on your machine**. Learn about the `ps` command to find processes on your machine. For advanced usage, combine it with grep to find a specific process.
 1. **View processes, live, with stats**. Try the `top` command to monitor running processes in real time.
 1. **curl your way on the Web**. You can "surf the web" on the command line using `curl`. Read the docs and see what happens when you use `curl` instead of a web browser.
