@@ -132,6 +132,15 @@ body {
 
 1. Run `grunt` and it will compile the `sass/main.scss` file as regular CSS in the `styles/main.css` file.
 
+# Resources
+
+## Animation libraries
+
+1. [Mo.js](http://mojs.io/) - Spectaclular modern animation library
+2. [jQuery](https://api.jquery.com/?ns0=1&s=animation) has many built-in animation methods.
+3. [Move.js](https://visionmedia.github.io/move.js/) - A very small JS library for using animations without the need for jQuery
+4. [three.js](http://threejs.org/) - The most popular library for 3D animations
+
 # Challenge \#1
 
 Visit the [CSS3 Transitions, Transforms, Animation, Filters](http://css3.bradshawenterprises.com/) site and learn all about the cool stuff that the CSS3 specification gives web application developers. Using the techniques you discover there, develop your own way to transition between the different songs in your Music History song list.
