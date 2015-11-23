@@ -19,4 +19,4 @@ You will be split up into teams of three, and your team will build a new applica
 
 > **Instructor suggestion**:
 >
-> Draw the suggested UI for student teams to design towards. Something simple, perhaps naive. Also, remember the twist.
+> Draw the suggested UI for student teams to design towards. Something simple, perhaps naive.
