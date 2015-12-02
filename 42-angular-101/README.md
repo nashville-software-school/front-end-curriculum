@@ -145,6 +145,26 @@ Try it out.
 
 Angular has its own implementation of the Q library that we've been using.
 
+```js
+  var getSongs = $q(function(resolve, reject) {
+      $http.get('./data/songs.json')
+      .success(
+        function(objectFromJSONFile) {
+          resolve(objectFromJSONFile.songs);
+        }, function(error) {
+          reject(error);
+        }
+      );
+    });
+
+  getSongs.then(function (songs) {
+    console.log("songs",songs);
+  }, function (error) {
+    console.log("Failed");
+  });
+
+```
+
 ## Filtering
 
 Let's filter our list of Todos. Add an input field where we can enter in some text.
