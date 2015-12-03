@@ -162,6 +162,30 @@ app.controller("SongCtrl", ["$scope",
 ]);
 ```
 
+### Catch-all route
+
+If you want to redirect the user to a particular route if they enter one that you currently don't have a view for, you can use the `otherwise` method on the route provider.
+
+```js
+app.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider.
+      when('/songs/list', {
+        templateUrl: 'partials/song-list.html',
+        controller: 'SongCtrl'
+      }).
+      when('/songs/new', {
+        templateUrl: 'partials/song-form.html',
+        controller: 'SongCtrl'
+      }).
+      otherwise('/songs/list');
+  }]);
+```
+
+Now, if a route is visited at the URL `http://localhost/#/songs/garbage` then the song list view will be loaded instead.
+
+## Multiple controllers
+
 Now, you may be wondering at this point if it's possible to break up this controller. One for managing the list of songs, and another for managing the song form. Yes, of course it is, and it's recommended, but then we run into the problem of how each of those controllers can read, and modify the same array of songs. Since the `$scope` object is not accessible outside the controller, if we read our songs from the JSON file in the song list controller, then somehow we have to share that with the song form controller so that it can add a new song to it.
 
 ## Factories
