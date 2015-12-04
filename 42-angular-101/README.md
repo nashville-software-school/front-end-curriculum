@@ -141,6 +141,25 @@ $scope.killTodo = function(todo) {
 
 Try it out.
 
+## Using $http instead of $.ajax()
+
+Angular, of course, provides their own XHR method, so instead of using `$.ajax()` like we've been doing, we must **use all the Angular** and use the built-in `$http` object.
+
+```js
+// Return a promise for our async XHR
+return $q(function(resolve, reject) {
+  $http
+    .get('./data/songs.json')
+    .success(
+      function(objectFromJSONFile) {
+        resolve(objectFromJSONFile.songs);
+      },function(error) {
+        reject(error);
+      }
+    );
+});
+```
+
 ## Promises
 
 Angular has its own implementation of the Q library that we've been using.

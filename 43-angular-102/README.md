@@ -30,7 +30,7 @@ touch partials/song-list.html
 
 Open your JSON file(s) and add an unique `id` key to each your song objects. Just start at 1 and increment.
 
-```js
+```
 {
   "songs": [
     {
@@ -278,21 +278,149 @@ app.controller("SongFormCtrl",
 );
 ```
 
-## Using $http instead of $.ajax()
+# Music History Refactoring Continues
 
-Angular, of course, provides their own XHR method, so instead of using `$.ajax()` like we've been doing, we must **use all the Angular** and use the built-in `$http` object.
+## Helpful concepts
+
+### Nested controllers
+
+Factories are incredibly useful for controllers to have a single store in which they can all add/read/delete data. However, factories don't emit events, so if one controller adds a song to a SongFactory, the other controllers have no idea that it happened.
+
+One way to solve this problem is through nested controllers.
+
+##### index.html
+
+```html
+<div ng-controller="OmniscientController">
+
+  <div class="sidebar" ng-controller="PersistentSidebarController">
+    <!-- 
+      The content in this element will always be visible, regardless
+      of which view in being rendered below
+      -->
+      <ul>
+        <li ng-repeat="currentSong in songs">
+          {{ song.title }}
+        </li>
+      </ul>
+  </div>
+
+  <div ng-view></div>
+</div>
+```
+
+##### app.js
 
 ```js
-// Return a promise for our async XHR
-return $q(function(resolve, reject) {
-  $http
-    .get('./data/songs.json')
-    .success(
-      function(objectFromJSONFile) {
-        resolve(objectFromJSONFile.songs);
-      },function(error) {
-        reject(error);
-      }
-    );
+var app = angular.module("SongApp", ["ngRoute"]);
+
+app.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider.
+      when('/songs/list', {
+        templateUrl: 'partials/songList.html',
+        controller: 'SongListCtrl'
+      }).
+      when('/songs/add', {
+        templateUrl: 'partials/songForm.html',
+        controller: 'SongFormCtrl'
+      }).
+      otherwise('/songs/list');
+  }
+]);
+
+/*
+  The other controllers, since they are bound to children of the
+  DOM element that this one is bound to, will both inherit the
+  `$scope.songArray` variable
+ */ 
+app.controller("OmniscientController", 
+["$scope", function($scope) {
+
+  $scope.songArray = [];
+
+}]);
+
+app.controller("PersistentSidebarController", ["$scope", function($scope) {
+  // Nothing to see here
+}]);
+
+/* 
+  Note the use of `$scope.$parent` below, which will look for
+  the variable in OmniscientController
+*/
+app.controller("SongListCtrl", ["$scope", function($scope, SongFactory) {
+
+  $scope.newSong = {};
+
+  // Add a new song to the SongFactory
+  $scope.addSong = function () {
+    $scope.$parent.songs = SongFactory.addSong($scope.newSong);
+  };
+
+  // Wait for songs to be loaded via XHR request
+  SongFactory.loadSongs.then(function () {
+    // After promise resolves (data has been loaded), get the songs
+    $scope.$parent.songs = SongFactory.getSongs($scope.newSong);
+  });
+
+}]);
+
+```
+
+### Using chained promises
+
+If you want to perform mutiple asynchronous operations, such as read from two separate JSON files, and then do something only after *all of the operations complete*, then you can chain them together just like with the original Q library.
+
+```js
+var first = $q( function( resolve, reject ) {
+  
+  // XHR to get one set of songs
+  $http.get('./data/songs.json')
+  .success(
+    function(results) {
+      resolve(results);
+    }, function(error) {
+      reject(error);
+    }
+  );
+
+});
+
+var second = $q( function( resolve, reject ) {
+  
+  // XHR to get another set of songs
+  $http.get('./data/more_songs.json')
+  .success(
+    function(results) {
+      resolve(results);
+    }, function(error) {
+      reject(error);
+    }
+  );
+
+});
+
+var fullSongList = [];
+
+// Chained promises, which in turn, results in another promise
+var allSongsPromise = first.then(function ( firstArrayOfSongs ) {
+  fullSongList = fullSongList.concat( firstArrayOfSongs );
+  return second;
+})
+.then(function ( secondArrayOfSongs ) {
+  fullSongList = fullSongList.concat( secondArrayOfSongs );
+});
+
+allSongsPromise.then(function () {
+  /*
+    This will only execute after both promises have been resolved,
+    so the array will be filled with both results
+   */
+  console.log("fullSongList", fullSongList);
 });
 ```
+
+
+
+
