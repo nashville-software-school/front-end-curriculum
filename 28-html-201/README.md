@@ -131,3 +131,80 @@ $("#entryOutput").append(entryOutput);
 ## Create handlebar templates for your filter form
 
 Create two new templates to populate the artist and album dropdowns in the filter form.
+
+
+# Modular Handlebars
+
+Once an application reaches any level beyond basic complexity, placing all of your Handlebar templates into the main `index.html` file becomes a nightmare to maintain. It would be preferable to create individual html files and then load them asynchronously and then render the results in the DOM.
+
+Copy the code and place it in a new file named `javascripts/HandlebarRenderer.js`.
+
+```js
+function HandlebarRenderer () { 
+  this.cache = {};
+};
+
+
+HandlebarRenderer.prototype.load = function (tplName, tplData, cb) {
+  console.log("tplName", tplName);
+  if ( !this.isCached(tplName) ) { 
+    var tplDirectory = '/templates'; 
+    var tplUrl = tplDirectory + '/' + tplName + '.html'; 
+    var renderedHTML, compiledTemplate;
+
+    $.ajax({ 
+      url: tplUrl, 
+      method: 'GET', 
+      async: false, 
+      success: function ( data ) { 
+        this.cache[tplName] = data;
+        compiledTemplate = Handlebars.compile(data);
+        renderedHTML = compiledTemplate(tplData);
+        cb(renderedHTML);
+      }.bind(this)
+    });
+  } else {
+    compiledTemplate = Handlebars.compile(this.cache.tplName);
+    renderedHTML = compiledTemplate(tplData);
+    console.log("already cached", renderedHTML);
+    cb(renderedHTML);
+  }
+}
+
+HandlebarRenderer.prototype.isCached = function (tplName) {
+  console.log("this.cache.tplName", this.cache.tplName);
+  return this.cache[tplName];
+};
+
+
+```
+
+Then you can move templates into files.
+
+##### templates/article.html
+
+```html
+<div class="entry">
+  <h1>{{title}}</h1>
+  <div class="body">
+    {{body}}
+  </div>
+</div>
+
+<ul>
+{{#each tags}}
+  <li>{{category}}:{{name}}</li>
+{{/each}}
+</ul>
+```
+
+##### templates/solarSystem.html
+
+```html
+<h1>The Solar System</h1>
+<ul>
+{{#each planets}}
+  <li>{{name}} is a {{type}} planet (index {{@key}} in the array)</li>
+{{/each}}
+</ul>
+```
