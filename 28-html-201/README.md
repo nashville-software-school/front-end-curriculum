@@ -1,4 +1,8 @@
-# HTML 201
+# Modular applications
+
+You've learned the basics of making modules in JavaScript in order to make an application more flexible, more maintainable, and more extensible. Application developers love modularity, and you can also apply the same concept to your HTML markup.
+
+# HTML 201 - Handlebars
 
 Up until this point, you've been building DOM strings in your JavaScript, and then using jQuery to inject that string into your existing DOM. As you've discovered, this is clunky, hard to maintain, and prone to human error.
 
@@ -242,23 +246,34 @@ $("#user-output").html(finalUserHTML);
 
 ### Custom helpers
 
+You can write your own helpers to provide more intelligent capabilities to your templates. Here's a simplistic example helper that ensures that each each item in an array is put into an unordered list.
+
+You will label the helper as `list` and then use it just like the built-in helpers, inside double curly braces.
+
+```html
+{{#list nav}}
+  <a href="{{url}}">{{title}}</a>
+{{/list}}
+```
+
+Then, in your JavaScript file, author a helper.
+
+```js
+Handlebars.registerHelper('list', function(context, options) {
+  var ret = "<ul>";
+
+  for(var i=0, j=context.length; i<j; i++) {
+    ret = ret + "<li>" + options.fn(context[i]) + "</li>";
+  }
+
+  return ret + "</ul>";
+});
+```
+
+
 > **Instructor Suggestion:** 
 >
-> Make sure you cover the following points while lecturing and live coding.
-> 
-> 1. Basic template with interpolation
-> 1. Handlebar helpers (each, if..else, unless)
-> 1. Handlebar [partials](http://blog.teamtreehouse.com/handlebars-js-part-2-partials-and-helpers)
-> 1. Custom Handlebar helpers
-
-## Create a Handlebar template for your songs
-
-1. Walk students through how to create a template directory and their first Handlebar file.
-1. Install the `require-handlebars-plugin` Bower components and show students how to call their Handlebar file in the the Require application with the `hbs!` prepend to the file path.
-
-## Create handlebar templates for your filter form
-
-Create two new templates to populate the artist and album dropdowns in the filter form.
+> Have students work on an exercise that utilizes basic interpolation, partials, built-in helpers, and a custom helper.
 
 
 # Handlebars Part 2
@@ -444,3 +459,17 @@ render.load('solarSystem', solarSystemData, function (output) {
   $("#ssOutput").html(output);
 });
 ```
+
+# Music History with Handlebars
+
+## Using Handlebars in a Require app
+
+1. Install the `require-handlebars-plugin` Bower components and show students how to call their Handlebar file in the the Require application with the `hbs!` prepend to the file path.
+
+## Create a Handlebar template for your songs
+
+1. Walk students through how to create a template directory and their first Handlebar file.
+
+## Create handlebar templates for your filter form
+
+Create two new templates to populate the artist and album dropdowns in the filter form.
