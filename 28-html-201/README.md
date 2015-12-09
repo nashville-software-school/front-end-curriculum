@@ -175,7 +175,70 @@ Handlebars.registerPartial("sharingButtons", partialFinalHTML);
 
 ## Helpers
 
+Handlebars provides [logical block helpers](http://handlebarsjs.com/block_helpers.html) right out of the box, and it also allows you to write your own, custom helpers to make your templates more intelligent.
+
 ### Built-in helpers
+
+### each
+
+See above example to see how to loop over a variable that is an array of objects.
+
+### if-else
+
+> **Scenario**: You have a template to display user information, but users can either be regular or expert. Each user has an `expert` variable that can be **true** or **false**. If the user is an expert, you want to display their name in bold with the word *Expert* next to it. Otherwise, just use the regular font.
+
+You can use the `if-else` helper that Handlebars provides to evaluate a variable, and then output one set of DOM if the condition is true, and different DOM if it is false.
+
+```html
+
+<div id="user-output"></div>
+
+<script id="user-template" type="text/x-handlebars-template">
+  <div class="user user__container">
+    <div>
+      {{#if expert}}
+        <span class="user__name--expert">
+          {{ first_name }} {{ last_name }} (Expert)
+        </span>
+      {{else}}
+        <span class="user__name--regular">
+          {{ first_name }} {{ last_name }}
+        </span>
+      {{/if}}
+    </div>
+  </div>
+</script>
+```
+
+##### user.js
+
+```js
+var user = {
+  first_name: "Abraham",
+  last_name: "Ybromovitz",
+  expert: true
+};
+
+var userPartial = $("#user-template").html();
+var compiledPartial = Handlebars.compile(userPartial);
+var finalUserHTML = compiledPartial(user);
+$("#user-output").html(finalUserHTML);
+
+// You can combine all of those statements into a single
+// statement, but you lose code clarity, and it's impossible
+// to debug, so don't do this...
+// 
+// $("#user-output").html(Handlebars.compile($("#user-template").html())(user));
+```
+
+
+##### main.css
+
+```css
+.user_name--expert {
+  font-weight: bold;
+}
+```
 
 ### Custom helpers
 
