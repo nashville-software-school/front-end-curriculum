@@ -1,34 +1,42 @@
 # HTML 201
 
-# HTML 5
+Up until this point, you've been building DOM strings in your JavaScript, and then using jQuery to inject that string into your existing DOM. As you've discovered, this is clunky, hard to maintain, and prone to human error.
 
-What new things can you do with HTML 5?
+```js
+var userInfo = "Current user: " + user.first_name + " " + user.last_name;
+var widgetInfo "(" + widget.id + ") " + widget.product_name;
 
-[What's different](https://html-differences.whatwg.org/) than HTML 4?
+$("#container").append("<div>" + userInfo + "</div>");
+$("#container").append("<div>" + widgetInfo + "</div>");
+```
 
-1. New elements (section, article, main, aside, video, audio, etc...)
-1. Form input types (search, url, email, date, etc...)
-1. A new placeholder attribute can be specified on the input and textarea elements
-1. HTML imports
-1. Drag & Drop
-1. Client storage
-1. WebSocket support
-1. Data push with EventSource
+Now, you're going to completely reverse the responsiblity. No longer are you going to use JavaScript to build DOM. Rather, you're going to build HTML and pull in JavaScript variables.
 
-# HTML Evolved with Handlebars
+You'll be using a JavaScript library called [Handlebars](http://handlebarsjs.com/) to accomplish this.
+
+
+# Handlebars Part 1
 
 Run the following commands.
 
 ```
-mkdir ~/workspace/handlebars #If you've switched to running from host machine
-mkdir /vagrant/handlebars #If you're still running Vagrant
-cd handlebars
+mkdir ~/workspace/handlebars && cd $_ #If you've switched to running from host machine
+mkdir /vagrant/handlebars && cd $_ #If you're still running Vagrant
+
 touch index.html
+
 mkdir javascripts
 touch javascripts/main.js
+
 bower install jquery
 bower install handlebars
 ```
+
+## Setup
+
+### HTML templates
+
+First, write some DOM in your `index.html` file.
 
 ##### index.html
 
@@ -45,13 +53,13 @@ bower install handlebars
 
 <body>
 
-  <div id="entryOutput"></div>
+  <div id="article-output"></div>
 
-  <script id="entry-template" type="text/x-handlebars-template">
-    <div class="entry">
-      <h1>{{title}}</h1>
-      <div class="body">
-        {{body}}
+  <script id="article-template" type="text/x-handlebars-template">
+    <div class="article article__container">
+      <h1>{{articleTitle}}</h1>
+      <div class="article__text">
+        {{articleText}}
       </div>
     </div>
 
@@ -62,13 +70,6 @@ bower install handlebars
     </ul>
   </script>
 
-  <script id="tagline-partial" type="text/x-handlebars-template">
-    <div class="tagline">
-      <h4>Authored by {{author_first_name}} {{author_last_name}}</h4>
-      <div class="date">{{authored_date}}</div>
-    </div>
-  </script>
-  
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="bower_components/handlebars/handlebars.min.js"></script>
   <script type="text/javascript" src="javascripts/main.js"></script>
@@ -77,6 +78,18 @@ bower install handlebars
 </html>
 
 ```
+
+The double curly braces that are inside your HTML is specifying which JavaScript variable's value should be inserted at that location. This is called interpolation.
+
+This code is telling Handlebars to evaluate the data object that is bound to it, find the key named `title` and put its value between the `<h1>` tags.
+
+```
+<h1>{{title}}</h1>
+```
+
+### JavaScript data objects
+
+Now you are going to create a POJO (plain old JavaScript object) that will be "bound" to a template.
 
 ##### main.js
 
@@ -88,27 +101,16 @@ var entryData = {
   title: "My New Post", 
   body: "This is my first post!",
   tags: [
-    {
-      category: "technology",
-      name: "handlebars"
-    },
-    {
-      category: "author",
-      name: "steve"
-    }
+    {category: "technology", name: "handlebars"},
+    {category: "author", name: "steve"}
   ]
 };
 
-var taglineData = {
-  author_first_name: "Steve",
-  author_last_name: "Brownlee",
-  authored_date: "January 29, 2015"
-};
-
-// Grab the HTML from the appropriate <script> tag
+// Grab the HTML from the appropriate <script> tag in index.html
 var entryHTML = $("#entry-template").html();
 
-// Use handlebars to compile it into a template
+// Use Handlebars to compile it into a template. Once it's a 
+// Handlebars template, you can bind data to it.
 var entryTemplate = Handlebars.compile(entryHTML);
 
 // Render the resulting HTML by passing the data to the template
@@ -118,10 +120,73 @@ var entryOutput = entryTemplate(entryData);
 $("#entryOutput").append(entryOutput);
 ```
 
-1. Basic template with interpolation
-1. Handlebar helpers (each, if..else, unless)
-1. Handlebar [partials](http://blog.teamtreehouse.com/handlebars-js-part-2-partials-and-helpers)
-1. Custom Handlebar helpers
+## Partials
+
+A partial is a special template that can be included in other templates. A good example would be social sharing buttons that you see on a lot of sites that produce content. By creating a partial, you can then inject that DOM after articles, after comments, really anywhere that you want those affordances to appear.
+
+Here's how you include a partial named `sharingButtons` into another template.
+
+```html
+<script id="entry-template" type="text/x-handlebars-template">
+  <div class="article article__container">
+    <h1>{{articleTitle}}</h1>
+    <div class="article__text">
+      {{articleText}}
+    </div>
+    <div class="social-sharing">
+      {{> sharingButtons}} <!-- this is a partial -->
+    </div>
+  </div>
+</script>
+```
+
+Now you can define that partial as another template in `index.html`.
+
+```html
+<script id="social-sharing" type="text/x-handlebars-template">
+  <div class="sharing sharing__container">
+    <span class="sharing__button">
+      <a href="{{ site_url }}">{{ site_name }}</a>
+    </span>
+  </div>
+</script>
+```
+
+In your JavaScript, just add a POJO like for any other template, but the code is slightly different. You have to use the `registerPartial` method provided by Handlebars.
+
+```js
+var socialData = {
+  site_url: "http://www.facebook.com",
+  site_name: "Facebook"
+};
+
+// Get a reference to the partial's HTML template with jQuery
+var socialPartial = $("#social-sharing").html();
+
+// Compile it into a Handlebar template
+var compiledPartial = Handlebars.compile(socialPartial);
+
+// Bind the POJO to it
+var partialFinalHTML = compiledPartial(socialData);
+
+// Register the partial so that other templates can use it
+Handlebars.registerPartial("sharingButtons", partialFinalHTML);
+```
+
+## Helpers
+
+### Built-in helpers
+
+### Custom helpers
+
+> **Instructor Suggestion:** 
+>
+> Make sure you cover the following points while lecturing and live coding.
+> 
+> 1. Basic template with interpolation
+> 1. Handlebar helpers (each, if..else, unless)
+> 1. Handlebar [partials](http://blog.teamtreehouse.com/handlebars-js-part-2-partials-and-helpers)
+> 1. Custom Handlebar helpers
 
 ## Create a Handlebar template for your songs
 
@@ -133,7 +198,7 @@ $("#entryOutput").append(entryOutput);
 Create two new templates to populate the artist and album dropdowns in the filter form.
 
 
-# Modular Handlebars
+# Handlebars Part 2
 
 Once an application reaches any level beyond basic complexity, placing all of your Handlebar templates into the main `index.html` file becomes a nightmare to maintain. It would be preferable to create individual html files and then load them asynchronously and then render the results in the DOM.
 
@@ -144,39 +209,90 @@ function HandlebarRenderer () {
   this.cache = {};
 };
 
-
 HandlebarRenderer.prototype.load = function (tplName, tplData, cb) {
-  console.log("tplName", tplName);
+  var renderedHTML, compiledTemplate;
+
   if ( !this.isCached(tplName) ) { 
-    var tplDirectory = '/templates'; 
-    var tplUrl = tplDirectory + '/' + tplName + '.html'; 
-    var renderedHTML, compiledTemplate;
+    var templateDirectory = '/templates'; 
+    var tplUrl = templateDirectory + '/' + tplName + '.html'; 
+
+    console.log(`Loading ${tplName} template`);
 
     $.ajax({ 
-      url: tplUrl, 
-      method: 'GET', 
-      async: false, 
-      success: function ( data ) { 
-        this.cache[tplName] = data;
-        compiledTemplate = Handlebars.compile(data);
-        renderedHTML = compiledTemplate(tplData);
-        cb(renderedHTML);
-      }.bind(this)
-    });
-  } else {
-    compiledTemplate = Handlebars.compile(this.cache.tplName);
-    renderedHTML = compiledTemplate(tplData);
-    console.log("already cached", renderedHTML);
-    cb(renderedHTML);
-  }
-}
+      url: tplUrl
+    }).done(function ( data ) { 
+      this.cache[tplName] = data;
+      compiledTemplate = Handlebars.compile(data);
+      renderedHTML = compiledTemplate(tplData);
+      cb(renderedHTML);
+    }.bind(this));
 
-HandlebarRenderer.prototype.isCached = function (tplName) {
-  console.log("this.cache.tplName", this.cache.tplName);
-  return this.cache[tplName];
+  } else {
+    this.loadFromCache(tplName, tplData, cb);
+  }
 };
 
+HandlebarRenderer.prototype.loadPartial = function (tplName, partialData, cb) {
+  var renderedHTML, compiledTemplate;
 
+
+  if ( !this.isCached(tplName) ) { 
+    var partialDirectory = '/templates/partials'; 
+    var tplUrl = partialDirectory + '/' + tplName + '.html'; 
+
+    console.log(`Loading ${tplName} partial`);
+
+    $.ajax({ 
+      url: tplUrl
+    }).done(function ( data ) { 
+      this.cache[tplName] = data;
+      compiledTemplate = Handlebars.compile(data);
+      renderedHTML = compiledTemplate(partialData);
+      Handlebars.registerPartial(tplName, renderedHTML)
+    }.bind(this));
+
+  } else {
+    this.loadFromCache(tplName, tplData, cb);
+  }
+};
+
+HandlebarRenderer.prototype.loadFromCache = function (tplName, tplData, cb) {
+  var renderedHTML, compiledTemplate;
+
+  console.log(`Pulling ${tplName} template from cache`);
+
+  compiledTemplate = Handlebars.compile(this.cache[tplName]);
+  renderedHTML = compiledTemplate(tplData);
+  cb(renderedHTML);
+};
+
+HandlebarRenderer.prototype.isCached = function (tplName) {
+  return this.cache[tplName];
+};
+```
+
+Include it in your HTML file.
+
+##### dymamic.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NSS Starter Kit - Handlebars</title>
+</head>
+
+<body>
+  <div id="articlesOutput"></div>
+  <div id="ssOutput"></div>
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/handlebars/handlebars.min.js"></script>
+  <script src="javascripts/HandlebarRenderer.js"></script>
+  <script src="javascripts/dynamic.js"></script>
+</body>
+</html>
 ```
 
 Then you can move templates into files.
@@ -207,4 +323,61 @@ Then you can move templates into files.
   <li>{{name}} is a {{type}} planet (index {{@key}} in the array)</li>
 {{/each}}
 </ul>
+```
+
+Now in your JavaScript, you can use that module.
+
+##### dynamic.js
+
+```js
+// Create a new instance of the Handlebar loader
+var render = new HandlebarRenderer();
+
+// Tagline partial data
+var taglineData = {
+  author_first_name: "Steve",
+  author_last_name: "Brownlee",
+  authored_date: "January 29, 2015"
+};
+
+// Register the tagline partial for use in other templates
+render.loadPartial('tagLine', taglineData, function (output) {
+  console.log("partial output", output);
+});
+
+
+// Article data
+var entryData = {
+  title: "My New Post",
+  body: "This is my first post!",
+  tags: [
+    {category: "technology", name: "handlebars"},
+    {category: "author", name: "steve"}
+  ]
+};
+
+// Load the article template and bind data to it
+render.load('article', entryData, function (output) {
+  $("#articlesOutput").html(output);
+});
+
+
+// Solar system data
+var solarSystemData = {
+  planets: [
+    {type: "rocky", name: "Mercury"},
+    {type: "rocky", name: "Venus"},
+    {type: "rocky", name: "Earth"},
+    {type: "rocky", name: "Mars"},
+    {type: "gas giant", name: "Jupiter"},
+    {type: "gas giant", name: "Saturn"},
+    {type: "ice giant", name: "Uranus"},
+    {type: "ice giant", name: "Neptune"}
+  ]
+};
+
+// Load the solar system template and bind data to it
+render.load('solarSystem', solarSystemData, function (output) {
+  $("#ssOutput").html(output);
+});
 ```
