@@ -2,19 +2,75 @@
 
 We're going to be using the [Jest](https://facebook.github.io/jest/) library which was open-sourced by Facebook.
 
+## Setup
+
 ```bash
 mkdir ~/workspace/jest && cd $_
 mkdir __tests__
-npm init # Accept the defaults
-npm install jest-cli --save-dev
+npm install jest-cli@^0.7.0 -g
+touch package.json
+touch Gruntfile.js
 ```
 
-Next, open your `package.json` file and add the following key.
+Open the `package.json` file and add the following code.
 
 ```json
-"scripts": {
-  "test": "jest"
-},
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jest": "^0.2.0",
+    "matchdep": "^0.3.0"
+  }
+}
+```
+
+Then run `npm install`.
+
+Open your `Gruntfile.js` and paste in the following code.
+
+```js
+module.exports = function(grunt) {
+
+  grunt.initConfig({
+    jshint: {
+      files: ['./app/**/*.js'],
+      options: {
+        esnext: true
+      }
+    },
+    jest: {
+      options: {
+        coverage: true,
+        testPathPattern: /.\/__tests__\/.*-test.js/
+      }
+    },
+    watch: {
+      javascripts: {
+        files: ['./app/**/*.js'],
+        tasks: ['jshint']
+      },
+      jester: {
+        files: ['./app/**/*.js'],
+        tasks: ['jest']
+      }
+    }
+  });
+
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  grunt.registerTask('default', ['jshint', 'jest', 'watch']);
+};
 ```
 
 ## Write the test before the solution
@@ -119,7 +175,12 @@ module.exports = { sum };
 
 Run `npm test` again to see the output. The test suite **still** fails because there are failing tests. Now it's your job to add in the other functions you need to make the test suite pass.
 
-# Assignment
+## Exercise
+
+1. Write functions in your `math.js` file to ensure all of your unit tests pass.
+1. Write a new unit test that verifies the existence of a function named `squared`, and verifies that the function, when passed a number, returns a value of that number squared.
+
+## Assignment
 
 You are going to use these concepts to build a JavaScript application that fulfills the following requirements. Check out all of the [possible uses](https://facebook.github.io/jest/docs/api.html#expect-value) of the `expect` function to meet the requirements.
 
