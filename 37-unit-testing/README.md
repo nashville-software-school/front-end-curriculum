@@ -166,6 +166,8 @@ touch app/math.js
 Open the `math.js` file and paste the following code into it.
 
 ```js
+var module = module || {};
+
 function sum(one, two) {
   return one + two;
 }
@@ -184,17 +186,27 @@ Run `npm test` again to see the output. The test suite **still** fails because t
 
 You are going to use these concepts to build a JavaScript application that fulfills the following requirements. Check out all of the [possible uses](https://facebook.github.io/jest/docs/api.html#expect-value) of the `expect` function to meet the requirements.
 
+You are going to work on a simple test scenario.
+
+Write a test suite to validate your JavaScript functions.
+
+1. There should be a function defined with the name `checkWordCount`.
+1. That function should return false if a string sent to it has more than 100 words in it.
+1. There should be a function defined with the name `duplicateCheck`.
+1. That function should return false if a string has duplicate words in it.
+1. There should be a function defined with the name `verifyAlphaNumeric`.
+1. That function should return false if there are any non-alphanumeric characters in a string.
+
+Now that the test suite exists, write a simple application to implement the functionality.
+
 1. In an HTML file, have two elements: a textarea and a button.
 2. When the button is clicked, extract the contents of the textarea and validate it against the following rules.
 3. There should only be alphanumeric characters in the text. No special characters like $%^&*.
 4. No duplicate words allowed.
 5. Word count should be less than 100.
-6. There should be a function defined with the name `checkWordCount`.
-7. There should be a function defined with the name `duplicateCheck`.
-8. There should be a function defined with the name `verifyAlphaNumeric`.
 
 
+# Resources
 
-
-
+The [Jest API docs](https://facebook.github.io/jest/docs/api.html#content) 
 

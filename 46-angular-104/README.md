@@ -30,6 +30,10 @@ The `ng-include` directive allows you to include HTML partials into other ones. 
 </div>
 ```
 
+## AngularUI Router
+
+[Angular UI router](https://github.com/angular-ui/ui-router) is a more advanced routing library that isn't solely dependent upon the URL, and supports nested views.
+
 ## Custom directives
 
 A directive, at its most simple implementation, is simply a fancy `ng-include`.  Check out the custom directive below.
