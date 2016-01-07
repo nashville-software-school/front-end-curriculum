@@ -16,7 +16,7 @@
 1. Cmd+S (_Save file_)
 1. Cmd+P (_Quick open file_)
 1. Shift+Arrows for selection
-1. Copy, cut, paste (_Cmd+C, X, P_)
+1. Copy, cut, paste (_Cmd+C, X, V_)
 1. Undo, redo (_Cmd+z, Cmd+Y_)
 1. Shift+Alt+Arrows for word selection
 1. Ctrl+Cmd+Up/Down
