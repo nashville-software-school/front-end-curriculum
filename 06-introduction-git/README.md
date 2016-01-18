@@ -28,7 +28,7 @@ git push -u origin master
 + In your terminal (`workspace`) paste the copied commands and hit enter  
 + type `ls -a` to see all the files, even hidden ones in your folder. You can see the `.git` folder that contains all the git magic for your `/my-blog` repo  
 
-## Set up your credentials 
+## Set up your credentials (First time users)
 + After pasting in the commands from GitHub, you will be presented with a prompt to add the email associated with your GitHub account and your name (not your username, just i.e. "Jane Doe") 
 + Copy these one by one, paste into the command line and change the placeholder info to your info
 + Type `git config --global -l`  to see if your config settings saved properly
