@@ -15,6 +15,7 @@ Click the `plus` sign to create a new repository (i.e. `my-blog`)
 + Highlight https button  
 + Make sure the *Create a README* options is not ticked. Then have them copy pasta the standard commands that Github provides once the repo is created.
 + Follow first set of instrux to copy commands to clipboard  
+
 ##### _Example: Do not use these commands_
 ```
 echo "# My Blog" >> README.md
@@ -27,12 +28,12 @@ git push -u origin master
 + In your terminal (`workspace`) paste the copied commands and hit enter  
 + type `ls -a` to see all the files, even hidden ones in your folder. You can see the `.git` folder that contains all the git magic for your `/my-blog` repo  
 
-## Set up your credentials   
-+ Copy config files one by one and change to user credentials  
-+ User name is user first name, space, last name
-+ `git config --global -l`  to see your config settings
+## Set up your credentials 
++ After pasting in the commands from GitHub, you will be presented with a prompt to add the email associated with your GitHub account and your name (not your username, just i.e. "Jane Doe") 
++ Copy these one by one, paste into the command line and change the placeholder info to your info
++ Type `git config --global -l`  to see if your config settings saved properly
 
-To store credentials locally, use this command so that you're not prompted every time you push
+To store credentials locally, use this command so that you're not prompted every time you push:
 
 `git config credential.helper store`
 
@@ -46,3 +47,16 @@ If you don't want to store them per project, but rather globally in your HOME di
 + `git commit -m "my commit message"` to commit the staged areas to git
 + `git push -u origin master` to push the latest commit(s) to your repo on GitHub. After this longhand command, you can use just `git push`  
 + `git log` to see all of your commits for this repo. `q` to quit git log (if log is long enough)
+
+
+
+
+
+
+
+
+
+
+
+
+
