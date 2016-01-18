@@ -1,5 +1,15 @@
 # Student grades
 
+## Setup
+
+```bash
+mkdir ~/workspace/exercises/the-static-web/grades && cd $_
+touch index.html
+touch grades.js
+```
+
+## Instructions
+
 Loop over an array of student grades (values from 50-100) and outputs how many of each grades there are. 
 
 * A score of 50-60 is an F
@@ -14,7 +24,6 @@ Start with array of random scores in your JavaScript
 var scores = [82, 71, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87];
 ```
 
-## Your assignment
 
 Use `console.log` to output the following criteria:
 
