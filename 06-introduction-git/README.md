@@ -48,15 +48,50 @@ If you don't want to store them per project, but rather globally in your HOME di
 + `git push -u origin master` to push the latest commit(s) to your repo on GitHub. After this longhand command, you can use just `git push`  
 + `git log` to see all of your commits for this repo. `q` to quit git log (if log is long enough)
 
+## Handling merge conflicts
 
+When a developer wants to merge a branch into master, and there has been code added or changed on a line where code currently exists, that creates a merge conflict.
 
+##### Original code in master
 
+```js
+1. for (var i = 0; i < myArray.length; i++) {
+2.   if (myArray[i].length === 3) {
+3.     console.log("This is a short word");
+4.   }
+5. }
+```
 
+##### Branch code
+```js
+1. for (var i = 0; i < myArray.length; i++) {
+2.   var currentItem = myArray[i];
+3.   if (currentItem.length === 3) {
+4.     console.log("This is a short word");
+5.   }
+6. }
+```
 
+Git will not automatically merge this code since the original code has been modified on lines 2 and 3. Git cannot make assumptions about which code is correct, so when a merge is attempted, it alerts the developer that there are merge conflicts.
 
+When you get this message, you need to open up the file in your code editor and you'll see something like this.
 
+```js
+1. for (var i = 0; i < myArray.length; i++) {
+2. <<<<<<<<
+3.   if (myArray[i].length === 3) {
+4.     console.log("This is a short word");
+5. ========
+6.   var currentItem = myArray[i];
+7.   if (currentItem.length === 3) {
+8. >>>>>>>>
+9.     console.log("This is a short word");
+10.   }
+11. }
+```
 
+The code between the `<<<<<<<<` decorator and the `========` decorator is the code that currently exists in master. The code between `========` and `>>>>>>>>` is the code that is in the branch being merged. You, and possibly your teammates, need to decide which is the correct code, and then delete the decorators.
 
+Once the code looks good, you will need to add and commit the resolved file.
 
-
-
+> **Note:** Sometimes when you commit after you resolve merge conflicts, you'll get thrown into vim with a default merge message. You can just accept the default message and press `:x` and then press the enter key.
