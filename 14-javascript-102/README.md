@@ -217,11 +217,6 @@ saySomething("World");
 ```
 
 
-> **Instructor suggestion**:
->
-> After live coding and student questions, have students do the [coins exercise](COINS.md) which combines working with an object and a function.
-
-
 ### Functions with/without return values
 
 ```js
@@ -259,7 +254,4 @@ var result = performOperationOnString("The lazy brown dog", alphabetical);
 console.log(result);
 ```
 
-> **Instructor suggestion**:
->
-> After live coding and student questions, have students do the [coins exercise](COINS.md). If you feel they are ready after that, throw the pine tree problem at them.
 
