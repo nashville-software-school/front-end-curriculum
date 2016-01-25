@@ -295,7 +295,7 @@ console.log(Sedan.setOccupancy(9));
 
 > **Instructor Suggestion:** 
 >
-> Break now for a class exercise. Have students create a new JS file for the solar system application that augments the `SolarSystem` module they created in the initial JS file.
+> Break now for an in-class exercise. Have students create a new JS file for the solar system application that augments the `SolarSystem` module they created in the initial JS file.
 > 
 >    1. Getter for an array of closest 5 stars to the Sun.
 >    1. Getter/setter for the estimated age of the solar system in earth years.
@@ -303,56 +303,8 @@ console.log(Sedan.setOccupancy(9));
 
 # Team Project
 
-Represent a small bilingual lexicon as a Javascript object (see example below) and use it to translate a holiday card message from English into another language. Each member of the team will build a JavaScript module that will convert text entered into an input field to the language that they choose.
-
-`{"merry":"god", "christmas":"jul", "and":"och", "happy":"gott", "new":"nytt", "year":"år"}`
-
-This is Swedish, so please choose other languages. You can add as many words/translations as you wish so that the user can write more complex holiday cards.
-
-1. One team member creates a Github project and adds the others as collaborators.
-1. Each team member picks a language.
-1. Your project should have one HTML file that has a textarea, a select element with an option for each language, a button with a label of "Translate", and an empty DOM element into which the translated text will be inserted.
-1. The team must discuss and choose a single variable name that will hold all of the logic that the team creates (i.e. see the Sedan example above).
-1. Each team member will create one JavaScript file that contains one IIFE. Each teammate's IIFE will augment the other teammates' IIFEs.
-1. The lexicon should be a private variable that cannot be accessed by the other team member's module except through an accessor (getter) method.
-1. Each IIFE should expose, in its public interface, a method named `translateTo{Language}` (e.g. `translateToSpanish` or `translateToFinnish`) that accepts a single argument. That argument's value should be the text entered in by the user.
-1. The team should create an extra JavaScript file that handles interacting with the form elements and determining which method should be called.
-
-> **Optional Bonus 1**
->
-> Find a way to write your IIFEs so that it doesn't matter whose module gets created first.
-
----
-
-> **Optional Bonus 2**
->
-> In addition to inserting the translated text into the HTML document, have the browser read the translated text to the user.
-> 
+Break students up into teams to work on the Translator group exercise.
 
 # Individual Project
-## Sandwich Maker
 
-Create a sandwich order form that allows the user to select all the ingredients for a custom deli sandwich. Create a `Sandwich` module, then create the following as individual modules, using IIFE syntax, to augment `Sandwich`:  
-
-+ bread
-+ meat
-+ cheese
-+ condiments
-+ veggies  
-
-Your project should have one HTML file that has:
-
-+ a section of options for each sandwich part 
-+ the ability to select multiple, or zero, choices for each section (such as turkey _and_ bacon, or "no meat") 
-+ a button with a label of "Make me a sandwich"  
-+ an empty DOM element into which the final sandwich order and its cost will be inserted  
-
-The ingredient choices should be stored as JS objects that contain the ingredients as keys and their cost as the value. `{"turkey": "2.00", "bacon": "1.50"}` 
-
-Make sure the ingredient objects cannot be accessed by the other modules except through an accessor (getter) method.  
-
-Each IIFE should expose, in its public interface, a method named `add{ingredient}` (e.g. `addMeat` or `addVeggies`) that accepts a single argument. That argument's value should be the ingredient(s) selected by the user.  
-
-You should also create an additional JavaScript file that handles interacting with the form elements and determining which method should be called.  
-
-Don't worry about exposing the prices to the user until you display the final cost. This is just an exercise, not a business model.
+Have students work on the sandwich maker exercise.
