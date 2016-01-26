@@ -111,6 +111,7 @@ fruits.sort().reverse().splice(4, 0, "Apricot");
 > Have students do the [array methods exercise](exercises/BASICARRAYMETHODS.md).
 
 ## Advanced array methods
+The methods below are all iterators that perform a specific task on every item in an array. Remember of our old friend the `for` loop? When we write a for loop, we create a block of code inside the loop that applies a certain task to every item in the array. Sound familiar? That's right. These methods are like a for loop with its task to perform on the array item already baked into it. Below each example of the array method you'll see an example of how a for loop would achive the same result.
 
 The `forEach` method on an array executed a callback function for each element in the array.
 
@@ -122,8 +123,15 @@ function outputFruit(element, index, array) {
 var fruits = ["apple", "banana", "cherry"];
 fruits.forEach(outputFruit);
 ```
+The above is the same as this `for` loop:
 
-The `map()` method creates a new array with the results of calling a provided function on every element in this array.
+```js
+for( var i = 0; i < fruits.length; i++ ) {
+  console.log('fruits[' + i + ']  = ' + fruits[i]);
+}
+```
+
+The `map()` method *creates a new array* with the results of calling a provided function on every element in this array.
 
 ```js
 function reverseIt(element, index, array) {
@@ -131,7 +139,16 @@ function reverseIt(element, index, array) {
 }
 
 var fruits = ["apple", "banana", "cherry"];
-var backwardFruits = fruits.map(reverseIt);
+var backwardFruits = fruits.map(reverseIt); 
+console.log(backwardFruits); // ["elppa", "ananab", "yrrehc"]
+```
+The above is the same as this `for` loop:
+
+```js
+var backwardFruits = [];
+for( var i = 0; i < fruits.length; i++ ) {
+  backwardFruits.push(fruits[i].split("").reverse().join(""));
+}
 console.log(backwardFruits); // ["elppa", "ananab", "yrrehc"]
 ```
 
@@ -148,6 +165,17 @@ var fruits = ["apple", "banana", "cherry"];
 var filteredFruits = fruits.filter(filterIt);
 console.log(filteredFruits); // ["apple"]
 ```
+The above is the same as this `for` loop:
+
+```js
+var filteredFruits = [];
+for( var i = 0; i < fruits.length; i++ ) {
+  if (fruits[i].length === 5) {
+    filteredFruits.push(fruits[i]);
+  }
+}
+console.log(filteredFruits); // // ["apple"]
+```
 
 The `reduce()` method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
 
@@ -158,6 +186,17 @@ var sum = [0, 1, 2, 3, 4].reduce(function(previousValue, currentValue, index, ar
 });
 console.log(sum);
 ```
+The above is the same as this `for` loop:
+
+```js
+var sum = 0;
+var numbers = [0, 1, 2, 3, 4];
+for( var i = 0; i < numbers.length; i++ ) {
+  sum = sum + numbers[i];
+}
+console.log(sum);
+```
+
 
 > **Instructor suggestion**:
 >
