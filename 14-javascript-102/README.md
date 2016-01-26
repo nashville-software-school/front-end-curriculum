@@ -200,7 +200,7 @@ console.log(sum);
 
 > **Instructor suggestion**:
 >
-> Have students do the [advanced array methods exercise](exercises/ARRAYMETHODS.md).
+> Have students do the [array methods exercise](https://github.com/nashville-software-school/front-end-milestones/blob/master/single-page-applications/exercises/ARRAY_METHODS_BASIC.md).
 
 
 ## Objects
