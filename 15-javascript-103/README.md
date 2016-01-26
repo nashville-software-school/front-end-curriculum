@@ -48,12 +48,6 @@ var outputEl = document.getElementById("output-target");
   function gets executed.
  */
 var articleEl = document.getElementsByClassName("article-section");
-console.log("articleEl",articleEl);
-
-function handleSectionClick(event) {
-  var elementText = event.target.innerHTML;
-  outputEl.innerHTML = "You clicked on the " + elementText + " section";
-}
 
 for (var i = 0; i < articleEl.length; i++) {
   articleEl.item(i).addEventListener("click", handleSectionClick);
@@ -64,16 +58,6 @@ for (var i = 0; i < articleEl.length; i++) {
   "page-header", and attach an event handler for the
   mouseover, and mouseout, events.
  */
-var header = document.getElementById("page-header");
-
-function handleHeaderMouseOver(event) {
-  outputEl.innerHTML ="You moved your mouse over me";
-}
-
-function handleHeaderMouseOut(event) {
-  outputEl.innerHTML = "Why u leave me?";
-}
-
 header.addEventListener("mouseover", handleHeaderMouseOver);
 header.addEventListener("mouseout", handleHeaderMouseOut);
 
@@ -85,10 +69,6 @@ header.addEventListener("mouseout", handleHeaderMouseOut);
   function reference
  */
 var fieldEl = document.getElementById("keypress-input");
-
-fieldEl.addEventListener("keyup", function (event) {
-  outputEl.innerHTML = event.target.value;
-});
 
 
 /*
@@ -103,27 +83,6 @@ fieldEl.addEventListener("keyup", function (event) {
  */
 var guineaPig = document.getElementById("guinea-pig");
 
-document.getElementById("add-color")
-  .addEventListener("click", function() {
-  guineaPig.classList.toggle("blue");
-});
-
-document.getElementById("make-large")
-  .addEventListener("click", function() {
-  guineaPig.classList.toggle("large");
-});
-
-document.getElementById("add-border")
-  .addEventListener("click", function() {
-  guineaPig.classList.toggle("bordered");
-});
-
-document.getElementById("add-rounding")
-  .addEventListener("click", function() {
-  guineaPig.classList.toggle("rounded");
-});
-
-
 
 /*
   EVENT BUBBLING:
@@ -134,57 +93,9 @@ document.getElementById("add-rounding")
   elements in one function.
  */
 document.querySelector("body").addEventListener("click", function(event) {
-  console.log(event);
-
-  // Handle the click event on any li
-  if (event.target.tagName.toLowerCase() === "li") {
-    console.log("You clicked on an <li> element");
-  }
-
-  // Handle the click event on any section
-  //    * Notice how when you click on a section, it executes
-  //      this code, but *also* the code on line 17.
-  if (event.target.className === "article-section") {
-    console.log("You clicked on an `article-section` element");
-  }
-
-  // Inspect the `id` property of the event target
-  if (event.target.id === "page-title") {
-    console.log("You clicked on the page-title element");
-  }
+  
 });
 ```
-
-##### events.css
-
-```css
-.blue {
-  color: blue;
-}
-
-.large {
-  font-size: 2em;
-}
-
-.bordered {
-  border: 2px dotted purple;
-}
-
-.rounded {
-  border-radius: 10px;
-}
-
-#guinea-pig {
-  margin: 50px 0 20px 0;
-  font-family: Helvetica;
-  padding: 5px;
-}
-```
-
-
-> **Instructor suggestion**:
->
-> Time for the Chatty group project. Create a new Github classroom team project, create a new repo in the class' organization and set it as the template for the new project.
 
 
 ## Simple SPA using events and CSS
