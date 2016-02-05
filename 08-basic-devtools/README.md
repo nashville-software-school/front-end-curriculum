@@ -1,6 +1,3 @@
-# Prerequisite homework
-None
-
 # Learning the basic tools of the trade 
 
 ## Sublime Text
@@ -65,25 +62,18 @@ Show students how they can tweak the design of their webpages right in the brows
  + Large/small row types
  + Timeline overview
 
----
 > **Instructor:** Break now for class exercise. Have the students load an HTML document that has several elements, and ask them to change the format, colors, and layout just by modifying the CSS in Chrome. Then have them modify the DOM in the console with some innerHTML commands, and deleting other DOM elements.
 
----
+## Teamwork Tools
 
-# Homework
+### Trello
 
-## Preparation for JavaScript
+Have students create a free account, and how to set up the basic *Backlog*, *To Do*, *Doing*, and *Done* columns. Walk them through how to create a ticket, and how they can move tickets from column to column.
 
-1. Read chapters 1-9 of "**A smarter way to learn JavaScript**".
-2. Do all of the interactive coding exercises for each chapter.
-3. *Treehouse* > *JavaScript Basics Course*: Watch first two videos and do the review questions
++ Discuss how tickets should revolve around features, not pages.
++ Discuss acceptance criteria language with BDD.
++ Show them how to use labels and checklists.
 
----
+### Moqups
 
-# Want to learn more?
-
-1. Have more than one file open at a time in SublimeText. Look in the View > Layout menu.
-1. Create a [SublimeText snippet](http://docs.sublimetext.info/en/latest/extensibility/snippets.html) that allows you to type in `log`, which can then output `console.log('', )` and which lets you enter in a value inside the quotes, and then hit tab to enter a value after the comma. Try to create other snippets that make useful shortcuts for how you code.
-1. Find out what the uses the most amount of browser memory for your favorite web site by using the [heap snapshot profile](https://developer.chrome.com/devtools/docs/heap-profiling) capability of Chrome.
-1. Make changes to your source file directly in Chrome, using [workspaces](https://developer.chrome.com/devtools/docs/workspaces).
-1. Download the [Firefox Developer Edition](https://developer.mozilla.org/en-US/Firefox/Developer_Edition) browser and check out some of the cool tools that Mozilla is providing to developers.
+Have students create a free account and explain how creating a wireframe that the team agrees upon before any code is written will be a great guide during a project.
